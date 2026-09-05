@@ -1,0 +1,128 @@
+{
+  "events": [
+    {
+      "case_evidence": [
+        {
+          "approval_status": "NOT_REQUIRED",
+          "approved_at": null,
+          "case_decision_code": "CONFIRMED_FRAUD",
+          "case_id": 42,
+          "case_status": "ACTION_FAILED",
+          "decision_submitted_at": "2026-07-01 21:02:49.090120",
+          "mapping_decision_code": null,
+          "mapping_status": "OPEN",
+          "transaction_alert_id": 42
+        }
+      ],
+      "channel": "ATM",
+      "event_date": "2026-06-30",
+      "event_timestamp": "2026-06-30 09:47:00",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "5000.00",
+        "history_debit_count": 2,
+        "replay_reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+        "rule_would_fire": true,
+        "threshold_amount": "15000.00"
+      },
+      "normalized_context": {
+        "current_amount": "47000.00",
+        "current_indicator": "D",
+        "customer_id": "C00028012",
+        "txn_type": "CASH"
+      },
+      "outcome": {
+        "case_ids": [
+          42
+        ],
+        "case_statuses": [
+          "ACTION_FAILED"
+        ],
+        "decision_codes": [
+          "CONFIRMED_FRAUD"
+        ],
+        "label": "UNKNOWN_DECISION_PRESENT_CASE_NOT_CLOSED",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "REVIEW",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          181
+        ]
+      },
+      "rule_match": {
+        "comparison": false,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 123
+    },
+    {
+      "case_evidence": [
+        {
+          "approval_status": "NOT_REQUIRED",
+          "approved_at": null,
+          "case_decision_code": "CONFIRMED_FRAUD",
+          "case_id": 42,
+          "case_status": "ACTION_FAILED",
+          "decision_submitted_at": "2026-07-01 21:02:49.090120",
+          "mapping_decision_code": null,
+          "mapping_status": "OPEN",
+          "transaction_alert_id": 43
+        }
+      ],
+      "channel": "ATM",
+      "event_date": "2026-06-30",
+      "event_timestamp": "2026-06-30 09:54:00",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "19000.00",
+        "history_debit_count": 3,
+        "replay_reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+        "rule_would_fire": false,
+        "threshold_amount": "57000.00"
+      },
+      "normalized_context": {
+        "current_amount": "43000.00",
+        "current_indicator": "D",
+        "customer_id": "C00028012",
+        "txn_type": "CASH"
+      },
+      "outcome": {
+        "case_ids": [
+          42
+        ],
+        "case_statuses": [
+          "ACTION_FAILED"
+        ],
+        "decision_codes": [
+          "CONFIRMED_FRAUD"
+        ],
+        "label": "UNKNOWN_DECISION_PRESENT_CASE_NOT_CLOSED",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "REVIEW",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          164
+        ]
+      },
+      "rule_match": {
+        "comparison": true,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 124
+    }
+  ],
+  "partition_key": "institution=KANJI/source_system=CARD_TRANSACTION/channel=ATM/event_date=2026-06-30",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded"
+}

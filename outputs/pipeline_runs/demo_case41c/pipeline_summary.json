@@ -1,0 +1,133 @@
+{
+  "status": "PIPELINE_COMPLETE",
+  "run_id": "demo_case41c",
+  "run_directory": "outputs\\pipeline_runs\\demo_case41c",
+  "requested_case_id": 41,
+  "requested_institution": "KANJI",
+  "source_system": "CARD_TRANSACTION",
+  "eligibility": {
+    "eligible": false,
+    "reason": "FINAL_DECISION_IS_NOT_FALSE_POSITIVE",
+    "continued_after_ineligible": true
+  },
+  "selected_rule": {
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "version": 1,
+    "signal_code": "CUST_SPEND_SPIKE",
+    "rule_master_id": 3,
+    "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE",
+    "available_trace_rules": [
+      {
+        "rule_code": "CUST_SPEND_2_4X_AVG",
+        "version": 1,
+        "signal_code": "CUST_SPEND_SPIKE",
+        "rule_master_id": 3,
+        "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+      },
+      {
+        "rule_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+        "version": 1,
+        "signal_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+        "rule_master_id": 9,
+        "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+      },
+      {
+        "rule_code": "CUST_HIGH_UTILIZATION_SPIKE",
+        "version": 1,
+        "signal_code": "CUST_UTIL_SPIKE",
+        "rule_master_id": 5,
+        "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+      },
+      {
+        "rule_code": "CUST_DEBIT_CUST_CREDIT_7D",
+        "version": 1,
+        "signal_code": "CUST_DEBIT_CUST_CREDIT_7D",
+        "rule_master_id": 1,
+        "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+      }
+    ],
+    "selection_reason": "FIRST_RESOLVED_RULE_IN_TRACE"
+  },
+  "runtime_event_ids_inspected": [
+    119,
+    123,
+    133
+  ],
+  "steps": [
+    {
+      "step": "Eligibility Check",
+      "status": "ELIGIBILITY_READ_CLOSED",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\01_eligibility.json"
+    },
+    {
+      "step": "Rule Trace",
+      "status": "TRACE_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\02_rule_trace.json"
+    },
+    {
+      "step": "Baseline Replay",
+      "status": "BASELINE_REPLAY_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\03_baseline_replay.json"
+    },
+    {
+      "step": "Runtime Semantics (support)",
+      "status": "RUNTIME_SEMANTICS_EXPERIMENT_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\04_runtime_semantics.json"
+    },
+    {
+      "step": "Runtime Selection (support)",
+      "status": "RUNTIME_SELECTION_EVIDENCE_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\05_runtime_selection.json"
+    },
+    {
+      "step": "Labeled Historical Dataset",
+      "status": "HISTORICAL_DATASET_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\06_historical_dataset.json"
+    },
+    {
+      "step": "Snapshot Builder",
+      "status": "HISTORICAL_SNAPSHOT_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\07_snapshot_builder.json"
+    },
+    {
+      "step": "Snapshot Read Check",
+      "status": "SNAPSHOT_READ_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\08_snapshot_read.json"
+    },
+    {
+      "step": "Candidate Search",
+      "status": "CANDIDATE_SEARCH_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\09_candidate_search.json"
+    },
+    {
+      "step": "Holdout Validation",
+      "status": "HOLDOUT_VALIDATION_REPORT_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\10_holdout_validation.json"
+    },
+    {
+      "step": "Agent Reasoning",
+      "status": "AGENT_REASONING_REPORT_COMPLETE",
+      "output": "outputs\\pipeline_runs\\demo_case41c\\11_agent_reasoning.json"
+    }
+  ],
+  "final_decision": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "recommendation": null,
+    "recommendation_gate": {
+      "status": "BLOCKED",
+      "blockers": [
+        "NO_FINALIZED_FALSE_POSITIVE_LABELS",
+        "RUNTIME_METRIC_BEHAVIOR_UNPROVEN"
+      ],
+      "selected_candidate": null
+    }
+  },
+  "checks": {
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN",
+    "network_calls": "NONE",
+    "model_call": "NONE",
+    "snapshot_directory": "outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_20bf4edfacd2"
+  },
+  "next_step": "REVIEW_PIPELINE_SUMMARY_AND_AGENT_REASONING"
+}

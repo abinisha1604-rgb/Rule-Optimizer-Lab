@@ -1,0 +1,57 @@
+BEGIN
+ institution_id | cases 
+----------------+-------
+ KANJI          |    21
+(1 row)
+
+ institution_id |      status      |   decision_code    | approval_status | cases 
+----------------+------------------+--------------------+-----------------+-------
+ KANJI          | ACTION_FAILED    | CONFIRMED_FRAUD    | NOT_REQUIRED    |     1
+ KANJI          | ACTION_PENDING   | DEVICE_COMPROMISED | NOT_REQUIRED    |     1
+ KANJI          | CLOSED           | ATTEMPTED_FRAUD    | NOT_REQUIRED    |     1
+ KANJI          | CLOSED           | CONFIRMED_FRAUD    | NOT_REQUIRED    |     2
+ KANJI          | IN_PROGRESS      |                    |                 |    14
+ KANJI          | OPEN             |                    |                 |     1
+ KANJI          | PENDING_APPROVAL | STR_RECOMMENDED    | PENDING         |     1
+(7 rows)
+
+ institution_id |  alert_type   | alert_source_table | mappings 
+----------------+---------------+--------------------+----------
+ KANJI          | ADVERSE_MEDIA | adverse_alert      |        3
+ KANJI          | DEVICE        | device_alert       |       15
+ KANJI          | SCREENING     | adverse_alert      |        2
+ KANJI          | SCREENING     | screening_alert    |       16
+ KANJI          | TRANSACTION   | transaction_alert  |        9
+(5 rows)
+
+ config_master_id |       decision_code        |        decision_name        | alert_type  | requires_approval 
+------------------+----------------------------+-----------------------------+-------------+-------------------
+                1 | ACCOUNT_TAKEOVER_SUSPECTED | Account Takeover Suspected  | DEVICE      | Y
+                1 | ATTEMPTED_FRAUD            | Attempted Fraud - Prevented | ANY         | N
+                1 | CONFIRMED_FRAUD            | Confirmed Fraud             | ANY         | N
+                1 | CONTINUE_ONBOARDING        | Continue Onboarding         | SCREENING   | N
+                1 | DEVICE_COMPROMISED         | Device Compromised          | DEVICE      | N
+                1 | EDD_COMPLETED              | EDD Completed               | SCREENING   | N
+                1 | FALSE_POSITIVE             | False Positive              | ANY         | N
+                1 | GENUINE                    | Genuine Customer Activity   | ANY         | N
+                1 | MONEY_MULE_SUSPECTED       | Money Mule Suspected        | TRANSACTION | Y
+                1 | REJECT_ONBOARDING          | Reject Onboarding           | SCREENING   | Y
+                1 | REVERSE_TRANSACTION        | Reverse Transaction         | TRANSACTION | Y
+                1 | UPI_FRAUD_CONFIRMED        | UPI Fraud Confirmed         | TRANSACTION | N
+(12 rows)
+
+ institution_id |  alert_type   |  decision_code  | mappings 
+----------------+---------------+-----------------+----------
+ KANJI          | ADVERSE_MEDIA | CONFIRMED_FRAUD |        1
+ KANJI          | ADVERSE_MEDIA |                 |        2
+ KANJI          | DEVICE        | CONFIRMED_FRAUD |        2
+ KANJI          | DEVICE        |                 |       13
+ KANJI          | SCREENING     | ATTEMPTED_FRAUD |        3
+ KANJI          | SCREENING     | CONFIRMED_FRAUD |        1
+ KANJI          | SCREENING     | FALSE_POSITIVE  |        2
+ KANJI          | SCREENING     |                 |       12
+ KANJI          | TRANSACTION   | CONFIRMED_FRAUD |        3
+ KANJI          | TRANSACTION   |                 |        6
+(10 rows)
+
+COMMIT

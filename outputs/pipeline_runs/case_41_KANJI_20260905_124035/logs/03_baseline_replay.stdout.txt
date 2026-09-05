@@ -1,0 +1,1447 @@
+Full baseline report saved: C:\Users\Abi\OneDrive\Documents\project\rule_optimizer_lab\outputs\pipeline_runs\case_41_KANJI_20260905_124035\03_baseline_replay.json
+{
+  "source": "LOCAL_DATABASE",
+  "status": "BASELINE_REPLAY_COMPLETE",
+  "requested_rule_code": "CUST_SPEND_2_4X_AVG",
+  "requested_version_no": 1,
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "rule": {
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "version_no": 1,
+    "status": "ACTIVE"
+  },
+  "metric": {
+    "code": "AVG_DEBIT_30DAY",
+    "entity_type": "CUSTOMER",
+    "window_type": "ROLLING",
+    "window_size": "30DAY",
+    "stored_sql_present": true
+  },
+  "multiplier": {
+    "status": "MULTIPLIER_RESOLVED",
+    "ref_id": 348,
+    "ref_code": "CUST_AVG_SPEND_MULTIPLIER",
+    "ref_sub_code": "3X",
+    "ref_value": "3"
+  },
+  "summary": {
+    "status": "BASELINE_REPLAY_COMPLETE",
+    "population_count": 38,
+    "evaluated_count": 38,
+    "skipped_count": 0,
+    "predicted_fire_count": 12,
+    "recorded_rule_match_count": 1,
+    "comparisons_available": 38,
+    "agreement_count": 27,
+    "mismatch_count": 11,
+    "mismatch_event_ids": [
+      1,
+      2,
+      3,
+      4,
+      125,
+      117,
+      121,
+      128,
+      123,
+      131,
+      133
+    ],
+    "no_result_count": 0,
+    "empty_history_count": 26,
+    "status_counts": {
+      "EVALUATED": 38
+    },
+    "recorded_decision_counts": {
+      "ALLOW": 18,
+      "BLOCK": 7,
+      "REVIEW": 13
+    },
+    "next_step": "INSPECT_BASELINE_MISMATCHES"
+  },
+  "checks": {
+    "stored_metric_sql_execution": "NOT_RUN",
+    "replay_query": "ALLOWLISTED_IN_MEMORY_FILTER_PLUS_PARAMETERIZED_SCOPE_READ",
+    "history_row_limit": 10000,
+    "duplicate_result_event_ids": []
+  },
+  "events": [
+    {
+      "transaction_master_id": 146,
+      "transaction_result_ids": [
+        146
+      ],
+      "timestamp": "2024-06-26 06:48:20",
+      "channel": "POS",
+      "txn_type": "000000",
+      "customer_id": "KKDNDJDKDDDD",
+      "stored_txn_amount": "8.50",
+      "derived_current_amount": "11.28",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2024-05-27 06:48:20",
+      "window_end_exclusive": "2024-06-26 06:48:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        55
+      ]
+    },
+    {
+      "transaction_master_id": 147,
+      "transaction_result_ids": [
+        147
+      ],
+      "timestamp": "2024-06-26 06:48:20",
+      "channel": "POS",
+      "txn_type": "000000",
+      "customer_id": "KKDNDJDKDDDD",
+      "stored_txn_amount": "8.50",
+      "derived_current_amount": "11.28",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2024-05-27 06:48:20",
+      "window_end_exclusive": "2024-06-26 06:48:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        55
+      ]
+    },
+    {
+      "transaction_master_id": 148,
+      "transaction_result_ids": [
+        148
+      ],
+      "timestamp": "2024-06-26 06:48:20",
+      "channel": "POS",
+      "txn_type": "000000",
+      "customer_id": "KKDNDJDKDDDD",
+      "stored_txn_amount": "8.50",
+      "derived_current_amount": "11.28",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2024-05-27 06:48:20",
+      "window_end_exclusive": "2024-06-26 06:48:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        55
+      ]
+    },
+    {
+      "transaction_master_id": 149,
+      "transaction_result_ids": [
+        149
+      ],
+      "timestamp": "2024-06-26 06:48:20",
+      "channel": "POS",
+      "txn_type": "000000",
+      "customer_id": "KKDNDJDKDDDD",
+      "stored_txn_amount": "8.50",
+      "derived_current_amount": "11.28",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2024-05-27 06:48:20",
+      "window_end_exclusive": "2024-06-26 06:48:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        55
+      ]
+    },
+    {
+      "transaction_master_id": 150,
+      "transaction_result_ids": [
+        150
+      ],
+      "timestamp": "2024-06-26 06:48:20",
+      "channel": "POS",
+      "txn_type": "000000",
+      "customer_id": "KKDNDJDKDDDD",
+      "stored_txn_amount": "8.50",
+      "derived_current_amount": "11.28",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2024-05-27 06:48:20",
+      "window_end_exclusive": "2024-06-26 06:48:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        55
+      ]
+    },
+    {
+      "transaction_master_id": 1,
+      "transaction_result_ids": [
+        1
+      ],
+      "timestamp": "2026-06-29 12:18:20",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "KANJI_REL_A_CUST",
+      "stored_txn_amount": "185000.00",
+      "derived_current_amount": "184500.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-30 12:18:20",
+      "window_end_exclusive": "2026-06-29 12:18:20",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        165
+      ]
+    },
+    {
+      "transaction_master_id": 2,
+      "transaction_result_ids": [
+        2
+      ],
+      "timestamp": "2026-06-29 12:34:10",
+      "channel": "ATM",
+      "txn_type": "CASH",
+      "customer_id": "KANJI_REL_B_CUST",
+      "stored_txn_amount": "75000.00",
+      "derived_current_amount": "75000.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-30 12:34:10",
+      "window_end_exclusive": "2026-06-29 12:34:10",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        187
+      ]
+    },
+    {
+      "transaction_master_id": 3,
+      "transaction_result_ids": [
+        3
+      ],
+      "timestamp": "2026-06-29 13:02:10",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "KANJI_REL_E_CUST",
+      "stored_txn_amount": "42000.00",
+      "derived_current_amount": "42000.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-30 13:02:10",
+      "window_end_exclusive": "2026-06-29 13:02:10",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        150
+      ]
+    },
+    {
+      "transaction_master_id": 4,
+      "transaction_result_ids": [
+        4
+      ],
+      "timestamp": "2026-06-29 13:30:10",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "KANJI_REL_G_CUST",
+      "stored_txn_amount": "2500.00",
+      "derived_current_amount": "2500.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-30 13:30:10",
+      "window_end_exclusive": "2026-06-29 13:30:10",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 125,
+      "transaction_result_ids": [
+        125
+      ],
+      "timestamp": "2026-06-30 08:58:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028013",
+      "stored_txn_amount": "2200.00",
+      "derived_current_amount": "2200.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 08:58:00",
+      "window_end_exclusive": "2026-06-30 08:58:00",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 126,
+      "transaction_result_ids": [
+        126
+      ],
+      "timestamp": "2026-06-30 09:12:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028013",
+      "stored_txn_amount": "4100.00",
+      "derived_current_amount": "4100.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:12:00",
+      "window_end_exclusive": "2026-06-30 09:12:00",
+      "history_candidate_count": 1,
+      "history_debit_count": 1,
+      "history_debit_ids": [
+        125
+      ],
+      "history_sum_amount": "2200.00",
+      "history_average_amount": "2200.00",
+      "multiplier": "3",
+      "threshold_amount": "6600.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 117,
+      "transaction_result_ids": [
+        117
+      ],
+      "timestamp": "2026-06-30 09:14:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028011",
+      "stored_txn_amount": "6200.00",
+      "derived_current_amount": "6200.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:14:00",
+      "window_end_exclusive": "2026-06-30 09:14:00",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 118,
+      "transaction_result_ids": [
+        118
+      ],
+      "timestamp": "2026-06-30 09:19:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028011",
+      "stored_txn_amount": "8400.00",
+      "derived_current_amount": "8400.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:19:00",
+      "window_end_exclusive": "2026-06-30 09:19:00",
+      "history_candidate_count": 1,
+      "history_debit_count": 1,
+      "history_debit_ids": [
+        117
+      ],
+      "history_sum_amount": "6200.00",
+      "history_average_amount": "6200.00",
+      "multiplier": "3",
+      "threshold_amount": "18600.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 121,
+      "transaction_result_ids": [
+        121
+      ],
+      "timestamp": "2026-06-30 09:20:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028012",
+      "stored_txn_amount": "3900.00",
+      "derived_current_amount": "3900.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:20:00",
+      "window_end_exclusive": "2026-06-30 09:20:00",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 128,
+      "transaction_result_ids": [
+        128
+      ],
+      "timestamp": "2026-06-30 09:24:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028014",
+      "stored_txn_amount": "1800.00",
+      "derived_current_amount": "1800.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:24:00",
+      "window_end_exclusive": "2026-06-30 09:24:00",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 122,
+      "transaction_result_ids": [
+        122
+      ],
+      "timestamp": "2026-06-30 09:28:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028012",
+      "stored_txn_amount": "6100.00",
+      "derived_current_amount": "6100.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:28:00",
+      "window_end_exclusive": "2026-06-30 09:28:00",
+      "history_candidate_count": 1,
+      "history_debit_count": 1,
+      "history_debit_ids": [
+        121
+      ],
+      "history_sum_amount": "3900.00",
+      "history_average_amount": "3900.00",
+      "multiplier": "3",
+      "threshold_amount": "11700.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 119,
+      "transaction_result_ids": [
+        119
+      ],
+      "timestamp": "2026-06-30 09:31:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028011",
+      "stored_txn_amount": "186500.00",
+      "derived_current_amount": "115800.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:31:00",
+      "window_end_exclusive": "2026-06-30 09:31:00",
+      "history_candidate_count": 2,
+      "history_debit_count": 2,
+      "history_debit_ids": [
+        117,
+        118
+      ],
+      "history_sum_amount": "14600.00",
+      "history_average_amount": "7300.00",
+      "multiplier": "3",
+      "threshold_amount": "21900.00",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": true,
+      "recorded_match_rows": [
+        {
+          "transaction_master_id": 119,
+          "transaction_result_id": 119,
+          "transaction_match_id": 79,
+          "rule_code": "CUST_SPEND_2_4X_AVG",
+          "rule_version": 1,
+          "signal_code": "CUST_SPEND_SPIKE"
+        }
+      ],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        188
+      ]
+    },
+    {
+      "transaction_master_id": 120,
+      "transaction_result_ids": [
+        120
+      ],
+      "timestamp": "2026-06-30 09:37:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028011",
+      "stored_txn_amount": "174900.00",
+      "derived_current_amount": "108600.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:37:00",
+      "window_end_exclusive": "2026-06-30 09:37:00",
+      "history_candidate_count": 3,
+      "history_debit_count": 3,
+      "history_debit_ids": [
+        117,
+        118,
+        119
+      ],
+      "history_sum_amount": "130400.00",
+      "history_average_amount": "43466.66666666666666666666667",
+      "multiplier": "3",
+      "threshold_amount": "130400.0000000000000000000000",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        176
+      ]
+    },
+    {
+      "transaction_master_id": 129,
+      "transaction_result_ids": [
+        129
+      ],
+      "timestamp": "2026-06-30 09:41:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028014",
+      "stored_txn_amount": "3600.00",
+      "derived_current_amount": "3600.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:41:00",
+      "window_end_exclusive": "2026-06-30 09:41:00",
+      "history_candidate_count": 1,
+      "history_debit_count": 1,
+      "history_debit_ids": [
+        128
+      ],
+      "history_sum_amount": "1800.00",
+      "history_average_amount": "1800.00",
+      "multiplier": "3",
+      "threshold_amount": "5400.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 123,
+      "transaction_result_ids": [
+        123
+      ],
+      "timestamp": "2026-06-30 09:47:00",
+      "channel": "ATM",
+      "txn_type": "CASH",
+      "customer_id": "C00028012",
+      "stored_txn_amount": "82000.00",
+      "derived_current_amount": "47000.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:47:00",
+      "window_end_exclusive": "2026-06-30 09:47:00",
+      "history_candidate_count": 2,
+      "history_debit_count": 2,
+      "history_debit_ids": [
+        121,
+        122
+      ],
+      "history_sum_amount": "10000.00",
+      "history_average_amount": "5000.00",
+      "multiplier": "3",
+      "threshold_amount": "15000.00",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        181
+      ]
+    },
+    {
+      "transaction_master_id": 127,
+      "transaction_result_ids": [
+        127
+      ],
+      "timestamp": "2026-06-30 09:52:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028013",
+      "stored_txn_amount": "6400.00",
+      "derived_current_amount": "6400.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:52:00",
+      "window_end_exclusive": "2026-06-30 09:52:00",
+      "history_candidate_count": 2,
+      "history_debit_count": 2,
+      "history_debit_ids": [
+        125,
+        126
+      ],
+      "history_sum_amount": "6300.00",
+      "history_average_amount": "3150.00",
+      "multiplier": "3",
+      "threshold_amount": "9450.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 124,
+      "transaction_result_ids": [
+        124
+      ],
+      "timestamp": "2026-06-30 09:54:00",
+      "channel": "ATM",
+      "txn_type": "CASH",
+      "customer_id": "C00028012",
+      "stored_txn_amount": "76000.00",
+      "derived_current_amount": "43000.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:54:00",
+      "window_end_exclusive": "2026-06-30 09:54:00",
+      "history_candidate_count": 3,
+      "history_debit_count": 3,
+      "history_debit_ids": [
+        121,
+        122,
+        123
+      ],
+      "history_sum_amount": "57000.00",
+      "history_average_amount": "19000.00",
+      "multiplier": "3",
+      "threshold_amount": "57000.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        164
+      ]
+    },
+    {
+      "transaction_master_id": 130,
+      "transaction_result_ids": [
+        130
+      ],
+      "timestamp": "2026-06-30 09:58:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028014",
+      "stored_txn_amount": "2400.00",
+      "derived_current_amount": "2400.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 09:58:00",
+      "window_end_exclusive": "2026-06-30 09:58:00",
+      "history_candidate_count": 2,
+      "history_debit_count": 2,
+      "history_debit_ids": [
+        128,
+        129
+      ],
+      "history_sum_amount": "5400.00",
+      "history_average_amount": "2700.00",
+      "multiplier": "3",
+      "threshold_amount": "8100.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 131,
+      "transaction_result_ids": [
+        131
+      ],
+      "timestamp": "2026-06-30 10:02:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028015",
+      "stored_txn_amount": "5100.00",
+      "derived_current_amount": "5100.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 10:02:00",
+      "window_end_exclusive": "2026-06-30 10:02:00",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 132,
+      "transaction_result_ids": [
+        132
+      ],
+      "timestamp": "2026-06-30 10:10:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028015",
+      "stored_txn_amount": "7900.00",
+      "derived_current_amount": "7900.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 10:10:00",
+      "window_end_exclusive": "2026-06-30 10:10:00",
+      "history_candidate_count": 1,
+      "history_debit_count": 1,
+      "history_debit_ids": [
+        131
+      ],
+      "history_sum_amount": "5100.00",
+      "history_average_amount": "5100.00",
+      "multiplier": "3",
+      "threshold_amount": "15300.00",
+      "rule_would_fire": false,
+      "reason": "CURRENT_AMOUNT_BELOW_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "ALLOW"
+      ],
+      "result_scores": [
+        0
+      ]
+    },
+    {
+      "transaction_master_id": 133,
+      "transaction_result_ids": [
+        133
+      ],
+      "timestamp": "2026-06-30 23:18:00",
+      "channel": "POS",
+      "txn_type": "PURCHASE",
+      "customer_id": "C00028015",
+      "stored_txn_amount": "48990.00",
+      "derived_current_amount": "48990.00",
+      "derived_current_indicator": "D",
+      "window_start_inclusive": "2026-05-31 23:18:00",
+      "window_end_exclusive": "2026-06-30 23:18:00",
+      "history_candidate_count": 2,
+      "history_debit_count": 2,
+      "history_debit_ids": [
+        131,
+        132
+      ],
+      "history_sum_amount": "13000.00",
+      "history_average_amount": "6500.00",
+      "multiplier": "3",
+      "threshold_amount": "19500.00",
+      "rule_would_fire": true,
+      "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": false,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        122
+      ]
+    },
+    {
+      "transaction_master_id": 134,
+      "transaction_result_ids": [
+        134
+      ],
+      "timestamp": "2026-07-02 12:14:03",
+      "channel": "MOBILE",
+      "txn_type": "UPI",
+      "customer_id": "KANJI_CUST_9201",
+      "stored_txn_amount": "48500.00",
+      "derived_current_amount": "48500.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 12:14:03",
+      "window_end_exclusive": "2026-07-02 12:14:03",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        860
+      ]
+    },
+    {
+      "transaction_master_id": 135,
+      "transaction_result_ids": [
+        135
+      ],
+      "timestamp": "2026-07-02 12:22:41",
+      "channel": "MOBILE",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_CUST_9202",
+      "stored_txn_amount": "12999.00",
+      "derived_current_amount": "12999.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 12:22:41",
+      "window_end_exclusive": "2026-07-02 12:22:41",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        720
+      ]
+    },
+    {
+      "transaction_master_id": 136,
+      "transaction_result_ids": [
+        136
+      ],
+      "timestamp": "2026-07-02 12:35:19",
+      "channel": "POS",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_MER_9301",
+      "stored_txn_amount": "219000.00",
+      "derived_current_amount": "219000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 12:35:19",
+      "window_end_exclusive": "2026-07-02 12:35:19",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        775
+      ]
+    },
+    {
+      "transaction_master_id": 137,
+      "transaction_result_ids": [
+        137
+      ],
+      "timestamp": "2026-07-02 12:42:02",
+      "channel": "WEB",
+      "txn_type": "UPI",
+      "customer_id": "KANJI_MER_9302",
+      "stored_txn_amount": "625000.00",
+      "derived_current_amount": "625000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 12:42:02",
+      "window_end_exclusive": "2026-07-02 12:42:02",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        940
+      ]
+    },
+    {
+      "transaction_master_id": 138,
+      "transaction_result_ids": [
+        138
+      ],
+      "timestamp": "2026-07-02 12:53:33",
+      "channel": "WEB",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_ORG_9401",
+      "stored_txn_amount": "318500.00",
+      "derived_current_amount": "318500.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 12:53:33",
+      "window_end_exclusive": "2026-07-02 12:53:33",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        805
+      ]
+    },
+    {
+      "transaction_master_id": 139,
+      "transaction_result_ids": [
+        139
+      ],
+      "timestamp": "2026-07-02 13:02:48",
+      "channel": "API",
+      "txn_type": "REMITTANCE",
+      "customer_id": "KANJI_ORG_9402",
+      "stored_txn_amount": "890000.00",
+      "derived_current_amount": "890000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 13:02:48",
+      "window_end_exclusive": "2026-07-02 13:02:48",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        975
+      ]
+    },
+    {
+      "transaction_master_id": 140,
+      "transaction_result_ids": [
+        140
+      ],
+      "timestamp": "2026-07-02 13:14:27",
+      "channel": "MOBILE",
+      "txn_type": "UPI",
+      "customer_id": "KANJI_CUST_9203",
+      "stored_txn_amount": "18000.00",
+      "derived_current_amount": "18000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 13:14:27",
+      "window_end_exclusive": "2026-07-02 13:14:27",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        610
+      ]
+    },
+    {
+      "transaction_master_id": 141,
+      "transaction_result_ids": [
+        141
+      ],
+      "timestamp": "2026-07-02 13:25:12",
+      "channel": "WEB",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_MER_9303",
+      "stored_txn_amount": "74200.00",
+      "derived_current_amount": "74200.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 13:25:12",
+      "window_end_exclusive": "2026-07-02 13:25:12",
+      "history_candidate_count": 0,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        695
+      ]
+    },
+    {
+      "transaction_master_id": 142,
+      "transaction_result_ids": [
+        142
+      ],
+      "timestamp": "2026-07-02 13:36:09",
+      "channel": "MOBILE",
+      "txn_type": "UPI",
+      "customer_id": "KANJI_CUST_9201",
+      "stored_txn_amount": "96500.00",
+      "derived_current_amount": "96500.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 13:36:09",
+      "window_end_exclusive": "2026-07-02 13:36:09",
+      "history_candidate_count": 1,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        830
+      ]
+    },
+    {
+      "transaction_master_id": 143,
+      "transaction_result_ids": [
+        143
+      ],
+      "timestamp": "2026-07-02 13:47:45",
+      "channel": "ATM",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_CUST_9202",
+      "stored_txn_amount": "5400.00",
+      "derived_current_amount": "5400.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 13:47:45",
+      "window_end_exclusive": "2026-07-02 13:47:45",
+      "history_candidate_count": 1,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        590
+      ]
+    },
+    {
+      "transaction_master_id": 144,
+      "transaction_result_ids": [
+        144
+      ],
+      "timestamp": "2026-07-02 14:00:16",
+      "channel": "APP",
+      "txn_type": "UPI",
+      "customer_id": "KANJI_MER_9302",
+      "stored_txn_amount": "440000.00",
+      "derived_current_amount": "440000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 14:00:16",
+      "window_end_exclusive": "2026-07-02 14:00:16",
+      "history_candidate_count": 1,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "BLOCK"
+      ],
+      "result_scores": [
+        910
+      ]
+    },
+    {
+      "transaction_master_id": 145,
+      "transaction_result_ids": [
+        145
+      ],
+      "timestamp": "2026-07-02 14:11:29",
+      "channel": "API",
+      "txn_type": "CARD",
+      "customer_id": "KANJI_ORG_9402",
+      "stored_txn_amount": "275000.00",
+      "derived_current_amount": "275000.00",
+      "derived_current_indicator": null,
+      "window_start_inclusive": "2026-06-02 14:11:29",
+      "window_end_exclusive": "2026-07-02 14:11:29",
+      "history_candidate_count": 1,
+      "history_debit_count": 0,
+      "history_debit_ids": [],
+      "history_sum_amount": "0",
+      "history_average_amount": "0",
+      "multiplier": "3",
+      "threshold_amount": "0",
+      "rule_would_fire": false,
+      "reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+      "invalid_history_amount_rows": [],
+      "recorded_rule_match": false,
+      "recorded_match_rows": [],
+      "comparison": true,
+      "status": "EVALUATED",
+      "result_decisions": [
+        "REVIEW"
+      ],
+      "result_scores": [
+        785
+      ]
+    }
+  ]
+}

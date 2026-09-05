@@ -1,0 +1,12 @@
+.venv/
+.local-postgres/
+__pycache__/
+*.py[cod]
+config.local.json
+tmp/
+data/*.dump
+data/*.backup
+*.log.tmp
+.DS_Store
+Thumbs.db
+

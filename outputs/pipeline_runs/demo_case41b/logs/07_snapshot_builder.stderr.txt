@@ -1,0 +1,1 @@
+Snapshot build failed: [WinError 206] The filename or extension is too long: 'C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\demo_case41b\\snapshot\\.snapshot_CUST_SPEND_2_4X_AVG_v1_4cfdd164a1d9.wiqnwrho\\partitions\\institution=KANJI\\source_system=CARD_TRANSACTION\\channel=POS\\event_date=2024-06-26'

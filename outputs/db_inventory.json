@@ -1,0 +1,1219 @@
+{
+  "database": "efrm_optimizer_lab",
+  "user": "lab_owner",
+  "server_version": "18.4",
+  "transaction_read_only": "on",
+  "schema": "efrm",
+  "tables": {
+    "case_master": {
+      "present": true,
+      "columns": [
+        {
+          "name": "case_id",
+          "type": "integer"
+        },
+        {
+          "name": "entity_type",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_id",
+          "type": "character varying"
+        },
+        {
+          "name": "risk_score",
+          "type": "integer"
+        },
+        {
+          "name": "priority",
+          "type": "character varying"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "assigned_to",
+          "type": "character varying"
+        },
+        {
+          "name": "sla_due_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "disposition_code",
+          "type": "character varying"
+        },
+        {
+          "name": "disposition_details",
+          "type": "text"
+        },
+        {
+          "name": "closure_reason",
+          "type": "text"
+        },
+        {
+          "name": "is_str_recommended",
+          "type": "character varying"
+        },
+        {
+          "name": "is_ctr_recommended",
+          "type": "character varying"
+        },
+        {
+          "name": "sla_id",
+          "type": "bigint"
+        },
+        {
+          "name": "sla_response_due_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "sla_resolution_due_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "sla_status",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_count",
+          "type": "integer"
+        },
+        {
+          "name": "category_count",
+          "type": "integer"
+        },
+        {
+          "name": "max_alert_score",
+          "type": "integer"
+        },
+        {
+          "name": "scoring_version",
+          "type": "character varying"
+        },
+        {
+          "name": "is_override_case",
+          "type": "character varying"
+        },
+        {
+          "name": "override_reason",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_name",
+          "type": "character varying"
+        },
+        {
+          "name": "institution_id",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_code",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "decision_remarks",
+          "type": "text"
+        },
+        {
+          "name": "decision_submitted_by",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_submitted_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "approval_status",
+          "type": "character varying"
+        },
+        {
+          "name": "approved_by",
+          "type": "character varying"
+        },
+        {
+          "name": "approved_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 21
+    },
+    "case_alert_mapping": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "case_id",
+          "type": "integer"
+        },
+        {
+          "name": "alert_id",
+          "type": "bigint"
+        },
+        {
+          "name": "alert_type",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_source_table",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_score",
+          "type": "integer"
+        },
+        {
+          "name": "normalized_score",
+          "type": "numeric"
+        },
+        {
+          "name": "is_primary_flag",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "disposition_code",
+          "type": "character varying"
+        },
+        {
+          "name": "disposition_details",
+          "type": "text"
+        },
+        {
+          "name": "decision_code",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "decision_remarks",
+          "type": "text"
+        },
+        {
+          "name": "decision_submitted_by",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_submitted_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 45
+    },
+    "case_decision_master": {
+      "present": true,
+      "columns": [
+        {
+          "name": "decision_id",
+          "type": "bigint"
+        },
+        {
+          "name": "decision_code",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_name",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_type",
+          "type": "character varying"
+        },
+        {
+          "name": "service_code",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_type",
+          "type": "character varying"
+        },
+        {
+          "name": "requires_loss_amount",
+          "type": "character varying"
+        },
+        {
+          "name": "requires_recovery",
+          "type": "character varying"
+        },
+        {
+          "name": "requires_remarks",
+          "type": "character varying"
+        },
+        {
+          "name": "requires_evidence",
+          "type": "character varying"
+        },
+        {
+          "name": "requires_approval",
+          "type": "character varying"
+        },
+        {
+          "name": "display_order",
+          "type": "integer"
+        },
+        {
+          "name": "is_active",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "config_master_id",
+          "type": "integer"
+        },
+        {
+          "name": "updates_customer_risk",
+          "type": "character varying"
+        },
+        {
+          "name": "risk_event_score",
+          "type": "integer"
+        }
+      ],
+      "rows": 12
+    },
+    "transaction_request": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "request_id",
+          "type": "character varying"
+        },
+        {
+          "name": "institution_id",
+          "type": "character varying"
+        },
+        {
+          "name": "source_system",
+          "type": "character varying"
+        },
+        {
+          "name": "channel",
+          "type": "character varying"
+        },
+        {
+          "name": "api_name",
+          "type": "character varying"
+        },
+        {
+          "name": "request_payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "response_payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "http_status",
+          "type": "integer"
+        },
+        {
+          "name": "processing_time_ms",
+          "type": "integer"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "fact",
+          "type": "character varying"
+        },
+        {
+          "name": "is_test",
+          "type": "character varying"
+        }
+      ],
+      "rows": 38
+    },
+    "transaction_master": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "transaction_request_id",
+          "type": "integer"
+        },
+        {
+          "name": "transaction_id",
+          "type": "character varying"
+        },
+        {
+          "name": "source_txn_id",
+          "type": "character varying"
+        },
+        {
+          "name": "rrn",
+          "type": "character varying"
+        },
+        {
+          "name": "correlation_id",
+          "type": "character varying"
+        },
+        {
+          "name": "institution_id",
+          "type": "character varying"
+        },
+        {
+          "name": "source_system",
+          "type": "character varying"
+        },
+        {
+          "name": "channel",
+          "type": "character varying"
+        },
+        {
+          "name": "txn_type",
+          "type": "character varying"
+        },
+        {
+          "name": "txn_sub_type",
+          "type": "character varying"
+        },
+        {
+          "name": "customer_id",
+          "type": "character varying"
+        },
+        {
+          "name": "account_id",
+          "type": "character varying"
+        },
+        {
+          "name": "card_id",
+          "type": "character varying"
+        },
+        {
+          "name": "txn_amount",
+          "type": "numeric"
+        },
+        {
+          "name": "txn_currency",
+          "type": "character varying"
+        },
+        {
+          "name": "txn_timestamp",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "rule_engine_context",
+          "type": "jsonb"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "txn_country",
+          "type": "character varying"
+        },
+        {
+          "name": "network_id",
+          "type": "character varying"
+        },
+        {
+          "name": "is_international",
+          "type": "character varying"
+        }
+      ],
+      "rows": 38
+    },
+    "transaction_result": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "transaction_master_id",
+          "type": "integer"
+        },
+        {
+          "name": "raw_score",
+          "type": "integer"
+        },
+        {
+          "name": "highest_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "highest_severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "matched_rule_count",
+          "type": "integer"
+        },
+        {
+          "name": "final_decision",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_strategy",
+          "type": "character varying"
+        },
+        {
+          "name": "decision_policy_code",
+          "type": "character varying"
+        },
+        {
+          "name": "execution_time_ms",
+          "type": "integer"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "overall_score",
+          "type": "integer"
+        },
+        {
+          "name": "entity_id",
+          "type": "character varying"
+        },
+        {
+          "name": "is_alert_generated",
+          "type": "character varying"
+        },
+        {
+          "name": "is_case_generated",
+          "type": "character varying"
+        }
+      ],
+      "rows": 38
+    },
+    "transaction_match": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "transaction_result_id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_group_version",
+          "type": "integer"
+        },
+        {
+          "name": "rule_code",
+          "type": "character varying"
+        },
+        {
+          "name": "rule_version",
+          "type": "integer"
+        },
+        {
+          "name": "signal_code",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "signal_weight",
+          "type": "integer"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 38
+    },
+    "transaction_alert": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "transaction_result_id",
+          "type": "integer"
+        },
+        {
+          "name": "alert_code",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_category",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "decision",
+          "type": "character varying"
+        },
+        {
+          "name": "customer_id",
+          "type": "character varying"
+        },
+        {
+          "name": "transaction_id",
+          "type": "character varying"
+        },
+        {
+          "name": "alert_payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "user_action",
+          "type": "character varying"
+        }
+      ],
+      "rows": 20
+    },
+    "rule_master": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_code",
+          "type": "character varying"
+        },
+        {
+          "name": "name",
+          "type": "character varying"
+        },
+        {
+          "name": "rule_type",
+          "type": "character varying"
+        },
+        {
+          "name": "fact",
+          "type": "character varying"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 71
+    },
+    "rule_version": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_master_id",
+          "type": "integer"
+        },
+        {
+          "name": "version_no",
+          "type": "integer"
+        },
+        {
+          "name": "logic",
+          "type": "jsonb"
+        },
+        {
+          "name": "drl_context_id",
+          "type": "integer"
+        },
+        {
+          "name": "drl_rule",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "checksum",
+          "type": "character varying"
+        },
+        {
+          "name": "test_count",
+          "type": "integer"
+        },
+        {
+          "name": "change_reason",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_code",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_weight",
+          "type": "integer"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "approved_by",
+          "type": "character varying"
+        },
+        {
+          "name": "approved_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "primary_entity",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_category",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "severity_rank",
+          "type": "integer"
+        }
+      ],
+      "rows": 71
+    },
+    "rule_group_master": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "group_code",
+          "type": "character varying"
+        },
+        {
+          "name": "group_name",
+          "type": "character varying"
+        },
+        {
+          "name": "group_type",
+          "type": "character varying"
+        },
+        {
+          "name": "description",
+          "type": "character varying"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "execution_mode",
+          "type": "character varying"
+        }
+      ],
+      "rows": 6
+    },
+    "rule_group_version": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_group_master_id",
+          "type": "integer"
+        },
+        {
+          "name": "version_no",
+          "type": "integer"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "change_reason",
+          "type": "character varying"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "approved_by",
+          "type": "character varying"
+        },
+        {
+          "name": "approved_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 6
+    },
+    "rule_group_version_map": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_group_version_id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_version_id",
+          "type": "integer"
+        },
+        {
+          "name": "execution_order",
+          "type": "integer"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "is_mandatory",
+          "type": "character varying"
+        }
+      ],
+      "rows": 71
+    },
+    "rule_group_source_binding": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "institution_id",
+          "type": "character varying"
+        },
+        {
+          "name": "source_system",
+          "type": "character varying"
+        },
+        {
+          "name": "channel",
+          "type": "character varying"
+        },
+        {
+          "name": "rule_group_version_id",
+          "type": "integer"
+        },
+        {
+          "name": "policy_code",
+          "type": "character varying"
+        },
+        {
+          "name": "priority",
+          "type": "integer"
+        },
+        {
+          "name": "status",
+          "type": "character varying"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 10
+    },
+    "rule_decision_policy": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "policy_code",
+          "type": "character varying"
+        },
+        {
+          "name": "policy_description",
+          "type": "character varying"
+        },
+        {
+          "name": "signal_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "min_score",
+          "type": "integer"
+        },
+        {
+          "name": "max_score",
+          "type": "integer"
+        },
+        {
+          "name": "min_rule_count",
+          "type": "integer"
+        },
+        {
+          "name": "decision",
+          "type": "character varying"
+        },
+        {
+          "name": "override_flag",
+          "type": "character varying"
+        },
+        {
+          "name": "priority",
+          "type": "integer"
+        },
+        {
+          "name": "is_active",
+          "type": "character varying"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "alert_required",
+          "type": "character varying"
+        },
+        {
+          "name": "case_required",
+          "type": "character varying"
+        }
+      ],
+      "rows": 5
+    },
+    "rule_decision_upgrade": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "policy_code",
+          "type": "character varying"
+        },
+        {
+          "name": "source_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "source_severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "min_rule_count",
+          "type": "integer"
+        },
+        {
+          "name": "target_severity",
+          "type": "character varying"
+        },
+        {
+          "name": "target_severity_rank",
+          "type": "integer"
+        },
+        {
+          "name": "is_active",
+          "type": "character varying"
+        },
+        {
+          "name": "description",
+          "type": "character varying"
+        },
+        {
+          "name": "created_by",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 3
+    },
+    "rule_metric_dependency": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "rule_id",
+          "type": "integer"
+        },
+        {
+          "name": "metric_code",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_type",
+          "type": "character varying"
+        },
+        {
+          "name": "metric_role",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 44
+    },
+    "metric_definition": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "metric_code",
+          "type": "character varying"
+        },
+        {
+          "name": "metric_name",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_type",
+          "type": "character varying"
+        },
+        {
+          "name": "direction",
+          "type": "character varying"
+        },
+        {
+          "name": "channel",
+          "type": "character varying"
+        },
+        {
+          "name": "window_type",
+          "type": "character varying"
+        },
+        {
+          "name": "window_size",
+          "type": "character varying"
+        },
+        {
+          "name": "data_type",
+          "type": "character varying"
+        },
+        {
+          "name": "description",
+          "type": "character varying"
+        },
+        {
+          "name": "is_active",
+          "type": "character varying"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "aggregation_type",
+          "type": "character varying"
+        },
+        {
+          "name": "context_code",
+          "type": "character varying"
+        },
+        {
+          "name": "sql_statement",
+          "type": "text"
+        },
+        {
+          "name": "updated_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 52
+    },
+    "aggregated_metric": {
+      "present": true,
+      "columns": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "institution_id",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_type",
+          "type": "character varying"
+        },
+        {
+          "name": "entity_id",
+          "type": "character varying"
+        },
+        {
+          "name": "metric_code",
+          "type": "character varying"
+        },
+        {
+          "name": "metric_value",
+          "type": "numeric"
+        },
+        {
+          "name": "source_system",
+          "type": "character varying"
+        },
+        {
+          "name": "channel",
+          "type": "character varying"
+        },
+        {
+          "name": "computed_at",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "valid_till",
+          "type": "timestamp without time zone"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 0
+    },
+    "case_events": {
+      "present": true,
+      "columns": [
+        {
+          "name": "event_id",
+          "type": "integer"
+        },
+        {
+          "name": "case_id",
+          "type": "integer"
+        },
+        {
+          "name": "event_type",
+          "type": "character varying"
+        },
+        {
+          "name": "event_description",
+          "type": "text"
+        },
+        {
+          "name": "actor_id",
+          "type": "character varying"
+        },
+        {
+          "name": "payload",
+          "type": "jsonb"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp without time zone"
+        }
+      ],
+      "rows": 89
+    }
+  },
+  "missing_required_tables": [],
+  "note": "Counts cover the local copy across institutions. This is a schema inventory, not optimizer evidence."
+}

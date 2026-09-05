@@ -1,0 +1,25 @@
+{
+  "source": "LOCAL_SAVED_DATASET_ONLY",
+  "status": "HISTORICAL_SNAPSHOT_COMPLETE",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded",
+  "snapshot_directory": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded",
+  "snapshot_file": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded\\snapshot.json",
+  "manifest_file": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded\\manifest.json",
+  "summary": {
+    "input_events": 38,
+    "materialized_events": 38,
+    "excluded_events": 0,
+    "partition_count": 11,
+    "event_timestamp_min": "2024-06-26 06:48:20",
+    "event_timestamp_max": "2026-07-02 14:11:29"
+  },
+  "checks": {
+    "source_sha256_present": true,
+    "snapshot_content_hash_present": true,
+    "immutable": true,
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN",
+    "already_exists": false
+  },
+  "next_step": "INSPECT_SNAPSHOT_AND_MANIFEST"
+}

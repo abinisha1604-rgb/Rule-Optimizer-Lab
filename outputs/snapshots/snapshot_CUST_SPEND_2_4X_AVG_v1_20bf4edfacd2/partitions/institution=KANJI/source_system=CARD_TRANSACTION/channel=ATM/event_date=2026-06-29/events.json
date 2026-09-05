@@ -1,0 +1,65 @@
+{
+  "events": [
+    {
+      "case_evidence": [
+        {
+          "approval_status": null,
+          "approved_at": null,
+          "case_decision_code": null,
+          "case_id": 5,
+          "case_status": "IN_PROGRESS",
+          "decision_submitted_at": null,
+          "mapping_decision_code": null,
+          "mapping_status": "OPEN",
+          "transaction_alert_id": 2
+        }
+      ],
+      "channel": "ATM",
+      "event_date": "2026-06-29",
+      "event_timestamp": "2026-06-29 12:34:10",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "0",
+        "history_debit_count": 0,
+        "replay_reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+        "rule_would_fire": true,
+        "threshold_amount": "0"
+      },
+      "normalized_context": {
+        "current_amount": "75000.00",
+        "current_indicator": "D",
+        "customer_id": "KANJI_REL_B_CUST",
+        "txn_type": "CASH"
+      },
+      "outcome": {
+        "case_ids": [
+          5
+        ],
+        "case_statuses": [
+          "IN_PROGRESS"
+        ],
+        "decision_codes": [],
+        "label": "UNKNOWN_CASE_NOT_DECIDED",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "REVIEW",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          187
+        ]
+      },
+      "rule_match": {
+        "comparison": false,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 2
+    }
+  ],
+  "partition_key": "institution=KANJI/source_system=CARD_TRANSACTION/channel=ATM/event_date=2026-06-29",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_20bf4edfacd2"
+}

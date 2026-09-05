@@ -1,0 +1,433 @@
+{
+  "source": "SAVED_SNAPSHOT_ONLY",
+  "status": "CANDIDATE_SEARCH_COMPLETE",
+  "snapshot_directory": "outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_c56f68d5c0c8",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_c56f68d5c0c8",
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "rule": {
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "status": "ACTIVE",
+    "version_no": 1
+  },
+  "candidate_set": [
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4"
+  ],
+  "current_multiplier": "3",
+  "candidates": {
+    "sql_zero_fallback": [
+      {
+        "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+        "multiplier": "2",
+        "predicted_fire_count": 16,
+        "predicted_fire_event_ids": [
+          2,
+          123,
+          124,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          119,
+          120,
+          129,
+          127,
+          131,
+          133
+        ],
+        "empty_history_predicted_fire_count": 9,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 23,
+        "mismatch_count": 15,
+        "mismatch_event_ids": [
+          2,
+          123,
+          124,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          120,
+          129,
+          127,
+          131,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 2,
+        "known_confirmed_fraud_missed_count": 1,
+        "known_confirmed_fraud_fired_event_ids": [
+          119,
+          120
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+        "multiplier": "2.5",
+        "predicted_fire_count": 12,
+        "predicted_fire_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          119,
+          131,
+          133
+        ],
+        "empty_history_predicted_fire_count": 9,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 27,
+        "mismatch_count": 11,
+        "mismatch_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          131,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+        "multiplier": "3",
+        "predicted_fire_count": 12,
+        "predicted_fire_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          119,
+          131,
+          133
+        ],
+        "empty_history_predicted_fire_count": 9,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 27,
+        "mismatch_count": 11,
+        "mismatch_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          131,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+        "multiplier": "3.5",
+        "predicted_fire_count": 12,
+        "predicted_fire_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          119,
+          131,
+          133
+        ],
+        "empty_history_predicted_fire_count": 9,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 27,
+        "mismatch_count": 11,
+        "mismatch_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          131,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+        "multiplier": "4",
+        "predicted_fire_count": 12,
+        "predicted_fire_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          119,
+          131,
+          133
+        ],
+        "empty_history_predicted_fire_count": 9,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 27,
+        "mismatch_count": 11,
+        "mismatch_event_ids": [
+          2,
+          123,
+          1,
+          3,
+          4,
+          125,
+          117,
+          121,
+          128,
+          131,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      }
+    ],
+    "no_history_means_absent": [
+      {
+        "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+        "multiplier": "2",
+        "predicted_fire_count": 7,
+        "predicted_fire_event_ids": [
+          123,
+          124,
+          119,
+          120,
+          129,
+          127,
+          133
+        ],
+        "empty_history_predicted_fire_count": 0,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 32,
+        "mismatch_count": 6,
+        "mismatch_event_ids": [
+          123,
+          124,
+          120,
+          129,
+          127,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 2,
+        "known_confirmed_fraud_missed_count": 1,
+        "known_confirmed_fraud_fired_event_ids": [
+          119,
+          120
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+        "multiplier": "2.5",
+        "predicted_fire_count": 3,
+        "predicted_fire_event_ids": [
+          123,
+          119,
+          133
+        ],
+        "empty_history_predicted_fire_count": 0,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 36,
+        "mismatch_count": 2,
+        "mismatch_event_ids": [
+          123,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+        "multiplier": "3",
+        "predicted_fire_count": 3,
+        "predicted_fire_event_ids": [
+          123,
+          119,
+          133
+        ],
+        "empty_history_predicted_fire_count": 0,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 36,
+        "mismatch_count": 2,
+        "mismatch_event_ids": [
+          123,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+        "multiplier": "3.5",
+        "predicted_fire_count": 3,
+        "predicted_fire_event_ids": [
+          123,
+          119,
+          133
+        ],
+        "empty_history_predicted_fire_count": 0,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 36,
+        "mismatch_count": 2,
+        "mismatch_event_ids": [
+          123,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      },
+      {
+        "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+        "multiplier": "4",
+        "predicted_fire_count": 3,
+        "predicted_fire_event_ids": [
+          123,
+          119,
+          133
+        ],
+        "empty_history_predicted_fire_count": 0,
+        "recorded_rule_match_count": 1,
+        "comparisons_available": 38,
+        "agreement_count": 36,
+        "mismatch_count": 2,
+        "mismatch_event_ids": [
+          123,
+          133
+        ],
+        "known_confirmed_fraud_count": 3,
+        "known_confirmed_fraud_fired_count": 1,
+        "known_confirmed_fraud_missed_count": 2,
+        "known_confirmed_fraud_fired_event_ids": [
+          119
+        ],
+        "known_false_positive_count": 0,
+        "known_false_positive_fired_count": 0,
+        "known_false_positive_fired_event_ids": []
+      }
+    ]
+  },
+  "selection": {
+    "status": "INSUFFICIENT_OUTCOME_EVIDENCE_FOR_RECOMMENDATION",
+    "known_false_positive_count": 0,
+    "reason": "No finalized false-positive case exists in this dump; candidate differences are replay effects, not an optimizer recommendation."
+  },
+  "checks": {
+    "database_reads": "NONE",
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN",
+    "unknown_outcomes_preserved": true,
+    "candidate_set_bounded": true,
+    "runtime_behavior_proven": false
+  },
+  "next_step": "STOP_FOR_LABEL_REVIEW_OR_RUN_HOLDOUT_DESIGN"
+}

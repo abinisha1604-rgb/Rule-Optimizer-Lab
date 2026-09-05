@@ -1,0 +1,20 @@
+{
+  "source": "LOCAL_DATABASE",
+  "policy": "lesson_01_closed_false_positive_v1",
+  "requested_institution": "KANJI",
+  "requested_case_id": 41,
+  "case": {
+    "case_id": 41,
+    "institution_id": "KANJI",
+    "status": "CLOSED",
+    "decision_code": "CONFIRMED_FRAUD",
+    "approval_status": "NOT_REQUIRED",
+    "decision_submitted_at": "2026-07-01 23:09:43.847145",
+    "approved_at": null
+  },
+  "decision": {
+    "eligible": false,
+    "reason": "FINAL_DECISION_IS_NOT_FALSE_POSITIVE",
+    "next_step": "STOP_FOR_THIS_CASE"
+  }
+}

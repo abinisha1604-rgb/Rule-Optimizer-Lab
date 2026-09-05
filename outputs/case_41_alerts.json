@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 112,
+    "alert_id": 149,
+    "alert_type": "SCREENING",
+    "alert_source_table": "screening_alert"
+  },
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 113,
+    "alert_id": 82,
+    "alert_type": "ADVERSE_MEDIA",
+    "alert_source_table": "adverse_alert"
+  },
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 114,
+    "alert_id": 108,
+    "alert_type": "DEVICE",
+    "alert_source_table": "device_alert"
+  },
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 115,
+    "alert_id": 40,
+    "alert_type": "TRANSACTION",
+    "alert_source_table": "transaction_alert"
+  },
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 116,
+    "alert_id": 109,
+    "alert_type": "DEVICE",
+    "alert_source_table": "device_alert"
+  },
+  {
+    "case_id": 41,
+    "case_decision": "CONFIRMED_FRAUD",
+    "mapping_id": 117,
+    "alert_id": 41,
+    "alert_type": "TRANSACTION",
+    "alert_source_table": "transaction_alert"
+  }
+]

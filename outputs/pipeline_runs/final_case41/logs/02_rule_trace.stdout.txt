@@ -1,0 +1,239 @@
+{
+  "source": "LOCAL_DATABASE",
+  "requested_institution": "KANJI",
+  "requested_case_id": 41,
+  "case": {
+    "case_id": 41,
+    "institution_id": "KANJI",
+    "status": "CLOSED",
+    "decision_code": "CONFIRMED_FRAUD",
+    "approval_status": "NOT_REQUIRED",
+    "decision_submitted_at": "2026-07-01 23:09:43.847145"
+  },
+  "transaction_alerts": [
+    {
+      "mapping_id": 115,
+      "alert_id": 40,
+      "alert_type": "TRANSACTION",
+      "alert_source_table": "transaction_alert",
+      "alert_decision_code": "CONFIRMED_FRAUD",
+      "mapping_status": "CLOSED",
+      "transaction_alert_id": 40,
+      "transaction_result_id": 119,
+      "transaction_result": {
+        "final_decision": "BLOCK",
+        "matched_rule_count": 2,
+        "raw_score": 188,
+        "overall_score": 188,
+        "execution_time_ms": 46,
+        "is_alert_generated": "Y",
+        "is_case_generated": "Y"
+      },
+      "transaction": {
+        "master_id": 119,
+        "institution_id": "KANJI",
+        "source_system": "CARD_TRANSACTION",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "txn_sub_type": "POS",
+        "txn_timestamp": "2026-06-30 09:31:00",
+        "txn_amount": "186500.00",
+        "txn_currency": "702"
+      },
+      "rule_matches": [
+        {
+          "match_id": 79,
+          "rule_code": "CUST_SPEND_2_4X_AVG",
+          "signal_code": "CUST_SPEND_SPIKE",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 82,
+          "recorded_rule_version": 1,
+          "recorded_group_version": 1,
+          "rule_master_id": 3,
+          "rule_name": "Current transaction \u2265 2\u20134X historical 30-day average spend.",
+          "rule_type": "FRM",
+          "fact": "TRANSACTION",
+          "rule_description": "Rule triggers when ALL of the following conditions are met:\n\n1. transaction.drCrIndicator is equal to D\n  AND\n2. field:transaction.drCrAmount is greater than or equal to (Average Debit Amount - 30 Days (Customer Level Entity) \u00d7 $LIMIT_AND_COUNT.CUST_AVG_SPEND_MULTIPLIER)",
+          "version_candidates": [
+            {
+              "id": 3,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "recorded_version_matches": [
+            {
+              "id": 3,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "group_mapping_candidates": [
+            {
+              "map_id": 7,
+              "execution_order": 7,
+              "rule_version_id": 3
+            }
+          ],
+          "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+        },
+        {
+          "match_id": 80,
+          "rule_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+          "signal_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 88,
+          "recorded_rule_version": 1,
+          "recorded_group_version": 1,
+          "rule_master_id": 9,
+          "rule_name": "Customer performs repeated transactions just below a defined threshold amount within a defined time window.",
+          "rule_type": "FRM",
+          "fact": "TRANSACTION",
+          "rule_description": "Rule triggers when ALL of the following conditions are met:\n\n1. transaction.drCrAmount is greater than or equal to \n  AND\n2. Customer Near Threshold Transaction Count - 7 Days (Customer Level Entity) is greater than or equal to $LIMIT_AND_COUNT.STRUCTURING_TXN_COUNT_LIMIT",
+          "version_candidates": [
+            {
+              "id": 9,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "recorded_version_matches": [
+            {
+              "id": 9,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "group_mapping_candidates": [
+            {
+              "map_id": 1,
+              "execution_order": 1,
+              "rule_version_id": 9
+            }
+          ],
+          "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+        }
+      ]
+    },
+    {
+      "mapping_id": 117,
+      "alert_id": 41,
+      "alert_type": "TRANSACTION",
+      "alert_source_table": "transaction_alert",
+      "alert_decision_code": "CONFIRMED_FRAUD",
+      "mapping_status": "CLOSED",
+      "transaction_alert_id": 41,
+      "transaction_result_id": 120,
+      "transaction_result": {
+        "final_decision": "REVIEW",
+        "matched_rule_count": 2,
+        "raw_score": 176,
+        "overall_score": 176,
+        "execution_time_ms": 44,
+        "is_alert_generated": "Y",
+        "is_case_generated": "Y"
+      },
+      "transaction": {
+        "master_id": 120,
+        "institution_id": "KANJI",
+        "source_system": "CARD_TRANSACTION",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "txn_sub_type": "POS",
+        "txn_timestamp": "2026-06-30 09:37:00",
+        "txn_amount": "174900.00",
+        "txn_currency": "702"
+      },
+      "rule_matches": [
+        {
+          "match_id": 81,
+          "rule_code": "CUST_HIGH_UTILIZATION_SPIKE",
+          "signal_code": "CUST_UTIL_SPIKE",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 79,
+          "recorded_rule_version": 1,
+          "recorded_group_version": 1,
+          "rule_master_id": 5,
+          "rule_name": "Customer overall card utilization ratio \u2265 threshold.",
+          "rule_type": "FRM",
+          "fact": "TRANSACTION",
+          "rule_description": "Rule triggers when ALL of the following conditions are met:\n\n1. Customer utilization ratio - 30 Days (Customer Level Entity) is greater than or equal to LIMIT_AND_COUNT.CUST_UTILIZATION_LIMIT",
+          "version_candidates": [
+            {
+              "id": 5,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "recorded_version_matches": [
+            {
+              "id": 5,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "group_mapping_candidates": [
+            {
+              "map_id": 5,
+              "execution_order": 5,
+              "rule_version_id": 5
+            }
+          ],
+          "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+        },
+        {
+          "match_id": 82,
+          "rule_code": "CUST_DEBIT_CUST_CREDIT_7D",
+          "signal_code": "CUST_DEBIT_CUST_CREDIT_7D",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 74,
+          "recorded_rule_version": 1,
+          "recorded_group_version": 1,
+          "rule_master_id": 1,
+          "rule_name": "Customer debit vs Customer Credit in 7 days",
+          "rule_type": "AML",
+          "fact": "TRANSACTION",
+          "rule_description": "Rule triggers when ALL of the following conditions are met:\n\n1. transaction.drCrIndicator is equal to D\n  AND\n2. Total Debit Amount - 7 Days (Customer Level Entity) is greater than or equal to (Total Credit Amount - 7 Days (Customer Level Entity) \u00f7 0.9)",
+          "version_candidates": [
+            {
+              "id": 1,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "recorded_version_matches": [
+            {
+              "id": 1,
+              "status": "ACTIVE",
+              "version_no": 1
+            }
+          ],
+          "group_mapping_candidates": [
+            {
+              "map_id": 9,
+              "execution_order": 9,
+              "rule_version_id": 1
+            }
+          ],
+          "resolution_status": "RULE_REFERENCE_RESOLVED_FOR_TRACE"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "status": "TRACE_COMPLETE",
+    "transaction_alert_count": 2,
+    "transaction_result_count": 2,
+    "transaction_master_count": 2,
+    "rule_match_count": 4,
+    "resolution_counts": {
+      "RULE_REFERENCE_RESOLVED_FOR_TRACE": 4
+    },
+    "institution_scope_issues": [],
+    "next_step": "READ_RESOLVED_RULE_LOGIC"
+  }
+}

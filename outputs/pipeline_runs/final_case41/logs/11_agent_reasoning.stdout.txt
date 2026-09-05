@@ -1,0 +1,325 @@
+Full agent-reasoning report saved: C:\Users\Abi\OneDrive\Documents\project\rule_optimizer_lab\outputs\pipeline_runs\final_case41\11_agent_reasoning.json
+{
+  "source": "SAVED_REPORTS_ONLY",
+  "status": "AGENT_REASONING_REPORT_COMPLETE",
+  "reasoning_mode": "DETERMINISTIC_LOCAL_REVIEW",
+  "model_call": "NOT_PERFORMED",
+  "rule": {
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "status": "ACTIVE",
+    "version_no": 1
+  },
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "agent_input": {
+    "rule": {
+      "rule_code": "CUST_SPEND_2_4X_AVG",
+      "rule_master_id": 3,
+      "rule_version_id": 3,
+      "status": "ACTIVE",
+      "version_no": 1
+    },
+    "scope": {
+      "institution_id": "KANJI",
+      "source_system": "CARD_TRANSACTION"
+    },
+    "candidate_set": [
+      "2",
+      "2.5",
+      "3",
+      "3.5",
+      "4"
+    ],
+    "current_multiplier": "3",
+    "candidate_metrics": {
+      "sql_zero_fallback": [
+        {
+          "multiplier": "2",
+          "predicted_fire_count": 16,
+          "agreement_count": 23,
+          "mismatch_count": 15,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 2,
+          "known_confirmed_fraud_missed_count": 1,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "2.5",
+          "predicted_fire_count": 12,
+          "agreement_count": 27,
+          "mismatch_count": 11,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "3",
+          "predicted_fire_count": 12,
+          "agreement_count": 27,
+          "mismatch_count": 11,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "3.5",
+          "predicted_fire_count": 12,
+          "agreement_count": 27,
+          "mismatch_count": 11,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "4",
+          "predicted_fire_count": 12,
+          "agreement_count": 27,
+          "mismatch_count": 11,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        }
+      ],
+      "no_history_means_absent": [
+        {
+          "multiplier": "2",
+          "predicted_fire_count": 7,
+          "agreement_count": 32,
+          "mismatch_count": 6,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 2,
+          "known_confirmed_fraud_missed_count": 1,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "2.5",
+          "predicted_fire_count": 3,
+          "agreement_count": 36,
+          "mismatch_count": 2,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "3",
+          "predicted_fire_count": 3,
+          "agreement_count": 36,
+          "mismatch_count": 2,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "3.5",
+          "predicted_fire_count": 3,
+          "agreement_count": 36,
+          "mismatch_count": 2,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        },
+        {
+          "multiplier": "4",
+          "predicted_fire_count": 3,
+          "agreement_count": 36,
+          "mismatch_count": 2,
+          "known_confirmed_fraud_count": 3,
+          "known_confirmed_fraud_fired_count": 1,
+          "known_confirmed_fraud_missed_count": 2,
+          "known_false_positive_count": 0,
+          "known_false_positive_fired_count": 0,
+          "partition": "full_population"
+        }
+      ]
+    },
+    "holdout_metrics": {
+      "sql_zero_fallback": {
+        "selection": [],
+        "holdout": []
+      },
+      "no_history_means_absent": {
+        "selection": [],
+        "holdout": []
+      }
+    },
+    "runtime_semantics": {
+      "mismatch_event_ids_under_sql_zero": [
+        1,
+        2,
+        3,
+        4,
+        125,
+        117,
+        121,
+        128,
+        123,
+        131,
+        133
+      ],
+      "mismatch_event_ids_under_no_history_absent": [
+        123,
+        133
+      ],
+      "runtime_behavior_proven": false
+    },
+    "runtime_selection": {
+      "summary": {
+        "requested_event_count": 3,
+        "events_found": 3,
+        "target_rule_match_count": 1,
+        "events_with_metric_context_key": 0,
+        "events_with_observed_group_match": 3,
+        "events_with_configured_target_binding": 3,
+        "decision_counts": {
+          "BLOCK": 1,
+          "REVIEW": 2
+        },
+        "next_step": "COMPARE_EVENT_123_AND_133_WITH_A_MATCHED_EVENT"
+      },
+      "evidence_boundary": "Persisted rows show outcomes, matches, request shapes, and catalog bindings. They do not prove which rule group the engine selected or whether the metric was absent, null, or calculated only in memory."
+    },
+    "label_evidence": {
+      "known_false_positive_count": 0,
+      "selection_partition": {
+        "event_count": 26,
+        "first_timestamp": "2024-06-26 06:48:20",
+        "last_timestamp": "2026-06-30 23:18:00",
+        "known_outcome_count": 2,
+        "known_false_positive_count": 0,
+        "known_confirmed_fraud_count": 2,
+        "cutoff_exclusive": "2026-07-02 12:14:03"
+      },
+      "holdout_partition": {
+        "event_count": 12,
+        "first_timestamp": "2026-07-02 12:14:03",
+        "last_timestamp": "2026-07-02 14:11:29",
+        "known_outcome_count": 1,
+        "known_false_positive_count": 0,
+        "known_confirmed_fraud_count": 1,
+        "cutoff_exclusive": "2026-07-02 12:14:03"
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "F1_EMPTY_HISTORY_SEMANTICS",
+      "finding": "Treating empty history as an absent metric changes the replay from 12 fires to 3 fires and improves agreement from 27/38 to 36/38.",
+      "evidence": "runtime_semantics.comparison",
+      "confidence": "MEDIUM",
+      "limit": "This is a replay experiment; runtime behavior is not proven."
+    },
+    {
+      "id": "F2_NONEMPTY_MISMATCHES",
+      "finding": "Events 123 and 133 still disagree under the empty-history hypothesis.",
+      "evidence": "runtime_semantics.comparison.no_history_means_absent.mismatch_event_ids",
+      "confidence": "HIGH",
+      "limit": "Persisted rows do not expose the in-memory metric map or selected group trace."
+    },
+    {
+      "id": "F3_LABEL_COVERAGE",
+      "finding": "The dataset has no finalized false-positive outcomes, so false-positive reduction cannot be measured.",
+      "evidence": "candidate_search.selection.known_false_positive_count",
+      "confidence": "HIGH",
+      "limit": "Unknown and non-closed case outcomes remain excluded from supervised counts."
+    },
+    {
+      "id": "F4_KNOWN_FRAUD_RETENTION",
+      "finding": "Multiplier 2 retains two known confirmed-fraud events under the no-history-absent experiment; multiplier 3 retains one.",
+      "evidence": "candidate_search.candidates.no_history_means_absent",
+      "confidence": "MEDIUM",
+      "limit": "Only three known confirmed-fraud events exist, and this is not a substitute for holdout performance."
+    }
+  ],
+  "claims": [
+    {
+      "claim": "No rule change should be recommended from this dump.",
+      "support": "The recommendation gate is blocked by missing false-positive labels and unproven runtime metric behavior.",
+      "confidence": "HIGH"
+    },
+    {
+      "claim": "The core replay-and-comparison workflow is technically feasible in the local lab.",
+      "support": "Baseline, metric, candidate, and holdout reports completed with read-only checks.",
+      "confidence": "HIGH"
+    },
+    {
+      "claim": "A future model should treat events 123 and 133 as unresolved runtime questions.",
+      "support": "They remain mismatches after the empty-history experiment and have no persisted metric key.",
+      "confidence": "HIGH"
+    }
+  ],
+  "recommendation_gate": {
+    "status": "BLOCKED",
+    "blockers": [
+      "NO_FINALIZED_FALSE_POSITIVE_LABELS",
+      "RUNTIME_METRIC_BEHAVIOR_UNPROVEN"
+    ],
+    "selected_candidate": null
+  },
+  "decision": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "recommendation": null,
+    "reason": "Do not choose a multiplier until finalized false-positive labels and runtime metric/group evidence are available.",
+    "candidate_observations": {
+      "no_history_absent_multiplier_2": {
+        "predicted_fire_count": 7,
+        "known_fraud_fired_count": 2
+      },
+      "no_history_absent_multiplier_3": {
+        "predicted_fire_count": 3,
+        "known_fraud_fired_count": 1
+      },
+      "sql_zero_current_multiplier_3_mismatch_count": 11
+    }
+  },
+  "next_actions": [
+    "Obtain at least one finalized false-positive case and link its transaction alerts.",
+    "Capture or reconstruct runtime metric/group selection evidence for events 123 and 133.",
+    "Rerun the same baseline, candidate, and holdout reports with the added labels.",
+    "Only then let an optional LLM rank candidates; verify every statement against saved report fields."
+  ],
+  "traceability": {
+    "candidate_search": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\final_case41\\09_candidate_search.json",
+    "holdout_validation": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\final_case41\\10_holdout_validation.json",
+    "runtime_semantics": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\final_case41\\04_runtime_semantics.json",
+    "runtime_selection": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\final_case41\\05_runtime_selection.json"
+  },
+  "checks": {
+    "database_reads": "NONE",
+    "database_writes": "NONE",
+    "network_calls": "NONE",
+    "model_call": "NONE",
+    "unknown_outcomes_preserved": true,
+    "unsupported_recommendation_blocked": true,
+    "runtime_behavior_proven": false
+  },
+  "next_step": "OBTAIN_FINALIZED_FALSE_POSITIVE_LABELS_AND_RUNTIME_EVIDENCE"
+}

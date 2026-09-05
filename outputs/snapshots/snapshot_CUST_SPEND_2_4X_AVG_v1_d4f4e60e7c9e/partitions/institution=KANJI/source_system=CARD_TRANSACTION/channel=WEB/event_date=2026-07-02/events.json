@@ -1,0 +1,135 @@
+{
+  "events": [
+    {
+      "case_evidence": [],
+      "channel": "WEB",
+      "event_date": "2026-07-02",
+      "event_timestamp": "2026-07-02 12:42:02",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "0",
+        "history_debit_count": 0,
+        "replay_reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+        "rule_would_fire": false,
+        "threshold_amount": "0"
+      },
+      "normalized_context": {
+        "current_amount": "625000.00",
+        "current_indicator": null,
+        "customer_id": "KANJI_MER_9302",
+        "txn_type": "UPI"
+      },
+      "outcome": {
+        "case_ids": [],
+        "case_statuses": [],
+        "decision_codes": [],
+        "label": "UNKNOWN_NO_CASE_LINK",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "BLOCK",
+        "result_decisions": [
+          "BLOCK"
+        ],
+        "result_scores": [
+          940
+        ]
+      },
+      "rule_match": {
+        "comparison": true,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 137
+    },
+    {
+      "case_evidence": [],
+      "channel": "WEB",
+      "event_date": "2026-07-02",
+      "event_timestamp": "2026-07-02 12:53:33",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "0",
+        "history_debit_count": 0,
+        "replay_reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+        "rule_would_fire": false,
+        "threshold_amount": "0"
+      },
+      "normalized_context": {
+        "current_amount": "318500.00",
+        "current_indicator": null,
+        "customer_id": "KANJI_ORG_9401",
+        "txn_type": "CARD"
+      },
+      "outcome": {
+        "case_ids": [],
+        "case_statuses": [],
+        "decision_codes": [],
+        "label": "UNKNOWN_NO_CASE_LINK",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "REVIEW",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          805
+        ]
+      },
+      "rule_match": {
+        "comparison": true,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 138
+    },
+    {
+      "case_evidence": [],
+      "channel": "WEB",
+      "event_date": "2026-07-02",
+      "event_timestamp": "2026-07-02 13:25:12",
+      "institution_id": "KANJI",
+      "metric_replay": {
+        "history_average_amount": "0",
+        "history_debit_count": 0,
+        "replay_reason": "CURRENT_TRANSACTION_IS_NOT_DEBIT",
+        "rule_would_fire": false,
+        "threshold_amount": "0"
+      },
+      "normalized_context": {
+        "current_amount": "74200.00",
+        "current_indicator": null,
+        "customer_id": "KANJI_MER_9303",
+        "txn_type": "CARD"
+      },
+      "outcome": {
+        "case_ids": [],
+        "case_statuses": [],
+        "decision_codes": [],
+        "label": "UNKNOWN_NO_CASE_LINK",
+        "supervision": "UNKNOWN"
+      },
+      "recorded_result": {
+        "final_decision": "REVIEW",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          695
+        ]
+      },
+      "rule_match": {
+        "comparison": true,
+        "label": "NO_MATCHED_RULE_VERSION",
+        "recorded_rule_match": false
+      },
+      "source_system": "CARD_TRANSACTION",
+      "transaction_master_id": 141
+    }
+  ],
+  "partition_key": "institution=KANJI/source_system=CARD_TRANSACTION/channel=WEB/event_date=2026-07-02",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_d4f4e60e7c9e"
+}

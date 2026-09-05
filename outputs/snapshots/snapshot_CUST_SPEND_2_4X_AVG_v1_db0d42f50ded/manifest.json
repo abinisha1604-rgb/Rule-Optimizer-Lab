@@ -1,0 +1,47 @@
+{
+  "configuration_hashes": {
+    "rule": "eff334b6906afcc4cfbb8b315a9f48459b7dcef006678055bbc95b9dec2ec475",
+    "scope": "581b388f5d609f3166c61024cf09762aba54faf3f3dbefc931fe5cf5118723cc"
+  },
+  "database_writes": "NONE",
+  "encryption_key_reference": "NOT_APPLICABLE_LOCAL_LAB",
+  "exclusions": [],
+  "extraction_query_hash": "NOT_APPLICABLE_SAVED_JSON_INPUT",
+  "immutable": true,
+  "partition_counts": {
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=API/event_date=2026-07-02": 2,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=APP/event_date=2026-07-02": 1,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=ATM/event_date=2026-06-29": 1,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=ATM/event_date=2026-06-30": 2,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=ATM/event_date=2026-07-02": 1,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=MOBILE/event_date=2026-07-02": 4,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=POS/event_date=2024-06-26": 5,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=POS/event_date=2026-06-29": 3,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=POS/event_date=2026-06-30": 15,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=POS/event_date=2026-07-02": 1,
+    "institution=KANJI/source_system=CARD_TRANSACTION/channel=WEB/event_date=2026-07-02": 3
+  },
+  "retention_classification": "LOCAL_LAB_ONLY",
+  "row_counts": {
+    "excluded_events": 0,
+    "input_events": 38,
+    "materialized_events": 38,
+    "partitions": 11
+  },
+  "schema_version": "LOCAL_HISTORICAL_SNAPSHOT_V1",
+  "snapshot_content_hash": "a9eed468511b0789c56692537d333521c84dd671445b4bb6527becf53c287305",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_db0d42f50ded",
+  "source_files": [
+    {
+      "path": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\final_case41\\06_historical_dataset.json",
+      "sha256": "db0d42f50dedb65e5b51484f72a204681629567d6a24b989b88ede3e78f28092",
+      "status": "READ_ONLY_SOURCE"
+    }
+  ],
+  "source_high_water_marks": {
+    "event_timestamp_max": "2026-07-02 14:11:29",
+    "event_timestamp_min": "2024-06-26 06:48:20",
+    "ingestion_timestamp": "NOT_AVAILABLE_IN_LOCAL_DATASET"
+  },
+  "stored_metric_sql_execution": "NOT_RUN"
+}

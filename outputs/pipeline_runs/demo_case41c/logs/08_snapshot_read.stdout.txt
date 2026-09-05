@@ -1,0 +1,22 @@
+{
+  "source": "LOCAL_SNAPSHOT_DIRECTORY",
+  "status": "SNAPSHOT_READ_COMPLETE",
+  "snapshot_directory": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\snapshots\\snapshot_CUST_SPEND_2_4X_AVG_v1_20bf4edfacd2",
+  "snapshot_id": "snapshot_CUST_SPEND_2_4X_AVG_v1_20bf4edfacd2",
+  "summary": {
+    "partition_files_read": 11,
+    "transactions_loaded": 38,
+    "manifest_expected_transactions": 38,
+    "manifest_expected_partitions": 11,
+    "duplicate_transaction_ids": 0,
+    "count_matches_manifest": true,
+    "partition_count_matches_manifest": true
+  },
+  "checks": {
+    "manifest_opened_first": true,
+    "database_reads": "NONE",
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN"
+  },
+  "next_step": "USE_SNAPSHOT_AS_ANALYTICS_INPUT"
+}

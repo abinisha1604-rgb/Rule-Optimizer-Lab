@@ -1,0 +1,871 @@
+{
+  "source": "LOCAL_DATABASE_AND_SAVED_BASELINE",
+  "status": "RUNTIME_SELECTION_EVIDENCE_COMPLETE",
+  "baseline_file": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\case_41_KANJI_20260905_124035\\03_baseline_replay.json",
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "rule": {
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "version_no": 1,
+    "status": "ACTIVE"
+  },
+  "metric_definition_catalog": [
+    {
+      "id": 9,
+      "metric_code": "AVG_DEBIT_30DAY",
+      "metric_name": "Average Debit Amount - 30 Days",
+      "entity_type": "CUSTOMER",
+      "channel": "ALL",
+      "window_type": "ROLLING",
+      "window_size": "30DAY",
+      "data_type": "AMOUNT",
+      "aggregation_type": "CUSTOM",
+      "context_code": "TRANSACTION",
+      "is_active": "Y",
+      "sql_statement": "\nSELECT COALESCE(AVG(COALESCE(NULLIF(tm.rule_engine_context #>> '{transaction,drCrAmount}', '')::numeric, tm.txn_amount)), 0)\nFROM efrm.transaction_master tm\nWHERE tm.institution_id = $header.institutionId\n  AND tm.source_system = $header.sourceSystem\n  AND tm.customer_id = $entity.customerId\n  AND tm.txn_timestamp >= (CAST($transaction.txnTimestamp AS timestamptz) AT TIME ZONE 'UTC') - INTERVAL '30 days'\n  AND tm.txn_timestamp < (CAST($transaction.txnTimestamp AS timestamptz) AT TIME ZONE 'UTC')\n  AND COALESCE(tm.source_txn_id, '') <> $transaction.sourceTxnId\n  AND COALESCE(\n        NULLIF(tm.rule_engine_context #>> '{transaction,drCrIndicator}', ''),\n        CASE\n            WHEN UPPER(COALESCE(tm.txn_type, '')) IN ('WITHDRAWAL', 'PURCHASE', 'CASH', 'DEBIT', 'P2P', 'P2M', 'TRANSFER') THEN 'D'\n            WHEN UPPER(COALESCE(tm.txn_type, '')) IN ('REFUND', 'REVERSAL', 'CREDIT', 'DEPOSIT') THEN 'C'\n            ELSE NULL\n        END\n      ) = 'D'\n"
+    }
+  ],
+  "group_catalog_for_rule": [
+    {
+      "rule_group_version_id": 1,
+      "rule_version_id": 3,
+      "execution_order": 7,
+      "is_mandatory": "Y",
+      "rule_group_master_id": 1,
+      "group_version_no": 1,
+      "group_status": "ACTIVE",
+      "group_code": "CUSTOMER_RULES",
+      "group_name": "Customer Level Rules",
+      "group_type": "TRANSACTION",
+      "execution_mode": "SYNC"
+    }
+  ],
+  "targets": [
+    {
+      "transaction_master_id": 119,
+      "baseline": {
+        "transaction_master_id": 119,
+        "transaction_result_ids": [
+          119
+        ],
+        "timestamp": "2026-06-30 09:31:00",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "customer_id": "C00028011",
+        "stored_txn_amount": "186500.00",
+        "derived_current_amount": "115800.00",
+        "derived_current_indicator": "D",
+        "window_start_inclusive": "2026-05-31 09:31:00",
+        "window_end_exclusive": "2026-06-30 09:31:00",
+        "history_candidate_count": 2,
+        "history_debit_count": 2,
+        "history_debit_ids": [
+          117,
+          118
+        ],
+        "history_sum_amount": "14600.00",
+        "history_average_amount": "7300.00",
+        "multiplier": "3",
+        "threshold_amount": "21900.00",
+        "rule_would_fire": true,
+        "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+        "invalid_history_amount_rows": [],
+        "recorded_rule_match": true,
+        "recorded_match_rows": [
+          {
+            "transaction_master_id": 119,
+            "transaction_result_id": 119,
+            "transaction_match_id": 79,
+            "rule_code": "CUST_SPEND_2_4X_AVG",
+            "rule_version": 1,
+            "signal_code": "CUST_SPEND_SPIKE"
+          }
+        ],
+        "comparison": true,
+        "status": "EVALUATED",
+        "result_decisions": [
+          "BLOCK"
+        ],
+        "result_scores": [
+          188
+        ]
+      },
+      "transaction": {
+        "transaction_master_id": 119,
+        "transaction_request_id": 124,
+        "transaction_id": "KANJI011-TXN-P1-03",
+        "source_txn_id": "7407920333531768113",
+        "institution_id": "KANJI",
+        "source_system": "CARD_TRANSACTION",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "txn_sub_type": "POS",
+        "customer_id": "C00028011",
+        "account_id": "110245670981",
+        "card_id": "4677739200008011",
+        "txn_amount": "186500.00",
+        "txn_currency": "702",
+        "txn_timestamp": "2026-06-30 09:31:00"
+      },
+      "context": {
+        "present": true,
+        "top_level_keys": [
+          "entity",
+          "header",
+          "reserved",
+          "transaction"
+        ],
+        "transaction_keys": [
+          "acquiringCountryCode",
+          "billingAmount",
+          "billingCurrency",
+          "cardId",
+          "drCrAmount",
+          "drCrCurrency",
+          "issuerCountryCode",
+          "issuerCurrencyCode",
+          "merchantCategory",
+          "merchantId",
+          "merchantNameLocation",
+          "posConditionCode",
+          "rrn",
+          "sourceTxnId",
+          "status",
+          "terminalId",
+          "transmissionDateTimeRaw",
+          "txnAmount",
+          "txnCurrency",
+          "txnResponseCode",
+          "txnTimestamp"
+        ],
+        "metric_keys": [],
+        "metric_key_present": false,
+        "metric_value_is_object": false,
+        "context_drcr_amount": 115800.0,
+        "context_drcr_indicator": null
+      },
+      "request": {
+        "transaction_request_row_id": 124,
+        "request_id": "KANJI011-TXN-P1-03-REQ",
+        "channel": "POS",
+        "api_name": "card_txn",
+        "fact": "card_txn",
+        "is_test": "N",
+        "http_status": 200,
+        "processing_time_ms": 46,
+        "request_payload_shape": [
+          "channel",
+          "institution_id",
+          "metadata",
+          "mode",
+          "refNo",
+          "source_system",
+          "txnreqacqchannel",
+          "txnreqacqcountrycode",
+          "txnreqacqcurrencycode",
+          "txnreqacquirerid",
+          "txnreqbillingamount",
+          "txnreqbillingconvrate",
+          "txnreqbillingcurrencycode",
+          "txnreqcin",
+          "txnreqdrcramount",
+          "txnreqdrcrcurrencycode",
+          "txnreqisscountrycode",
+          "txnreqisscurrencycode",
+          "txnreqissuerid",
+          "txnreqkitid",
+          "txnreqmcc",
+          "txnreqmerchantid",
+          "txnreqmti",
+          "txnreqnetwork",
+          "txnreqposcondcode",
+          "txnreqposentrymode",
+          "txnreqreasoncode",
+          "txnreqreservefld1",
+          "txnreqreservefld10",
+          "txnreqresponsecode",
+          "txnreqrrn",
+          "txnreqstan",
+          "txnreqterminalid",
+          "txnreqterminalloc",
+          "txnreqtpcode",
+          "txnreqtrandate",
+          "txnreqtransactamount",
+          "txnreqtransactkey",
+          "txnreqtrantype"
+        ],
+        "response_payload_shape": [
+          "alertGenerated",
+          "decision",
+          "executedRuleCount",
+          "executionId",
+          "fact",
+          "highestSeverity",
+          "matchedRuleCount",
+          "metadata",
+          "policyCode",
+          "signals",
+          "test",
+          "totalScore"
+        ]
+      },
+      "result_rows": [
+        {
+          "transaction_result_id": 119,
+          "final_decision": "BLOCK",
+          "highest_severity": "HIGH",
+          "highest_severity_rank": 2,
+          "matched_rule_count": 2,
+          "overall_score": 188,
+          "is_alert_generated": "Y",
+          "is_case_generated": "Y"
+        }
+      ],
+      "all_match_rows": [
+        {
+          "transaction_master_id": 119,
+          "transaction_result_id": 119,
+          "transaction_match_id": 79,
+          "rule_group_version": 1,
+          "rule_code": "CUST_SPEND_2_4X_AVG",
+          "rule_version": 1,
+          "signal_code": "CUST_SPEND_SPIKE",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 82
+        },
+        {
+          "transaction_master_id": 119,
+          "transaction_result_id": 119,
+          "transaction_match_id": 80,
+          "rule_group_version": 1,
+          "rule_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+          "rule_version": 1,
+          "signal_code": "CUST_STRUCTURED_AMOUNT_PATTERN",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 88
+        }
+      ],
+      "target_rule_match_rows": [
+        {
+          "transaction_master_id": 119,
+          "transaction_result_id": 119,
+          "transaction_match_id": 79,
+          "rule_group_version": 1,
+          "rule_code": "CUST_SPEND_2_4X_AVG",
+          "rule_version": 1,
+          "signal_code": "CUST_SPEND_SPIKE",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 82
+        }
+      ],
+      "alert_rows": [
+        {
+          "transaction_alert_id": 40,
+          "alert_code": "DECISION_ALERT",
+          "alert_category": "FRAUD",
+          "alert_severity": "HIGH",
+          "decision": "BLOCK",
+          "status": "CLOSED",
+          "severity_rank": 2,
+          "user_action": null
+        }
+      ],
+      "group_evidence": {
+        "target_rule_group_version_ids": [
+          1
+        ],
+        "observed_group_version_ids_in_matches": [
+          1
+        ],
+        "configured_bindings_for_channel": [
+          {
+            "binding_id": 10,
+            "channel": "POS",
+            "rule_group_version_id": 1,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "CUSTOMER_RULES",
+            "group_name": "Customer Level Rules",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 15,
+            "channel": "POS",
+            "rule_group_version_id": 8,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "KANJI_CARD_TXN_POS_RULES",
+            "group_name": "Kanji Card Transaction POS Rules",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 11,
+            "channel": "POS",
+            "rule_group_version_id": 3,
+            "policy_code": "POLICY_1",
+            "priority": 2,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "NETWORK_ASYNC_CLUSTER",
+            "group_name": "Network & BIN Advanced Fraud Monitoring Bundle",
+            "group_version_no": 1
+          }
+        ],
+        "target_rule_group_binding_exists_for_channel": true
+      },
+      "evidence_interpretation": "TARGET_RULE_MATCH_PERSISTED"
+    },
+    {
+      "transaction_master_id": 123,
+      "baseline": {
+        "transaction_master_id": 123,
+        "transaction_result_ids": [
+          123
+        ],
+        "timestamp": "2026-06-30 09:47:00",
+        "channel": "ATM",
+        "txn_type": "CASH",
+        "customer_id": "C00028012",
+        "stored_txn_amount": "82000.00",
+        "derived_current_amount": "47000.00",
+        "derived_current_indicator": "D",
+        "window_start_inclusive": "2026-05-31 09:47:00",
+        "window_end_exclusive": "2026-06-30 09:47:00",
+        "history_candidate_count": 2,
+        "history_debit_count": 2,
+        "history_debit_ids": [
+          121,
+          122
+        ],
+        "history_sum_amount": "10000.00",
+        "history_average_amount": "5000.00",
+        "multiplier": "3",
+        "threshold_amount": "15000.00",
+        "rule_would_fire": true,
+        "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+        "invalid_history_amount_rows": [],
+        "recorded_rule_match": false,
+        "recorded_match_rows": [],
+        "comparison": false,
+        "status": "EVALUATED",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          181
+        ]
+      },
+      "transaction": {
+        "transaction_master_id": 123,
+        "transaction_request_id": 127,
+        "transaction_id": "KANJI011-TXN-P2-03",
+        "source_txn_id": "7407920333531768123",
+        "institution_id": "KANJI",
+        "source_system": "CARD_TRANSACTION",
+        "channel": "ATM",
+        "txn_type": "CASH",
+        "txn_sub_type": "ATM",
+        "customer_id": "C00028012",
+        "account_id": "110245670982",
+        "card_id": "4677739200008012",
+        "txn_amount": "82000.00",
+        "txn_currency": "392",
+        "txn_timestamp": "2026-06-30 09:47:00"
+      },
+      "context": {
+        "present": true,
+        "top_level_keys": [
+          "entity",
+          "header",
+          "reserved",
+          "transaction"
+        ],
+        "transaction_keys": [
+          "acquiringCountryCode",
+          "billingAmount",
+          "billingCurrency",
+          "cardId",
+          "drCrAmount",
+          "drCrCurrency",
+          "issuerCountryCode",
+          "issuerCurrencyCode",
+          "merchantCategory",
+          "merchantId",
+          "merchantNameLocation",
+          "posConditionCode",
+          "rrn",
+          "sourceTxnId",
+          "status",
+          "terminalId",
+          "transmissionDateTimeRaw",
+          "txnAmount",
+          "txnCurrency",
+          "txnResponseCode",
+          "txnTimestamp"
+        ],
+        "metric_keys": [],
+        "metric_key_present": false,
+        "metric_value_is_object": false,
+        "context_drcr_amount": 47000.0,
+        "context_drcr_indicator": null
+      },
+      "request": {
+        "transaction_request_row_id": 127,
+        "request_id": "KANJI011-TXN-P2-03-REQ",
+        "channel": "ATM",
+        "api_name": "card_txn",
+        "fact": "card_txn",
+        "is_test": "N",
+        "http_status": 200,
+        "processing_time_ms": 41,
+        "request_payload_shape": [
+          "channel",
+          "institution_id",
+          "metadata",
+          "mode",
+          "refNo",
+          "source_system",
+          "txnreqacqchannel",
+          "txnreqacqcountrycode",
+          "txnreqacqcurrencycode",
+          "txnreqacquirerid",
+          "txnreqbillingamount",
+          "txnreqbillingconvrate",
+          "txnreqbillingcurrencycode",
+          "txnreqcin",
+          "txnreqdrcramount",
+          "txnreqdrcrcurrencycode",
+          "txnreqisscountrycode",
+          "txnreqisscurrencycode",
+          "txnreqissuerid",
+          "txnreqkitid",
+          "txnreqmcc",
+          "txnreqmerchantid",
+          "txnreqmti",
+          "txnreqnetwork",
+          "txnreqposcondcode",
+          "txnreqposentrymode",
+          "txnreqreasoncode",
+          "txnreqreservefld1",
+          "txnreqreservefld10",
+          "txnreqresponsecode",
+          "txnreqrrn",
+          "txnreqstan",
+          "txnreqterminalid",
+          "txnreqterminalloc",
+          "txnreqtpcode",
+          "txnreqtrandate",
+          "txnreqtransactamount",
+          "txnreqtransactkey",
+          "txnreqtrantype"
+        ],
+        "response_payload_shape": [
+          "alertGenerated",
+          "decision",
+          "executedRuleCount",
+          "executionId",
+          "fact",
+          "highestSeverity",
+          "matchedRuleCount",
+          "metadata",
+          "policyCode",
+          "signals",
+          "test",
+          "totalScore"
+        ]
+      },
+      "result_rows": [
+        {
+          "transaction_result_id": 123,
+          "final_decision": "REVIEW",
+          "highest_severity": "CRITICAL",
+          "highest_severity_rank": 1,
+          "matched_rule_count": 2,
+          "overall_score": 181,
+          "is_alert_generated": "Y",
+          "is_case_generated": "Y"
+        }
+      ],
+      "all_match_rows": [
+        {
+          "transaction_master_id": 123,
+          "transaction_result_id": 123,
+          "transaction_match_id": 83,
+          "rule_group_version": 2,
+          "rule_code": "ATM_GEO_VELOCITY_CARD",
+          "rule_version": 1,
+          "signal_code": "ATM_GEO_VELOCITY",
+          "signal_severity": "CRITICAL",
+          "severity_rank": 1,
+          "signal_weight": 95
+        },
+        {
+          "transaction_master_id": 123,
+          "transaction_result_id": 123,
+          "transaction_match_id": 84,
+          "rule_group_version": 2,
+          "rule_code": "ATM_DORMANT_CARD_HIGH_WITHDRAWAL",
+          "rule_version": 1,
+          "signal_code": "ATM_DORMANT_SPIKE",
+          "signal_severity": "CRITICAL",
+          "severity_rank": 1,
+          "signal_weight": 92
+        }
+      ],
+      "target_rule_match_rows": [],
+      "alert_rows": [
+        {
+          "transaction_alert_id": 42,
+          "alert_code": "DECISION_ALERT",
+          "alert_category": "FRAUD",
+          "alert_severity": "CRITICAL",
+          "decision": "REVIEW",
+          "status": "CASE_CREATED",
+          "severity_rank": 1,
+          "user_action": null
+        }
+      ],
+      "group_evidence": {
+        "target_rule_group_version_ids": [
+          1
+        ],
+        "observed_group_version_ids_in_matches": [
+          2
+        ],
+        "configured_bindings_for_channel": [
+          {
+            "binding_id": 7,
+            "channel": "ATM",
+            "rule_group_version_id": 1,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "CUSTOMER_RULES",
+            "group_name": "Customer Level Rules",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 8,
+            "channel": "ATM",
+            "rule_group_version_id": 2,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "ATM_SYNC_FRAUD_V1",
+            "group_name": "ATM Fraud Controls - Sync",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 9,
+            "channel": "ATM",
+            "rule_group_version_id": 3,
+            "policy_code": "POLICY_1",
+            "priority": 2,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "NETWORK_ASYNC_CLUSTER",
+            "group_name": "Network & BIN Advanced Fraud Monitoring Bundle",
+            "group_version_no": 1
+          }
+        ],
+        "target_rule_group_binding_exists_for_channel": true
+      },
+      "evidence_interpretation": "NO_TARGET_RULE_MATCH_PERSISTED;_RUNTIME_METRIC_AND_GROUP_SELECTION_UNKNOWN"
+    },
+    {
+      "transaction_master_id": 133,
+      "baseline": {
+        "transaction_master_id": 133,
+        "transaction_result_ids": [
+          133
+        ],
+        "timestamp": "2026-06-30 23:18:00",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "customer_id": "C00028015",
+        "stored_txn_amount": "48990.00",
+        "derived_current_amount": "48990.00",
+        "derived_current_indicator": "D",
+        "window_start_inclusive": "2026-05-31 23:18:00",
+        "window_end_exclusive": "2026-06-30 23:18:00",
+        "history_candidate_count": 2,
+        "history_debit_count": 2,
+        "history_debit_ids": [
+          131,
+          132
+        ],
+        "history_sum_amount": "13000.00",
+        "history_average_amount": "6500.00",
+        "multiplier": "3",
+        "threshold_amount": "19500.00",
+        "rule_would_fire": true,
+        "reason": "CURRENT_AMOUNT_MEETS_AVERAGE_TIMES_MULTIPLIER",
+        "invalid_history_amount_rows": [],
+        "recorded_rule_match": false,
+        "recorded_match_rows": [],
+        "comparison": false,
+        "status": "EVALUATED",
+        "result_decisions": [
+          "REVIEW"
+        ],
+        "result_scores": [
+          122
+        ]
+      },
+      "transaction": {
+        "transaction_master_id": 133,
+        "transaction_request_id": 133,
+        "transaction_id": "KANJI011-TXN-P5-03",
+        "source_txn_id": "7407920333531768153",
+        "institution_id": "KANJI",
+        "source_system": "CARD_TRANSACTION",
+        "channel": "POS",
+        "txn_type": "PURCHASE",
+        "txn_sub_type": "POS",
+        "customer_id": "C00028015",
+        "account_id": "110245670985",
+        "card_id": "4677739200008015",
+        "txn_amount": "48990.00",
+        "txn_currency": "356",
+        "txn_timestamp": "2026-06-30 23:18:00"
+      },
+      "context": {
+        "present": true,
+        "top_level_keys": [
+          "entity",
+          "header",
+          "reserved",
+          "transaction"
+        ],
+        "transaction_keys": [
+          "acquiringCountryCode",
+          "billingAmount",
+          "billingCurrency",
+          "cardId",
+          "drCrAmount",
+          "drCrCurrency",
+          "issuerCountryCode",
+          "issuerCurrencyCode",
+          "merchantCategory",
+          "merchantId",
+          "merchantNameLocation",
+          "posConditionCode",
+          "rrn",
+          "sourceTxnId",
+          "status",
+          "terminalId",
+          "transmissionDateTimeRaw",
+          "txnAmount",
+          "txnCurrency",
+          "txnResponseCode",
+          "txnTimestamp"
+        ],
+        "metric_keys": [],
+        "metric_key_present": false,
+        "metric_value_is_object": false,
+        "context_drcr_amount": 48990.0,
+        "context_drcr_indicator": null
+      },
+      "request": {
+        "transaction_request_row_id": 133,
+        "request_id": "KANJI011-TXN-P5-03-REQ",
+        "channel": "POS",
+        "api_name": "card_txn",
+        "fact": "card_txn",
+        "is_test": "N",
+        "http_status": 200,
+        "processing_time_ms": 37,
+        "request_payload_shape": [
+          "channel",
+          "institution_id",
+          "metadata",
+          "mode",
+          "refNo",
+          "source_system",
+          "txnreqacqchannel",
+          "txnreqacqcountrycode",
+          "txnreqacqcurrencycode",
+          "txnreqacquirerid",
+          "txnreqbillingamount",
+          "txnreqbillingconvrate",
+          "txnreqbillingcurrencycode",
+          "txnreqcin",
+          "txnreqdrcramount",
+          "txnreqdrcrcurrencycode",
+          "txnreqisscountrycode",
+          "txnreqisscurrencycode",
+          "txnreqissuerid",
+          "txnreqkitid",
+          "txnreqmcc",
+          "txnreqmerchantid",
+          "txnreqmti",
+          "txnreqnetwork",
+          "txnreqposcondcode",
+          "txnreqposentrymode",
+          "txnreqreasoncode",
+          "txnreqreservefld1",
+          "txnreqreservefld10",
+          "txnreqresponsecode",
+          "txnreqrrn",
+          "txnreqstan",
+          "txnreqterminalid",
+          "txnreqterminalloc",
+          "txnreqtpcode",
+          "txnreqtrandate",
+          "txnreqtransactamount",
+          "txnreqtransactkey",
+          "txnreqtrantype"
+        ],
+        "response_payload_shape": [
+          "alertGenerated",
+          "decision",
+          "executedRuleCount",
+          "executionId",
+          "fact",
+          "highestSeverity",
+          "matchedRuleCount",
+          "metadata",
+          "policyCode",
+          "signals",
+          "test",
+          "totalScore"
+        ]
+      },
+      "result_rows": [
+        {
+          "transaction_result_id": 133,
+          "final_decision": "REVIEW",
+          "highest_severity": "HIGH",
+          "highest_severity_rank": 2,
+          "matched_rule_count": 2,
+          "overall_score": 122,
+          "is_alert_generated": "Y",
+          "is_case_generated": "N"
+        }
+      ],
+      "all_match_rows": [
+        {
+          "transaction_master_id": 133,
+          "transaction_result_id": 133,
+          "transaction_match_id": 87,
+          "rule_group_version": 1,
+          "rule_code": "CUST_HIGH_UTILIZATION_SPIKE",
+          "rule_version": 1,
+          "signal_code": "CUST_UTIL_SPIKE",
+          "signal_severity": "HIGH",
+          "severity_rank": 2,
+          "signal_weight": 78
+        },
+        {
+          "transaction_master_id": 133,
+          "transaction_result_id": 133,
+          "transaction_match_id": 88,
+          "rule_group_version": 1,
+          "rule_code": "CUST_TIME_OF_DAY_ANOMALY",
+          "rule_version": 1,
+          "signal_code": "CUST_TIME_OF_DAY_ANOMALY",
+          "signal_severity": "LOW",
+          "severity_rank": 3,
+          "signal_weight": 44
+        }
+      ],
+      "target_rule_match_rows": [],
+      "alert_rows": [
+        {
+          "transaction_alert_id": 44,
+          "alert_code": "DECISION_ALERT",
+          "alert_category": "FRAUD",
+          "alert_severity": "HIGH",
+          "decision": "REVIEW",
+          "status": "CASE_CREATED",
+          "severity_rank": 2,
+          "user_action": null
+        }
+      ],
+      "group_evidence": {
+        "target_rule_group_version_ids": [
+          1
+        ],
+        "observed_group_version_ids_in_matches": [
+          1
+        ],
+        "configured_bindings_for_channel": [
+          {
+            "binding_id": 10,
+            "channel": "POS",
+            "rule_group_version_id": 1,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "CUSTOMER_RULES",
+            "group_name": "Customer Level Rules",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 15,
+            "channel": "POS",
+            "rule_group_version_id": 8,
+            "policy_code": "POLICY_1",
+            "priority": 1,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "KANJI_CARD_TXN_POS_RULES",
+            "group_name": "Kanji Card Transaction POS Rules",
+            "group_version_no": 1
+          },
+          {
+            "binding_id": 11,
+            "channel": "POS",
+            "rule_group_version_id": 3,
+            "policy_code": "POLICY_1",
+            "priority": 2,
+            "binding_status": "ACTIVE",
+            "group_status": "ACTIVE",
+            "group_code": "NETWORK_ASYNC_CLUSTER",
+            "group_name": "Network & BIN Advanced Fraud Monitoring Bundle",
+            "group_version_no": 1
+          }
+        ],
+        "target_rule_group_binding_exists_for_channel": true
+      },
+      "evidence_interpretation": "NO_TARGET_RULE_MATCH_PERSISTED;_RUNTIME_METRIC_AND_GROUP_SELECTION_UNKNOWN"
+    }
+  ],
+  "checks": {
+    "database": "efrm_optimizer_lab",
+    "database_user": "lab_owner",
+    "transaction_read_only": "on",
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN",
+    "full_request_response_payloads": "NOT_COPIED",
+    "missing_requested_baseline_ids": []
+  },
+  "summary": {
+    "requested_event_count": 3,
+    "events_found": 3,
+    "target_rule_match_count": 1,
+    "events_with_metric_context_key": 0,
+    "events_with_observed_group_match": 3,
+    "events_with_configured_target_binding": 3,
+    "decision_counts": {
+      "BLOCK": 1,
+      "REVIEW": 2
+    },
+    "next_step": "COMPARE_EVENT_123_AND_133_WITH_A_MATCHED_EVENT"
+  },
+  "evidence_boundary": "Persisted rows show outcomes, matches, request shapes, and catalog bindings. They do not prove which rule group the engine selected or whether the metric was absent, null, or calculated only in memory."
+}

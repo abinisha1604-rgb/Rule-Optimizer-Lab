@@ -1,0 +1,18 @@
+{
+  "status": "PIPELINE_STOPPED_AT_ELIGIBILITY",
+  "reason": "FINAL_DECISION_IS_NOT_FALSE_POSITIVE",
+  "run_id": "gate_case41",
+  "run_directory": "outputs\\pipeline_runs\\gate_case41",
+  "steps": [
+    {
+      "step": "Eligibility Check",
+      "status": "ELIGIBILITY_READ_CLOSED",
+      "output": "outputs\\pipeline_runs\\gate_case41\\01_eligibility.json"
+    }
+  ],
+  "checks": {
+    "database_writes": "NONE",
+    "pipeline_continued_after_ineligible": false
+  },
+  "next_step": "USE_A_FINALIZED_FALSE_POSITIVE_CASE_OR_ADD --continue-on-ineligible FOR_LAB_ONLY"
+}

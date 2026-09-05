@@ -1,0 +1,687 @@
+Full semantics experiment saved: C:\Users\Abi\OneDrive\Documents\project\rule_optimizer_lab\outputs\pipeline_runs\demo_case41c\04_runtime_semantics.json
+{
+  "source": "SAVED_BASELINE_ONLY",
+  "status": "RUNTIME_SEMANTICS_EXPERIMENT_COMPLETE",
+  "baseline_file": "C:\\Users\\Abi\\OneDrive\\Documents\\project\\rule_optimizer_lab\\outputs\\pipeline_runs\\demo_case41c\\03_baseline_replay.json",
+  "rule": {
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "version_no": 1,
+    "status": "ACTIVE"
+  },
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "hypotheses": [
+    {
+      "name": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+      "meaning": "Use the stored metric text's COALESCE(AVG(...), 0) result.",
+      "evidence": "Direct replay semantics only; runtime metric presence is not persisted."
+    },
+    {
+      "name": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+      "meaning": "Do not fire when no prior debit exists because the metric is considered absent.",
+      "evidence": "A testable hypothesis motivated by the DRL non-null metric guard, not proof of runtime behavior."
+    }
+  ],
+  "comparison": {
+    "sql_zero_fallback": {
+      "interpretation": "SQL_ZERO_FALLBACK_FROM_BASELINE",
+      "population_count": 38,
+      "predicted_fire_count": 12,
+      "recorded_rule_match_count": 1,
+      "comparisons_available": 38,
+      "agreement_count": 27,
+      "mismatch_count": 11,
+      "mismatch_event_ids": [
+        1,
+        2,
+        3,
+        4,
+        125,
+        117,
+        121,
+        128,
+        123,
+        131,
+        133
+      ]
+    },
+    "no_history_means_absent": {
+      "interpretation": "EXPERIMENTAL_NO_HISTORY_MEANS_METRIC_ABSENT",
+      "population_count": 38,
+      "predicted_fire_count": 3,
+      "recorded_rule_match_count": 1,
+      "comparisons_available": 38,
+      "agreement_count": 36,
+      "mismatch_count": 2,
+      "mismatch_event_ids": [
+        123,
+        133
+      ]
+    }
+  },
+  "checks": {
+    "database_reads": "NONE",
+    "database_writes": "NONE",
+    "stored_metric_sql_execution": "NOT_RUN",
+    "runtime_behavior_proven": false
+  },
+  "next_step": "INSPECT_NONEMPTY_MISMATCHES_123_AND_133",
+  "events_by_interpretation": {
+    "sql_zero_fallback": [
+      {
+        "transaction_master_id": 146,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 147,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 148,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 149,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 150,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 1,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 2,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 3,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 4,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 125,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 126,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 117,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 118,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 121,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 128,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 122,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 119,
+        "predicted_fire": true,
+        "recorded_rule_match": true,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 120,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 3,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 129,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 123,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 127,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 124,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 3,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 130,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 131,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 132,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 133,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 134,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 135,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 136,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 137,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 138,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 139,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 140,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 141,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 142,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 143,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 144,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 145,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      }
+    ],
+    "no_history_means_absent": [
+      {
+        "transaction_master_id": 146,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 147,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 148,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 149,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 150,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 1,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 2,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 3,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 4,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 125,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 126,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 117,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 118,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 121,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 128,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 122,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 119,
+        "predicted_fire": true,
+        "recorded_rule_match": true,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 120,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 3,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 129,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 123,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 127,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 124,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 3,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 130,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 2,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 131,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 132,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 1,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 133,
+        "predicted_fire": true,
+        "recorded_rule_match": false,
+        "comparison": false,
+        "history_debit_count": 2,
+        "original_replay_fire": true
+      },
+      {
+        "transaction_master_id": 134,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 135,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 136,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 137,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 138,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 139,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 140,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 141,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 142,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 143,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 144,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      },
+      {
+        "transaction_master_id": 145,
+        "predicted_fire": false,
+        "recorded_rule_match": false,
+        "comparison": true,
+        "history_debit_count": 0,
+        "original_replay_fire": false
+      }
+    ]
+  }
+}

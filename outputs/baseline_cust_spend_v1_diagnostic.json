@@ -1,0 +1,343 @@
+{
+  "source": "LOCAL_DATABASE_AND_SAVED_BASELINE",
+  "status": "BASELINE_DIAGNOSTIC_COMPLETE",
+  "baseline_file": "outputs\\baseline_cust_spend_v1.json",
+  "rule": {
+    "rule_master_id": 3,
+    "rule_version_id": 3,
+    "rule_code": "CUST_SPEND_2_4X_AVG",
+    "version_no": 1,
+    "status": "ACTIVE"
+  },
+  "scope": {
+    "institution_id": "KANJI",
+    "source_system": "CARD_TRANSACTION"
+  },
+  "summary": {
+    "mismatch_count": 11,
+    "classification_counts": {
+      "EMPTY_HISTORY_ZERO_FALLBACK": 9,
+      "NONEMPTY_HISTORY_UNRECORDED": 2
+    },
+    "metric_context_presence_counts": {
+      "False": 11
+    },
+    "rule_group_binding_exists_counts": {
+      "True": 11
+    },
+    "rule_group_versions_for_rule": [
+      {
+        "rule_group_version_id": 1,
+        "rule_version_id": 3,
+        "group_code": "CUSTOMER_RULES",
+        "group_name": "Customer Level Rules",
+        "group_status": "ACTIVE"
+      }
+    ],
+    "next_step": "INSPECT_RUNTIME_METRIC_AND_GROUP_SELECTION"
+  },
+  "checks": {
+    "stored_metric_sql_execution": "NOT_RUN",
+    "database_writes": "NONE",
+    "note": "Catalog bindings show configured applicability, not which group the runtime selected for a no-match event."
+  },
+  "mismatches": [
+    {
+      "transaction_master_id": 1,
+      "timestamp": "2026-06-29 12:18:20",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "184500.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 2,
+      "timestamp": "2026-06-29 12:34:10",
+      "channel": "ATM",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "75000.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          2,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 3,
+      "timestamp": "2026-06-29 13:02:10",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "42000.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 4,
+      "timestamp": "2026-06-29 13:30:10",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "2500.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 125,
+      "timestamp": "2026-06-30 08:58:00",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "2200.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 117,
+      "timestamp": "2026-06-30 09:14:00",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "6200.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 121,
+      "timestamp": "2026-06-30 09:20:00",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "3900.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 128,
+      "timestamp": "2026-06-30 09:24:00",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "1800.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 123,
+      "timestamp": "2026-06-30 09:47:00",
+      "channel": "ATM",
+      "classification": "NONEMPTY_HISTORY_UNRECORDED",
+      "history_debit_count": 2,
+      "history_average_amount": "5000.00",
+      "threshold_amount": "15000.00",
+      "derived_current_amount": "47000.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          2,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 131,
+      "timestamp": "2026-06-30 10:02:00",
+      "channel": "POS",
+      "classification": "EMPTY_HISTORY_ZERO_FALLBACK",
+      "history_debit_count": 0,
+      "history_average_amount": "0",
+      "threshold_amount": "0",
+      "derived_current_amount": "5100.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    },
+    {
+      "transaction_master_id": 133,
+      "timestamp": "2026-06-30 23:18:00",
+      "channel": "POS",
+      "classification": "NONEMPTY_HISTORY_UNRECORDED",
+      "history_debit_count": 2,
+      "history_average_amount": "6500.00",
+      "threshold_amount": "19500.00",
+      "derived_current_amount": "48990.00",
+      "rule_would_fire_under_replay": true,
+      "recorded_rule_match": false,
+      "context_metric_key_present": false,
+      "context_drcr_indicator": null,
+      "context_drcr_amount_present": true,
+      "binding": {
+        "configured_binding_count": 3,
+        "configured_group_version_ids": [
+          1,
+          8,
+          3
+        ],
+        "rule_group_version_ids_for_rule": [
+          1
+        ],
+        "rule_group_binding_exists_for_channel": true
+      }
+    }
+  ]
+}

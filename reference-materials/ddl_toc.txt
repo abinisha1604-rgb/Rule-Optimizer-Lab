@@ -1,0 +1,1724 @@
+﻿;
+; Archive created at 2026-07-25 02:08:36
+;     dbname: boss_23_july
+;     TOC Entries: 1713
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.3 (Homebrew)
+;     Dumped by pg_dump version: 18.3 (Homebrew)
+;
+;
+; Selected TOC Entries:
+;
+7; 2615 451143 SCHEMA - efrm ganesh
+2; 3079 451062 EXTENSION - pg_trgm 
+6786; 0 0 COMMENT - EXTENSION pg_trgm 
+595; 1255 451144 FUNCTION efrm guard_security_audit_log() ganesh
+225; 1259 451145 TABLE efrm account_lockout ganesh
+226; 1259 451155 SEQUENCE efrm adverse_alert_seq ganesh
+227; 1259 451156 TABLE efrm adverse_alert ganesh
+228; 1259 451172 SEQUENCE efrm adverse_category_weight_seq ganesh
+229; 1259 451173 TABLE efrm adverse_category_weight ganesh
+230; 1259 451183 SEQUENCE efrm adverse_config_master_seq ganesh
+231; 1259 451184 TABLE efrm adverse_config_master ganesh
+232; 1259 451201 SEQUENCE efrm adverse_country_risk_seq ganesh
+233; 1259 451202 TABLE efrm adverse_country_risk ganesh
+234; 1259 451211 TABLE efrm adverse_integration_config ganesh
+235; 1259 451254 SEQUENCE efrm adverse_integration_config_id_seq ganesh
+6787; 0 0 SEQUENCE OWNED BY efrm adverse_integration_config_id_seq ganesh
+236; 1259 451255 SEQUENCE efrm adverse_match_seq ganesh
+237; 1259 451256 TABLE efrm adverse_match ganesh
+238; 1259 451275 SEQUENCE efrm adverse_recency_factor_seq ganesh
+239; 1259 451276 TABLE efrm adverse_recency_factor ganesh
+240; 1259 451286 SEQUENCE efrm adverse_request_seq ganesh
+241; 1259 451287 TABLE efrm adverse_request ganesh
+242; 1259 451305 SEQUENCE efrm adverse_result_seq ganesh
+243; 1259 451306 TABLE efrm adverse_result ganesh
+244; 1259 451319 SEQUENCE efrm adverse_risk_band_seq ganesh
+245; 1259 451320 TABLE efrm adverse_risk_band ganesh
+246; 1259 451337 SEQUENCE efrm adverse_severity_score_seq ganesh
+247; 1259 451338 TABLE efrm adverse_severity_score ganesh
+248; 1259 451348 SEQUENCE efrm adverse_source_weight_seq ganesh
+249; 1259 451349 TABLE efrm adverse_source_weight ganesh
+250; 1259 451359 SEQUENCE efrm aggregated_metric_seq ganesh
+251; 1259 451360 TABLE efrm aggregated_metric ganesh
+252; 1259 451373 TABLE efrm alembic_version ganesh
+253; 1259 451377 TABLE efrm alert_category_master ganesh
+254; 1259 451388 SEQUENCE efrm alert_category_master_id_seq ganesh
+6788; 0 0 SEQUENCE OWNED BY efrm alert_category_master_id_seq ganesh
+255; 1259 451389 TABLE efrm alert_count_boost_config ganesh
+256; 1259 451399 SEQUENCE efrm alert_count_boost_config_id_seq ganesh
+6789; 0 0 SEQUENCE OWNED BY efrm alert_count_boost_config_id_seq ganesh
+257; 1259 451400 TABLE efrm assignment_config ganesh
+6790; 0 0 COMMENT efrm COLUMN assignment_config.action_type ganesh
+6791; 0 0 COMMENT efrm COLUMN assignment_config.alert_type ganesh
+6792; 0 0 COMMENT efrm COLUMN assignment_config.priority ganesh
+6793; 0 0 COMMENT efrm COLUMN assignment_config.assign_role_code ganesh
+6794; 0 0 COMMENT efrm COLUMN assignment_config.is_active ganesh
+6795; 0 0 COMMENT efrm COLUMN assignment_config.notify ganesh
+6796; 0 0 COMMENT efrm COLUMN assignment_config.notification_template ganesh
+258; 1259 451414 TABLE efrm audit_trail ganesh
+259; 1259 451427 SEQUENCE efrm audit_trail_seq ganesh
+260; 1259 451428 TABLE efrm bulk_file_upload ganesh
+261; 1259 451445 SEQUENCE efrm bulk_file_upload_id_seq ganesh
+6797; 0 0 SEQUENCE OWNED BY efrm bulk_file_upload_id_seq ganesh
+262; 1259 451446 SEQUENCE efrm bulk_job_seq ganesh
+263; 1259 451447 TABLE efrm bulk_job ganesh
+264; 1259 451467 TABLE efrm capability_endpoint_map ganesh
+265; 1259 451483 TABLE efrm case_action_execution_log ganesh
+266; 1259 451495 SEQUENCE efrm case_action_execution_log_log_id_seq ganesh
+6798; 0 0 SEQUENCE OWNED BY efrm case_action_execution_log_log_id_seq ganesh
+267; 1259 451496 TABLE efrm case_action_execution_queue ganesh
+268; 1259 451521 SEQUENCE efrm case_action_execution_queue_execution_id_seq ganesh
+6799; 0 0 SEQUENCE OWNED BY efrm case_action_execution_queue_execution_id_seq ganesh
+269; 1259 451522 TABLE efrm case_action_master ganesh
+270; 1259 451543 SEQUENCE efrm case_action_master_action_id_seq ganesh
+6800; 0 0 SEQUENCE OWNED BY efrm case_action_master_action_id_seq ganesh
+271; 1259 451544 TABLE efrm case_alert_mapping ganesh
+272; 1259 451562 SEQUENCE efrm case_alert_mapping_id_seq ganesh
+6801; 0 0 SEQUENCE OWNED BY efrm case_alert_mapping_id_seq ganesh
+273; 1259 451563 TABLE efrm case_assignment ganesh
+274; 1259 451573 SEQUENCE efrm case_assignment_assignment_id_seq ganesh
+6802; 0 0 SEQUENCE OWNED BY efrm case_assignment_assignment_id_seq ganesh
+275; 1259 451574 SEQUENCE efrm case_assignment_config_config_id_seq ganesh
+6803; 0 0 SEQUENCE OWNED BY efrm case_assignment_config_config_id_seq ganesh
+276; 1259 451575 TABLE efrm case_config_master ganesh
+277; 1259 451589 SEQUENCE efrm case_config_master_id_seq ganesh
+6804; 0 0 SEQUENCE OWNED BY efrm case_config_master_id_seq ganesh
+278; 1259 451590 TABLE efrm case_decision_action_mapping ganesh
+279; 1259 451607 SEQUENCE efrm case_decision_action_mapping_mapping_id_seq ganesh
+6805; 0 0 SEQUENCE OWNED BY efrm case_decision_action_mapping_mapping_id_seq ganesh
+280; 1259 451608 TABLE efrm case_decision_master ganesh
+281; 1259 451644 SEQUENCE efrm case_decision_master_decision_id_seq ganesh
+6806; 0 0 SEQUENCE OWNED BY efrm case_decision_master_decision_id_seq ganesh
+282; 1259 451645 TABLE efrm case_events ganesh
+283; 1259 451652 SEQUENCE efrm case_events_event_id_seq ganesh
+6807; 0 0 SEQUENCE OWNED BY efrm case_events_event_id_seq ganesh
+284; 1259 451653 TABLE efrm case_evidence ganesh
+285; 1259 451666 SEQUENCE efrm case_evidence_evidence_id_seq ganesh
+6808; 0 0 SEQUENCE OWNED BY efrm case_evidence_evidence_id_seq ganesh
+286; 1259 451667 TABLE efrm case_master ganesh
+6809; 0 0 COMMENT efrm COLUMN case_master.sla_id ganesh
+6810; 0 0 COMMENT efrm COLUMN case_master.sla_response_due_at ganesh
+6811; 0 0 COMMENT efrm COLUMN case_master.sla_resolution_due_at ganesh
+6812; 0 0 COMMENT efrm COLUMN case_master.sla_status ganesh
+287; 1259 451696 TABLE efrm case_priority_master ganesh
+288; 1259 451706 SEQUENCE efrm case_priority_master_id_seq ganesh
+6813; 0 0 SEQUENCE OWNED BY efrm case_priority_master_id_seq ganesh
+289; 1259 451707 TABLE efrm case_recovery ganesh
+290; 1259 451712 SEQUENCE efrm case_recovery_recovery_id_seq ganesh
+6814; 0 0 SEQUENCE OWNED BY efrm case_recovery_recovery_id_seq ganesh
+291; 1259 451713 TABLE efrm case_score_breakdown ganesh
+292; 1259 451720 SEQUENCE efrm case_score_breakdown_id_seq ganesh
+6815; 0 0 SEQUENCE OWNED BY efrm case_score_breakdown_id_seq ganesh
+293; 1259 451721 TABLE efrm case_scoring_trace ganesh
+294; 1259 451730 SEQUENCE efrm case_scoring_trace_id_seq ganesh
+6816; 0 0 SEQUENCE OWNED BY efrm case_scoring_trace_id_seq ganesh
+295; 1259 451731 TABLE efrm case_sla_tracker ganesh
+6817; 0 0 COMMENT efrm COLUMN case_sla_tracker.case_id ganesh
+6818; 0 0 COMMENT efrm COLUMN case_sla_tracker.sla_stage ganesh
+6819; 0 0 COMMENT efrm COLUMN case_sla_tracker.due_at ganesh
+6820; 0 0 COMMENT efrm COLUMN case_sla_tracker.achieved_at ganesh
+6821; 0 0 COMMENT efrm COLUMN case_sla_tracker.breached ganesh
+6822; 0 0 COMMENT efrm COLUMN case_sla_tracker.breached_at ganesh
+6823; 0 0 COMMENT efrm COLUMN case_sla_tracker.created_at ganesh
+296; 1259 451742 SEQUENCE efrm case_sla_tracker_tracker_id_seq ganesh
+6824; 0 0 SEQUENCE OWNED BY efrm case_sla_tracker_tracker_id_seq ganesh
+297; 1259 451743 SEQUENCE efrm cases_case_id_seq ganesh
+6825; 0 0 SEQUENCE OWNED BY efrm cases_case_id_seq ganesh
+298; 1259 451744 TABLE efrm category_correlation_config ganesh
+299; 1259 451754 SEQUENCE efrm category_correlation_config_id_seq ganesh
+6826; 0 0 SEQUENCE OWNED BY efrm category_correlation_config_id_seq ganesh
+300; 1259 451755 TABLE efrm chatbot_audit_log ganesh
+301; 1259 451763 SEQUENCE efrm chatbot_audit_log_id_seq ganesh
+6827; 0 0 SEQUENCE OWNED BY efrm chatbot_audit_log_id_seq ganesh
+302; 1259 451764 TABLE efrm common_password_list ganesh
+303; 1259 451770 TABLE efrm critical_override_rules ganesh
+304; 1259 451780 SEQUENCE efrm critical_override_rules_id_seq ganesh
+6828; 0 0 SEQUENCE OWNED BY efrm critical_override_rules_id_seq ganesh
+305; 1259 451781 TABLE efrm device_alert ganesh
+306; 1259 451798 SEQUENCE efrm device_alert_id_seq ganesh
+6829; 0 0 SEQUENCE OWNED BY efrm device_alert_id_seq ganesh
+307; 1259 451799 TABLE efrm device_master ganesh
+308; 1259 451813 SEQUENCE efrm device_master_id_seq ganesh
+6830; 0 0 SEQUENCE OWNED BY efrm device_master_id_seq ganesh
+309; 1259 451814 TABLE efrm device_match ganesh
+310; 1259 451828 SEQUENCE efrm device_match_id_seq ganesh
+6831; 0 0 SEQUENCE OWNED BY efrm device_match_id_seq ganesh
+311; 1259 451829 TABLE efrm device_request ganesh
+312; 1259 451845 SEQUENCE efrm device_request_id_seq ganesh
+6832; 0 0 SEQUENCE OWNED BY efrm device_request_id_seq ganesh
+313; 1259 451846 TABLE efrm device_result ganesh
+314; 1259 451859 SEQUENCE efrm device_result_id_seq ganesh
+6833; 0 0 SEQUENCE OWNED BY efrm device_result_id_seq ganesh
+315; 1259 451860 TABLE efrm efrm_service_config ganesh
+316; 1259 451879 SEQUENCE efrm efrm_service_config_id_seq ganesh
+6834; 0 0 SEQUENCE OWNED BY efrm efrm_service_config_id_seq ganesh
+317; 1259 451880 TABLE efrm engine_attribute_def ganesh
+318; 1259 451890 SEQUENCE efrm engine_attribute_def_id_seq ganesh
+6835; 0 0 SEQUENCE OWNED BY efrm engine_attribute_def_id_seq ganesh
+319; 1259 451891 SEQUENCE efrm engine_flink_map_seq ganesh
+320; 1259 451892 TABLE efrm engine_flink_map ganesh
+321; 1259 451907 SEQUENCE efrm entity_definition_seq ganesh
+322; 1259 451908 TABLE efrm entity_definition ganesh
+323; 1259 451922 TABLE efrm entity_device_map ganesh
+6836; 0 0 COMMENT efrm COLUMN entity_device_map.entity_id ganesh
+6837; 0 0 COMMENT efrm COLUMN entity_device_map.device_fingerprint ganesh
+6838; 0 0 COMMENT efrm COLUMN entity_device_map.channel ganesh
+6839; 0 0 COMMENT efrm COLUMN entity_device_map.source_system ganesh
+6840; 0 0 COMMENT efrm COLUMN entity_device_map.is_active ganesh
+6841; 0 0 COMMENT efrm COLUMN entity_device_map.created_at ganesh
+6842; 0 0 COMMENT efrm COLUMN entity_device_map.updated_at ganesh
+324; 1259 451936 SEQUENCE efrm entity_device_map_entity_device_id_seq ganesh
+6843; 0 0 SEQUENCE OWNED BY efrm entity_device_map_entity_device_id_seq ganesh
+325; 1259 451937 TABLE efrm entity_graph_cluster_nodes ganesh
+326; 1259 451946 SEQUENCE efrm entity_graph_cluster_nodes_id_seq ganesh
+6844; 0 0 SEQUENCE OWNED BY efrm entity_graph_cluster_nodes_id_seq ganesh
+327; 1259 451947 TABLE efrm entity_graph_clusters ganesh
+328; 1259 451972 SEQUENCE efrm entity_graph_clusters_cluster_id_seq ganesh
+6845; 0 0 SEQUENCE OWNED BY efrm entity_graph_clusters_cluster_id_seq ganesh
+329; 1259 451973 TABLE efrm entity_graph_edges ganesh
+330; 1259 451987 SEQUENCE efrm entity_graph_edges_edge_id_seq ganesh
+6846; 0 0 SEQUENCE OWNED BY efrm entity_graph_edges_edge_id_seq ganesh
+331; 1259 451988 TABLE efrm entity_graph_evidence ganesh
+332; 1259 452002 SEQUENCE efrm entity_graph_evidence_id_seq ganesh
+6847; 0 0 SEQUENCE OWNED BY efrm entity_graph_evidence_id_seq ganesh
+333; 1259 452003 TABLE efrm entity_graph_nodes ganesh
+334; 1259 452014 SEQUENCE efrm entity_graph_nodes_node_id_seq ganesh
+6848; 0 0 SEQUENCE OWNED BY efrm entity_graph_nodes_node_id_seq ganesh
+335; 1259 452015 TABLE efrm entity_graph_refresh_checkpoint ganesh
+336; 1259 452029 SEQUENCE efrm entity_graph_refresh_checkpoint_id_seq ganesh
+6849; 0 0 SEQUENCE OWNED BY efrm entity_graph_refresh_checkpoint_id_seq ganesh
+337; 1259 452030 TABLE efrm entity_graph_refresh_config ganesh
+338; 1259 452050 SEQUENCE efrm entity_graph_refresh_config_id_seq ganesh
+6850; 0 0 SEQUENCE OWNED BY efrm entity_graph_refresh_config_id_seq ganesh
+339; 1259 452051 TABLE efrm entity_graph_view_config ganesh
+340; 1259 452075 SEQUENCE efrm entity_graph_view_config_id_seq ganesh
+6851; 0 0 SEQUENCE OWNED BY efrm entity_graph_view_config_id_seq ganesh
+341; 1259 452076 TABLE efrm entity_master ganesh
+6852; 0 0 COMMENT efrm COLUMN entity_master.entity_id ganesh
+6853; 0 0 COMMENT efrm COLUMN entity_master.entity_type ganesh
+6854; 0 0 COMMENT efrm COLUMN entity_master.entity_group ganesh
+6855; 0 0 COMMENT efrm COLUMN entity_master.institution_id ganesh
+6856; 0 0 COMMENT efrm COLUMN entity_master.source_system ganesh
+6857; 0 0 COMMENT efrm COLUMN entity_master.channel ganesh
+6858; 0 0 COMMENT efrm COLUMN entity_master.external_entity_id ganesh
+6859; 0 0 COMMENT efrm COLUMN entity_master.name ganesh
+6860; 0 0 COMMENT efrm COLUMN entity_master.normalized_name ganesh
+6861; 0 0 COMMENT efrm COLUMN entity_master.date_of_birth ganesh
+6862; 0 0 COMMENT efrm COLUMN entity_master.gender ganesh
+6863; 0 0 COMMENT efrm COLUMN entity_master.registration_number ganesh
+6864; 0 0 COMMENT efrm COLUMN entity_master.incorporation_date ganesh
+6865; 0 0 COMMENT efrm COLUMN entity_master.country ganesh
+6866; 0 0 COMMENT efrm COLUMN entity_master.address ganesh
+6867; 0 0 COMMENT efrm COLUMN entity_master.email ganesh
+6868; 0 0 COMMENT efrm COLUMN entity_master.phone_no ganesh
+6869; 0 0 COMMENT efrm COLUMN entity_master.metadata ganesh
+6870; 0 0 COMMENT efrm COLUMN entity_master.last_screened_at ganesh
+6871; 0 0 COMMENT efrm COLUMN entity_master.screening_status ganesh
+6872; 0 0 COMMENT efrm COLUMN entity_master.is_active ganesh
+6873; 0 0 COMMENT efrm COLUMN entity_master.created_at ganesh
+6874; 0 0 COMMENT efrm COLUMN entity_master.created_by ganesh
+6875; 0 0 COMMENT efrm COLUMN entity_master.updated_at ganesh
+6876; 0 0 COMMENT efrm COLUMN entity_master.updated_by ganesh
+6877; 0 0 COMMENT efrm COLUMN entity_master.last_device_location ganesh
+6878; 0 0 COMMENT efrm COLUMN entity_master.last_transaction_details ganesh
+342; 1259 452096 SEQUENCE efrm entity_master_entity_id_seq ganesh
+6879; 0 0 SEQUENCE OWNED BY efrm entity_master_entity_id_seq ganesh
+343; 1259 452097 TABLE efrm entity_relation_map ganesh
+6880; 0 0 COMMENT efrm COLUMN entity_relation_map.entity_id ganesh
+344; 1259 452114 SEQUENCE efrm entity_relation_map_entity_relation_id_seq ganesh
+6881; 0 0 SEQUENCE OWNED BY efrm entity_relation_map_entity_relation_id_seq ganesh
+345; 1259 452115 TABLE efrm entity_risk_aggregate ganesh
+346; 1259 452140 TABLE efrm entity_risk_config ganesh
+347; 1259 452150 SEQUENCE efrm entity_risk_config_id_seq ganesh
+6882; 0 0 SEQUENCE OWNED BY efrm entity_risk_config_id_seq ganesh
+348; 1259 452151 TABLE efrm entity_risk_factor_breakdown ganesh
+349; 1259 452169 SEQUENCE efrm entity_risk_factor_breakdown_id_seq ganesh
+6883; 0 0 SEQUENCE OWNED BY efrm entity_risk_factor_breakdown_id_seq ganesh
+350; 1259 452170 TABLE efrm entity_risk_history ganesh
+351; 1259 452180 SEQUENCE efrm entity_risk_history_id_seq ganesh
+6884; 0 0 SEQUENCE OWNED BY efrm entity_risk_history_id_seq ganesh
+352; 1259 452181 TABLE efrm entity_risk_profile ganesh
+353; 1259 452201 SEQUENCE efrm entity_risk_profile_id_seq ganesh
+6885; 0 0 SEQUENCE OWNED BY efrm entity_risk_profile_id_seq ganesh
+354; 1259 452202 TABLE efrm enum_value ganesh
+355; 1259 452210 SEQUENCE efrm enum_value_id_seq ganesh
+6886; 0 0 SEQUENCE OWNED BY efrm enum_value_id_seq ganesh
+356; 1259 452211 TABLE efrm facts_definition ganesh
+357; 1259 452220 SEQUENCE efrm facts_definition_id_seq ganesh
+6887; 0 0 SEQUENCE OWNED BY efrm facts_definition_id_seq ganesh
+358; 1259 452221 TABLE efrm graph_dimension_config ganesh
+359; 1259 452251 SEQUENCE efrm graph_dimension_config_id_seq ganesh
+6888; 0 0 SEQUENCE OWNED BY efrm graph_dimension_config_id_seq ganesh
+360; 1259 452252 TABLE efrm graph_dimension_subtype_config ganesh
+361; 1259 452270 SEQUENCE efrm graph_dimension_subtype_config_id_seq ganesh
+6889; 0 0 SEQUENCE OWNED BY efrm graph_dimension_subtype_config_id_seq ganesh
+362; 1259 452271 TABLE efrm institution ganesh
+363; 1259 452286 TABLE efrm institution_type ganesh
+364; 1259 452294 SEQUENCE efrm institution_type_id_seq ganesh
+6890; 0 0 SEQUENCE OWNED BY efrm institution_type_id_seq ganesh
+365; 1259 452295 TABLE efrm integration_endpoint_config ganesh
+366; 1259 452320 SEQUENCE efrm integration_endpoint_config_endpoint_config_id_seq ganesh
+6891; 0 0 SEQUENCE OWNED BY efrm integration_endpoint_config_endpoint_config_id_seq ganesh
+367; 1259 452321 TABLE efrm list_entity ganesh
+368; 1259 452330 TABLE efrm list_entity_alias ganesh
+369; 1259 452339 SEQUENCE efrm list_entity_alias_id_seq ganesh
+6892; 0 0 SEQUENCE OWNED BY efrm list_entity_alias_id_seq ganesh
+370; 1259 452340 SEQUENCE efrm list_entity_id_seq ganesh
+6893; 0 0 SEQUENCE OWNED BY efrm list_entity_id_seq ganesh
+371; 1259 452341 TABLE efrm list_normalized_address ganesh
+372; 1259 452351 SEQUENCE efrm list_normalized_address_id_seq ganesh
+6894; 0 0 SEQUENCE OWNED BY efrm list_normalized_address_id_seq ganesh
+373; 1259 452352 TABLE efrm list_source ganesh
+374; 1259 452363 SEQUENCE efrm list_source_id_seq ganesh
+6895; 0 0 SEQUENCE OWNED BY efrm list_source_id_seq ganesh
+375; 1259 452364 TABLE efrm list_version ganesh
+376; 1259 452375 SEQUENCE efrm list_version_id_seq ganesh
+6896; 0 0 SEQUENCE OWNED BY efrm list_version_id_seq ganesh
+377; 1259 452376 TABLE efrm login_attempt ganesh
+378; 1259 452386 TABLE efrm menu_master ganesh
+379; 1259 452401 SEQUENCE efrm metric_definition_seq ganesh
+380; 1259 452402 TABLE efrm metric_definition ganesh
+381; 1259 452425 TABLE efrm ml_feature_definition ganesh
+382; 1259 452444 SEQUENCE efrm ml_feature_definition_feature_id_seq ganesh
+6897; 0 0 SEQUENCE OWNED BY efrm ml_feature_definition_feature_id_seq ganesh
+383; 1259 452445 TABLE efrm ml_feature_definition_metadata ganesh
+384; 1259 452455 SEQUENCE efrm ml_feature_definition_metadata_seq ganesh
+6898; 0 0 SEQUENCE OWNED BY efrm ml_feature_definition_metadata_seq ganesh
+385; 1259 452456 TABLE efrm ml_feature_set ganesh
+386; 1259 452470 SEQUENCE efrm ml_feature_set_feature_set_id_seq ganesh
+6899; 0 0 SEQUENCE OWNED BY efrm ml_feature_set_feature_set_id_seq ganesh
+387; 1259 452471 TABLE efrm ml_feature_set_version ganesh
+388; 1259 452484 SEQUENCE efrm ml_feature_set_version_feature_set_version_id_seq ganesh
+6900; 0 0 SEQUENCE OWNED BY efrm ml_feature_set_version_feature_set_version_id_seq ganesh
+389; 1259 452485 TABLE efrm ml_feedback ganesh
+390; 1259 452494 SEQUENCE efrm ml_feedback_feedback_id_seq ganesh
+6901; 0 0 SEQUENCE OWNED BY efrm ml_feedback_feedback_id_seq ganesh
+391; 1259 452495 TABLE efrm ml_inference_result ganesh
+392; 1259 452507 SEQUENCE efrm ml_inference_result_inference_id_seq ganesh
+6902; 0 0 SEQUENCE OWNED BY efrm ml_inference_result_inference_id_seq ganesh
+393; 1259 452508 TABLE efrm ml_inference_shap_local ganesh
+394; 1259 452520 SEQUENCE efrm ml_inference_shap_local_seq ganesh
+6903; 0 0 SEQUENCE OWNED BY efrm ml_inference_shap_local_seq ganesh
+395; 1259 452521 TABLE efrm ml_model_drift_summary ganesh
+396; 1259 452528 SEQUENCE efrm ml_model_drift_summary_model_drift_summary_id_seq ganesh
+6904; 0 0 SEQUENCE OWNED BY efrm ml_model_drift_summary_model_drift_summary_id_seq ganesh
+397; 1259 452529 TABLE efrm ml_model_explainability_profile ganesh
+398; 1259 452550 SEQUENCE efrm ml_model_explainability_profile_explainability_profile_id_seq ganesh
+399; 1259 452551 TABLE efrm ml_model_feature_drift ganesh
+400; 1259 452558 SEQUENCE efrm ml_model_feature_drift_model_feature_drift_id_seq ganesh
+6905; 0 0 SEQUENCE OWNED BY efrm ml_model_feature_drift_model_feature_drift_id_seq ganesh
+401; 1259 452559 TABLE efrm ml_model_governance ganesh
+402; 1259 452568 SEQUENCE efrm ml_model_governance_model_governance_id_seq ganesh
+6906; 0 0 SEQUENCE OWNED BY efrm ml_model_governance_model_governance_id_seq ganesh
+403; 1259 452569 TABLE efrm ml_model_job ganesh
+404; 1259 452585 SEQUENCE efrm ml_model_job_seq ganesh
+6907; 0 0 SEQUENCE OWNED BY efrm ml_model_job_seq ganesh
+405; 1259 452586 TABLE efrm ml_model_performance_daily ganesh
+406; 1259 452592 SEQUENCE efrm ml_model_performance_daily_model_performance_daily_id_seq ganesh
+6908; 0 0 SEQUENCE OWNED BY efrm ml_model_performance_daily_model_performance_daily_id_seq ganesh
+407; 1259 452593 TABLE efrm ml_model_registry ganesh
+408; 1259 452607 SEQUENCE efrm ml_model_registry_model_id_seq ganesh
+6909; 0 0 SEQUENCE OWNED BY efrm ml_model_registry_model_id_seq ganesh
+409; 1259 452608 TABLE efrm ml_model_runtime_metrics ganesh
+410; 1259 452615 SEQUENCE efrm ml_model_runtime_metrics_model_runtime_metrics_id_seq ganesh
+6910; 0 0 SEQUENCE OWNED BY efrm ml_model_runtime_metrics_model_runtime_metrics_id_seq ganesh
+411; 1259 452616 TABLE efrm ml_model_shap_global ganesh
+412; 1259 452623 SEQUENCE efrm ml_model_shap_global_model_shap_global_id_seq ganesh
+6911; 0 0 SEQUENCE OWNED BY efrm ml_model_shap_global_model_shap_global_id_seq ganesh
+413; 1259 452624 TABLE efrm ml_model_simulation_sample ganesh
+414; 1259 452643 SEQUENCE efrm ml_model_simulation_sample_simulation_sample_id_seq ganesh
+415; 1259 452644 TABLE efrm ml_model_version ganesh
+416; 1259 452658 SEQUENCE efrm ml_model_version_model_version_id_seq ganesh
+6912; 0 0 SEQUENCE OWNED BY efrm ml_model_version_model_version_id_seq ganesh
+417; 1259 452659 TABLE efrm ml_score_blending_policy ganesh
+418; 1259 452666 SEQUENCE efrm ml_score_blending_policy_policy_id_seq ganesh
+6913; 0 0 SEQUENCE OWNED BY efrm ml_score_blending_policy_policy_id_seq ganesh
+419; 1259 452667 TABLE efrm ml_training_dataset_profile ganesh
+420; 1259 452679 SEQUENCE efrm ml_training_dataset_profile_model_training_dataset_profile__seq ganesh
+6914; 0 0 SEQUENCE OWNED BY efrm ml_training_dataset_profile_model_training_dataset_profile__seq ganesh
+421; 1259 452680 TABLE efrm notification_queue ganesh
+6915; 0 0 COMMENT efrm COLUMN notification_queue.event_code ganesh
+6916; 0 0 COMMENT efrm COLUMN notification_queue.channel ganesh
+6917; 0 0 COMMENT efrm COLUMN notification_queue.user_id ganesh
+6918; 0 0 COMMENT efrm COLUMN notification_queue.message ganesh
+6919; 0 0 COMMENT efrm COLUMN notification_queue.status ganesh
+422; 1259 452688 SEQUENCE efrm notification_queue_notification_id_seq ganesh
+6920; 0 0 SEQUENCE OWNED BY efrm notification_queue_notification_id_seq ganesh
+423; 1259 452689 TABLE efrm notification_template ganesh
+6921; 0 0 COMMENT efrm COLUMN notification_template.event_code ganesh
+6922; 0 0 COMMENT efrm COLUMN notification_template.channel ganesh
+6923; 0 0 COMMENT efrm COLUMN notification_template.template_body ganesh
+6924; 0 0 COMMENT efrm COLUMN notification_template.is_active ganesh
+424; 1259 452699 SEQUENCE efrm notification_template_template_id_seq ganesh
+6925; 0 0 SEQUENCE OWNED BY efrm notification_template_template_id_seq ganesh
+425; 1259 452700 TABLE efrm operator_value ganesh
+426; 1259 452707 SEQUENCE efrm operator_id_seq ganesh
+6926; 0 0 SEQUENCE OWNED BY efrm operator_id_seq ganesh
+427; 1259 452708 TABLE efrm password_expiry_notice ganesh
+428; 1259 452717 TABLE efrm password_policy_rule ganesh
+429; 1259 452729 TABLE efrm password_reset_token ganesh
+430; 1259 452742 TABLE efrm product_master ganesh
+431; 1259 452751 TABLE efrm profile_capability ganesh
+432; 1259 452761 TABLE efrm profile_master ganesh
+433; 1259 452783 TABLE efrm reference_data ganesh
+434; 1259 452802 SEQUENCE efrm reference_data_ref_id_seq ganesh
+6927; 0 0 SEQUENCE OWNED BY efrm reference_data_ref_id_seq ganesh
+435; 1259 452803 TABLE efrm refresh_token ganesh
+436; 1259 452815 TABLE efrm risk_event_log ganesh
+437; 1259 452831 SEQUENCE efrm risk_event_log_id_seq ganesh
+6928; 0 0 SEQUENCE OWNED BY efrm risk_event_log_id_seq ganesh
+438; 1259 452832 TABLE efrm risk_rating_config ganesh
+439; 1259 452843 SEQUENCE efrm risk_rating_config_id_seq ganesh
+6929; 0 0 SEQUENCE OWNED BY efrm risk_rating_config_id_seq ganesh
+440; 1259 452844 TABLE efrm risk_rating_decay_policy_config ganesh
+441; 1259 452854 SEQUENCE efrm risk_rating_decay_policy_config_id_seq ganesh
+6930; 0 0 SEQUENCE OWNED BY efrm risk_rating_decay_policy_config_id_seq ganesh
+442; 1259 452855 TABLE efrm risk_rating_decision_impact_config ganesh
+443; 1259 452868 SEQUENCE efrm risk_rating_decision_impact_config_id_seq ganesh
+6931; 0 0 SEQUENCE OWNED BY efrm risk_rating_decision_impact_config_id_seq ganesh
+444; 1259 452869 TABLE efrm risk_rating_domain_override_config ganesh
+445; 1259 452884 SEQUENCE efrm risk_rating_domain_override_config_id_seq ganesh
+6932; 0 0 SEQUENCE OWNED BY efrm risk_rating_domain_override_config_id_seq ganesh
+446; 1259 452885 TABLE efrm risk_rating_event_type_config ganesh
+447; 1259 452899 SEQUENCE efrm risk_rating_event_type_config_id_seq ganesh
+6933; 0 0 SEQUENCE OWNED BY efrm risk_rating_event_type_config_id_seq ganesh
+448; 1259 452900 TABLE efrm risk_rating_override_policy ganesh
+449; 1259 452923 SEQUENCE efrm risk_rating_override_policy_id_seq ganesh
+6934; 0 0 SEQUENCE OWNED BY efrm risk_rating_override_policy_id_seq ganesh
+450; 1259 452924 TABLE efrm risk_rating_relationship_risk_config ganesh
+451; 1259 452941 SEQUENCE efrm risk_rating_relationship_risk_config_id_seq ganesh
+6935; 0 0 SEQUENCE OWNED BY efrm risk_rating_relationship_risk_config_id_seq ganesh
+452; 1259 452942 TABLE efrm risk_rating_service_weight_config ganesh
+453; 1259 452957 SEQUENCE efrm risk_rating_service_weight_config_id_seq ganesh
+6936; 0 0 SEQUENCE OWNED BY efrm risk_rating_service_weight_config_id_seq ganesh
+454; 1259 452958 TABLE efrm risk_rating_tier_config ganesh
+455; 1259 452969 SEQUENCE efrm risk_rating_tier_config_id_seq ganesh
+6937; 0 0 SEQUENCE OWNED BY efrm risk_rating_tier_config_id_seq ganesh
+456; 1259 452970 TABLE efrm risk_rating_weight_config ganesh
+457; 1259 452981 SEQUENCE efrm risk_rating_weight_config_id_seq ganesh
+6938; 0 0 SEQUENCE OWNED BY efrm risk_rating_weight_config_id_seq ganesh
+458; 1259 452982 TABLE efrm risk_recalculation_job ganesh
+459; 1259 453000 SEQUENCE efrm risk_recalculation_job_id_seq ganesh
+6939; 0 0 SEQUENCE OWNED BY efrm risk_recalculation_job_id_seq ganesh
+460; 1259 453001 TABLE efrm rule_decision_policy ganesh
+461; 1259 453026 SEQUENCE efrm rule_decision_policy_id_seq ganesh
+6940; 0 0 SEQUENCE OWNED BY efrm rule_decision_policy_id_seq ganesh
+462; 1259 453027 TABLE efrm rule_decision_upgrade ganesh
+463; 1259 453042 TABLE efrm rule_drl_context ganesh
+464; 1259 453058 SEQUENCE efrm rule_drl_context_id_seq ganesh
+6941; 0 0 SEQUENCE OWNED BY efrm rule_drl_context_id_seq ganesh
+465; 1259 453059 TABLE efrm rule_group_master ganesh
+466; 1259 453071 SEQUENCE efrm rule_group_master_id_seq ganesh
+6942; 0 0 SEQUENCE OWNED BY efrm rule_group_master_id_seq ganesh
+467; 1259 453072 TABLE efrm rule_group_source_binding ganesh
+468; 1259 453088 SEQUENCE efrm rule_group_source_binding_id_seq ganesh
+6943; 0 0 SEQUENCE OWNED BY efrm rule_group_source_binding_id_seq ganesh
+469; 1259 453089 TABLE efrm rule_group_version ganesh
+470; 1259 453100 SEQUENCE efrm rule_group_version_id_seq ganesh
+6944; 0 0 SEQUENCE OWNED BY efrm rule_group_version_id_seq ganesh
+471; 1259 453101 TABLE efrm rule_group_version_map ganesh
+472; 1259 453112 SEQUENCE efrm rule_group_version_map_id_seq ganesh
+6945; 0 0 SEQUENCE OWNED BY efrm rule_group_version_map_id_seq ganesh
+473; 1259 453113 TABLE efrm rule_master ganesh
+474; 1259 453126 SEQUENCE efrm rule_master_id_seq ganesh
+6946; 0 0 SEQUENCE OWNED BY efrm rule_master_id_seq ganesh
+475; 1259 453127 TABLE efrm rule_master_tag ganesh
+476; 1259 453136 SEQUENCE efrm rule_master_tag_id_seq ganesh
+6947; 0 0 SEQUENCE OWNED BY efrm rule_master_tag_id_seq ganesh
+477; 1259 453137 SEQUENCE efrm rule_metric_dependency_seq ganesh
+478; 1259 453138 TABLE efrm rule_metric_dependency ganesh
+479; 1259 453149 SEQUENCE efrm rule_required_data_seq ganesh
+480; 1259 453150 TABLE efrm rule_required_data ganesh
+481; 1259 453160 TABLE efrm rule_version ganesh
+482; 1259 453185 SEQUENCE efrm rule_version_id_seq ganesh
+6948; 0 0 SEQUENCE OWNED BY efrm rule_version_id_seq ganesh
+483; 1259 453186 TABLE efrm rule_version_old ganesh
+484; 1259 453191 TABLE efrm rule_version_old1 ganesh
+485; 1259 453196 TABLE efrm ruleengine_alert_old ganesh
+486; 1259 453201 TABLE efrm ruleengine_bulk_job ganesh
+487; 1259 453225 SEQUENCE efrm ruleengine_bulk_job_id_seq ganesh
+6949; 0 0 SEQUENCE OWNED BY efrm ruleengine_bulk_job_id_seq ganesh
+488; 1259 453226 TABLE efrm ruleengine_bulk_job_item ganesh
+489; 1259 453238 SEQUENCE efrm ruleengine_bulk_job_item_id_seq ganesh
+6950; 0 0 SEQUENCE OWNED BY efrm ruleengine_bulk_job_item_id_seq ganesh
+490; 1259 453239 TABLE efrm ruleengine_bulk_job_summary ganesh
+491; 1259 453261 SEQUENCE efrm ruleengine_bulk_job_summary_id_seq ganesh
+6951; 0 0 SEQUENCE OWNED BY efrm ruleengine_bulk_job_summary_id_seq ganesh
+492; 1259 453262 SEQUENCE efrm ruleengine_decision_upgrade_id_seq ganesh
+6952; 0 0 SEQUENCE OWNED BY efrm ruleengine_decision_upgrade_id_seq ganesh
+493; 1259 453263 TABLE efrm ruleengine_match_old ganesh
+494; 1259 453266 TABLE efrm screening_alert ganesh
+495; 1259 453280 SEQUENCE efrm screening_alert_id_seq ganesh
+6953; 0 0 SEQUENCE OWNED BY efrm screening_alert_id_seq ganesh
+496; 1259 453281 TABLE efrm screening_bulk_job ganesh
+497; 1259 453303 SEQUENCE efrm screening_bulk_job_id_seq ganesh
+6954; 0 0 SEQUENCE OWNED BY efrm screening_bulk_job_id_seq ganesh
+498; 1259 453304 TABLE efrm screening_bulk_job_item ganesh
+499; 1259 453316 SEQUENCE efrm screening_bulk_job_item_id_seq ganesh
+6955; 0 0 SEQUENCE OWNED BY efrm screening_bulk_job_item_id_seq ganesh
+500; 1259 453317 TABLE efrm screening_bulk_job_summary ganesh
+501; 1259 453336 SEQUENCE efrm screening_bulk_job_summary_id_seq ganesh
+6956; 0 0 SEQUENCE OWNED BY efrm screening_bulk_job_summary_id_seq ganesh
+502; 1259 453337 TABLE efrm screening_config_master ganesh
+503; 1259 453352 SEQUENCE efrm screening_config_master_id_seq ganesh
+6957; 0 0 SEQUENCE OWNED BY efrm screening_config_master_id_seq ganesh
+504; 1259 453353 SEQUENCE efrm screening_config_seq ganesh
+505; 1259 453354 TABLE efrm screening_decision_threshold ganesh
+506; 1259 453383 SEQUENCE efrm screening_decision_threshold_id_seq ganesh
+6958; 0 0 SEQUENCE OWNED BY efrm screening_decision_threshold_id_seq ganesh
+507; 1259 453384 TABLE efrm screening_entity ganesh
+6959; 0 0 COMMENT efrm COLUMN screening_entity.is_primary ganesh
+508; 1259 453398 TABLE efrm screening_entity_field ganesh
+509; 1259 453416 SEQUENCE efrm screening_entity_field_field_id_seq ganesh
+6960; 0 0 SEQUENCE OWNED BY efrm screening_entity_field_field_id_seq ganesh
+510; 1259 453417 SEQUENCE efrm screening_entity_id_seq ganesh
+6961; 0 0 SEQUENCE OWNED BY efrm screening_entity_id_seq ganesh
+511; 1259 453418 TABLE efrm screening_entity_relation ganesh
+512; 1259 453434 SEQUENCE efrm screening_entity_relation_relation_id_seq ganesh
+6962; 0 0 SEQUENCE OWNED BY efrm screening_entity_relation_relation_id_seq ganesh
+513; 1259 453435 TABLE efrm screening_field_config ganesh
+514; 1259 453455 SEQUENCE efrm screening_field_config_id_seq ganesh
+6963; 0 0 SEQUENCE OWNED BY efrm screening_field_config_id_seq ganesh
+515; 1259 453456 TABLE efrm screening_group_config ganesh
+516; 1259 453472 SEQUENCE efrm screening_group_config_id_seq ganesh
+6964; 0 0 SEQUENCE OWNED BY efrm screening_group_config_id_seq ganesh
+517; 1259 453473 TABLE efrm screening_identifier_config ganesh
+518; 1259 453492 SEQUENCE efrm screening_identifier_config_id_seq ganesh
+6965; 0 0 SEQUENCE OWNED BY efrm screening_identifier_config_id_seq ganesh
+519; 1259 453493 TABLE efrm screening_match ganesh
+520; 1259 453506 SEQUENCE efrm screening_match_id_seq ganesh
+6966; 0 0 SEQUENCE OWNED BY efrm screening_match_id_seq ganesh
+521; 1259 453507 TABLE efrm screening_request ganesh
+522; 1259 453519 SEQUENCE efrm screening_request_id_seq ganesh
+6967; 0 0 SEQUENCE OWNED BY efrm screening_request_id_seq ganesh
+523; 1259 453520 TABLE efrm screening_result ganesh
+6968; 0 0 COMMENT efrm COLUMN screening_result.request_type ganesh
+524; 1259 453534 SEQUENCE efrm screening_result_id_seq ganesh
+6969; 0 0 SEQUENCE OWNED BY efrm screening_result_id_seq ganesh
+525; 1259 453535 TABLE efrm screening_risk_band ganesh
+526; 1259 453551 SEQUENCE efrm screening_risk_band_id_seq ganesh
+6970; 0 0 SEQUENCE OWNED BY efrm screening_risk_band_id_seq ganesh
+527; 1259 453552 TABLE efrm screening_source_config ganesh
+528; 1259 453570 SEQUENCE efrm screening_source_config_id_seq ganesh
+6971; 0 0 SEQUENCE OWNED BY efrm screening_source_config_id_seq ganesh
+529; 1259 453571 TABLE efrm security_audit_log ganesh
+530; 1259 453589 TABLE efrm security_capability ganesh
+531; 1259 453607 TABLE efrm security_check ganesh
+532; 1259 453615 TABLE efrm security_notification ganesh
+533; 1259 453626 TABLE efrm service_client ganesh
+534; 1259 453639 TABLE efrm service_token_jti ganesh
+535; 1259 453647 TABLE efrm sla_escalation ganesh
+6972; 0 0 COMMENT efrm COLUMN sla_escalation.sla_id ganesh
+6973; 0 0 COMMENT efrm COLUMN sla_escalation.escalation_level ganesh
+6974; 0 0 COMMENT efrm COLUMN sla_escalation.escalation_after_minutes ganesh
+6975; 0 0 COMMENT efrm COLUMN sla_escalation.escalate_to_role ganesh
+6976; 0 0 COMMENT efrm COLUMN sla_escalation.notify ganesh
+6977; 0 0 COMMENT efrm COLUMN sla_escalation.notification_template ganesh
+6978; 0 0 COMMENT efrm COLUMN sla_escalation.is_active ganesh
+536; 1259 453659 SEQUENCE efrm sla_escalation_escalation_id_seq ganesh
+6979; 0 0 SEQUENCE OWNED BY efrm sla_escalation_escalation_id_seq ganesh
+537; 1259 453660 TABLE efrm sla_policy ganesh
+6980; 0 0 COMMENT efrm COLUMN sla_policy.action_type ganesh
+6981; 0 0 COMMENT efrm COLUMN sla_policy.alert_type ganesh
+6982; 0 0 COMMENT efrm COLUMN sla_policy.priority ganesh
+6983; 0 0 COMMENT efrm COLUMN sla_policy.sla_name ganesh
+6984; 0 0 COMMENT efrm COLUMN sla_policy.response_time_minutes ganesh
+6985; 0 0 COMMENT efrm COLUMN sla_policy.resolution_time_minutes ganesh
+6986; 0 0 COMMENT efrm COLUMN sla_policy.business_hours_only ganesh
+6987; 0 0 COMMENT efrm COLUMN sla_policy.escalation_required ganesh
+6988; 0 0 COMMENT efrm COLUMN sla_policy.is_active ganesh
+538; 1259 453678 SEQUENCE efrm sla_policy_sla_id_seq ganesh
+6989; 0 0 SEQUENCE OWNED BY efrm sla_policy_sla_id_seq ganesh
+539; 1259 453679 TABLE efrm source_attribute_def ganesh
+540; 1259 453690 SEQUENCE efrm source_attribute_def_id_seq ganesh
+6990; 0 0 SEQUENCE OWNED BY efrm source_attribute_def_id_seq ganesh
+541; 1259 453691 TABLE efrm source_column_mapping ganesh
+542; 1259 453707 SEQUENCE efrm source_column_mapping_mapping_id_seq ganesh
+6991; 0 0 SEQUENCE OWNED BY efrm source_column_mapping_mapping_id_seq ganesh
+543; 1259 453708 TABLE efrm source_config ganesh
+544; 1259 453724 SEQUENCE efrm source_config_id_seq ganesh
+6992; 0 0 SEQUENCE OWNED BY efrm source_config_id_seq ganesh
+545; 1259 453725 TABLE efrm source_system_master ganesh
+546; 1259 453773 SEQUENCE efrm source_system_master_source_system_id_seq ganesh
+6993; 0 0 SEQUENCE OWNED BY efrm source_system_master_source_system_id_seq ganesh
+547; 1259 453774 TABLE efrm transaction_alert ganesh
+548; 1259 453792 SEQUENCE efrm transaction_alert_seq ganesh
+6994; 0 0 SEQUENCE OWNED BY efrm transaction_alert_seq ganesh
+549; 1259 453793 TABLE efrm transaction_master ganesh
+550; 1259 453807 SEQUENCE efrm transaction_master_id_seq ganesh
+6995; 0 0 SEQUENCE OWNED BY efrm transaction_master_id_seq ganesh
+551; 1259 453808 TABLE efrm transaction_match ganesh
+552; 1259 453822 SEQUENCE efrm transaction_match_seq ganesh
+6996; 0 0 SEQUENCE OWNED BY efrm transaction_match_seq ganesh
+553; 1259 453823 TABLE efrm transaction_request ganesh
+554; 1259 453839 SEQUENCE efrm transaction_request_seq ganesh
+6997; 0 0 SEQUENCE OWNED BY efrm transaction_request_seq ganesh
+555; 1259 453840 TABLE efrm transaction_result ganesh
+556; 1259 453851 SEQUENCE efrm transaction_result_seq ganesh
+6998; 0 0 SEQUENCE OWNED BY efrm transaction_result_seq ganesh
+557; 1259 453852 TABLE efrm user_credential ganesh
+558; 1259 453866 TABLE efrm user_master ganesh
+559; 1259 453893 TABLE efrm user_password_history ganesh
+560; 1259 453906 SEQUENCE efrm user_password_history_seq ganesh
+561; 1259 453907 TABLE efrm user_session ganesh
+562; 1259 453927 TABLE efrm whitelist_entry ganesh
+563; 1259 453939 SEQUENCE efrm whitelist_entry_id_seq ganesh
+6999; 0 0 SEQUENCE OWNED BY efrm whitelist_entry_id_seq ganesh
+4647; 2604 453940 DEFAULT efrm adverse_integration_config id ganesh
+4686; 2604 453941 DEFAULT efrm alert_category_master id ganesh
+4689; 2604 453942 DEFAULT efrm alert_count_boost_config id ganesh
+4692; 2604 453943 DEFAULT efrm assignment_config config_id ganesh
+4696; 2604 453944 DEFAULT efrm bulk_file_upload id ganesh
+4707; 2604 453945 DEFAULT efrm case_action_execution_log log_id ganesh
+4709; 2604 453946 DEFAULT efrm case_action_execution_queue execution_id ganesh
+4717; 2604 453947 DEFAULT efrm case_action_master action_id ganesh
+4725; 2604 453948 DEFAULT efrm case_alert_mapping id ganesh
+4729; 2604 453949 DEFAULT efrm case_assignment assignment_id ganesh
+4730; 2604 453950 DEFAULT efrm case_config_master id ganesh
+4734; 2604 453951 DEFAULT efrm case_decision_action_mapping mapping_id ganesh
+4740; 2604 453952 DEFAULT efrm case_decision_master decision_id ganesh
+4755; 2604 453953 DEFAULT efrm case_events event_id ganesh
+4756; 2604 453954 DEFAULT efrm case_evidence evidence_id ganesh
+4757; 2604 453955 DEFAULT efrm case_master case_id ganesh
+4766; 2604 453956 DEFAULT efrm case_priority_master id ganesh
+4769; 2604 453957 DEFAULT efrm case_recovery recovery_id ganesh
+4770; 2604 453958 DEFAULT efrm case_score_breakdown id ganesh
+4772; 2604 453959 DEFAULT efrm case_scoring_trace id ganesh
+4775; 2604 453960 DEFAULT efrm case_sla_tracker tracker_id ganesh
+4778; 2604 453961 DEFAULT efrm category_correlation_config id ganesh
+4781; 2604 453962 DEFAULT efrm chatbot_audit_log id ganesh
+4782; 2604 453963 DEFAULT efrm critical_override_rules id ganesh
+4785; 2604 453964 DEFAULT efrm device_alert id ganesh
+4788; 2604 453965 DEFAULT efrm device_master id ganesh
+4790; 2604 453966 DEFAULT efrm device_match id ganesh
+4792; 2604 453967 DEFAULT efrm device_request id ganesh
+4795; 2604 453968 DEFAULT efrm device_result id ganesh
+4799; 2604 453969 DEFAULT efrm efrm_service_config id ganesh
+4803; 2604 453970 DEFAULT efrm engine_attribute_def id ganesh
+4812; 2604 453971 DEFAULT efrm entity_device_map entity_device_id ganesh
+4816; 2604 453972 DEFAULT efrm entity_graph_cluster_nodes id ganesh
+4818; 2604 453973 DEFAULT efrm entity_graph_clusters cluster_id ganesh
+4827; 2604 453974 DEFAULT efrm entity_graph_edges edge_id ganesh
+4831; 2604 453975 DEFAULT efrm entity_graph_evidence id ganesh
+4834; 2604 453976 DEFAULT efrm entity_graph_nodes node_id ganesh
+4836; 2604 453977 DEFAULT efrm entity_graph_refresh_checkpoint id ganesh
+4839; 2604 453978 DEFAULT efrm entity_graph_refresh_config id ganesh
+4843; 2604 453979 DEFAULT efrm entity_graph_view_config id ganesh
+4851; 2604 453980 DEFAULT efrm entity_master entity_id ganesh
+4856; 2604 453981 DEFAULT efrm entity_relation_map entity_relation_id ganesh
+4878; 2604 453982 DEFAULT efrm entity_risk_config id ganesh
+4880; 2604 453983 DEFAULT efrm entity_risk_factor_breakdown id ganesh
+4882; 2604 453984 DEFAULT efrm entity_risk_history id ganesh
+4884; 2604 453985 DEFAULT efrm entity_risk_profile id ganesh
+4892; 2604 453986 DEFAULT efrm enum_value id ganesh
+4893; 2604 453987 DEFAULT efrm facts_definition id ganesh
+4895; 2604 453988 DEFAULT efrm graph_dimension_config id ganesh
+4904; 2604 453989 DEFAULT efrm graph_dimension_subtype_config id ganesh
+4908; 2604 453990 DEFAULT efrm institution_type id ganesh
+4909; 2604 453991 DEFAULT efrm integration_endpoint_config endpoint_config_id ganesh
+4918; 2604 453992 DEFAULT efrm list_entity id ganesh
+4919; 2604 453993 DEFAULT efrm list_entity_alias id ganesh
+4920; 2604 453994 DEFAULT efrm list_normalized_address id ganesh
+4922; 2604 453995 DEFAULT efrm list_source id ganesh
+4924; 2604 453996 DEFAULT efrm list_version id ganesh
+4931; 2604 453997 DEFAULT efrm ml_feature_definition feature_id ganesh
+4936; 2604 453998 DEFAULT efrm ml_feature_definition_metadata feature_metadata_id ganesh
+4939; 2604 453999 DEFAULT efrm ml_feature_set feature_set_id ganesh
+4942; 2604 454000 DEFAULT efrm ml_feature_set_version feature_set_version_id ganesh
+4945; 2604 454001 DEFAULT efrm ml_feedback feedback_id ganesh
+4947; 2604 454002 DEFAULT efrm ml_inference_result inference_id ganesh
+4951; 2604 454003 DEFAULT efrm ml_inference_shap_local inference_shap_local_id ganesh
+4954; 2604 454004 DEFAULT efrm ml_model_drift_summary model_drift_summary_id ganesh
+4958; 2604 454005 DEFAULT efrm ml_model_feature_drift model_feature_drift_id ganesh
+4959; 2604 454006 DEFAULT efrm ml_model_governance model_governance_id ganesh
+4961; 2604 454007 DEFAULT efrm ml_model_job model_job_id ganesh
+4967; 2604 454008 DEFAULT efrm ml_model_performance_daily model_performance_daily_id ganesh
+4968; 2604 454009 DEFAULT efrm ml_model_registry model_id ganesh
+4970; 2604 454010 DEFAULT efrm ml_model_runtime_metrics model_runtime_metrics_id ganesh
+4971; 2604 454011 DEFAULT efrm ml_model_shap_global model_shap_global_id ganesh
+4975; 2604 454012 DEFAULT efrm ml_model_version model_version_id ganesh
+4980; 2604 454013 DEFAULT efrm ml_score_blending_policy policy_id ganesh
+4981; 2604 454014 DEFAULT efrm ml_training_dataset_profile model_training_dataset_profile_id ganesh
+4983; 2604 454015 DEFAULT efrm notification_queue notification_id ganesh
+4985; 2604 454016 DEFAULT efrm notification_template template_id ganesh
+4988; 2604 454017 DEFAULT efrm operator_value id ganesh
+4991; 2604 454018 DEFAULT efrm reference_data ref_id ganesh
+4997; 2604 454019 DEFAULT efrm risk_event_log id ganesh
+5001; 2604 454020 DEFAULT efrm risk_rating_config id ganesh
+5004; 2604 454021 DEFAULT efrm risk_rating_decay_policy_config id ganesh
+5006; 2604 454022 DEFAULT efrm risk_rating_decision_impact_config id ganesh
+5008; 2604 454023 DEFAULT efrm risk_rating_domain_override_config id ganesh
+5012; 2604 454024 DEFAULT efrm risk_rating_event_type_config id ganesh
+5015; 2604 454025 DEFAULT efrm risk_rating_override_policy id ganesh
+5021; 2604 454026 DEFAULT efrm risk_rating_relationship_risk_config id ganesh
+5026; 2604 454027 DEFAULT efrm risk_rating_service_weight_config id ganesh
+5030; 2604 454028 DEFAULT efrm risk_rating_tier_config id ganesh
+5032; 2604 454029 DEFAULT efrm risk_rating_weight_config id ganesh
+5035; 2604 454030 DEFAULT efrm risk_recalculation_job id ganesh
+5041; 2604 454031 DEFAULT efrm rule_decision_policy id ganesh
+5049; 2604 454032 DEFAULT efrm rule_decision_upgrade id ganesh
+5052; 2604 454033 DEFAULT efrm rule_drl_context id ganesh
+5056; 2604 454034 DEFAULT efrm rule_group_master id ganesh
+5059; 2604 454035 DEFAULT efrm rule_group_source_binding id ganesh
+5063; 2604 454036 DEFAULT efrm rule_group_version id ganesh
+5066; 2604 454037 DEFAULT efrm rule_group_version_map id ganesh
+5069; 2604 454038 DEFAULT efrm rule_master id ganesh
+5071; 2604 454039 DEFAULT efrm rule_master_tag id ganesh
+5078; 2604 454040 DEFAULT efrm rule_version id ganesh
+5086; 2604 454041 DEFAULT efrm ruleengine_bulk_job id ganesh
+5093; 2604 454042 DEFAULT efrm ruleengine_bulk_job_item id ganesh
+5095; 2604 454043 DEFAULT efrm ruleengine_bulk_job_summary id ganesh
+5107; 2604 454044 DEFAULT efrm screening_alert id ganesh
+5108; 2604 454045 DEFAULT efrm screening_bulk_job id ganesh
+5114; 2604 454046 DEFAULT efrm screening_bulk_job_item id ganesh
+5116; 2604 454047 DEFAULT efrm screening_bulk_job_summary id ganesh
+5125; 2604 454048 DEFAULT efrm screening_config_master id ganesh
+5130; 2604 454049 DEFAULT efrm screening_decision_threshold id ganesh
+5137; 2604 454050 DEFAULT efrm screening_entity id ganesh
+5140; 2604 454051 DEFAULT efrm screening_entity_field field_id ganesh
+5144; 2604 454052 DEFAULT efrm screening_entity_relation relation_id ganesh
+5149; 2604 454053 DEFAULT efrm screening_field_config id ganesh
+5154; 2604 454054 DEFAULT efrm screening_group_config id ganesh
+5158; 2604 454055 DEFAULT efrm screening_identifier_config id ganesh
+5164; 2604 454056 DEFAULT efrm screening_match id ganesh
+5166; 2604 454057 DEFAULT efrm screening_request id ganesh
+5167; 2604 454058 DEFAULT efrm screening_result id ganesh
+5170; 2604 454059 DEFAULT efrm screening_risk_band id ganesh
+5173; 2604 454060 DEFAULT efrm screening_source_config id ganesh
+5178; 2604 454061 DEFAULT efrm sla_escalation escalation_id ganesh
+5181; 2604 454062 DEFAULT efrm sla_policy sla_id ganesh
+5186; 2604 454063 DEFAULT efrm source_attribute_def id ganesh
+5187; 2604 454064 DEFAULT efrm source_column_mapping mapping_id ganesh
+5192; 2604 454065 DEFAULT efrm source_config id ganesh
+5194; 2604 454066 DEFAULT efrm source_system_master source_system_id ganesh
+5214; 2604 454067 DEFAULT efrm transaction_alert id ganesh
+5218; 2604 454068 DEFAULT efrm transaction_master id ganesh
+5220; 2604 454069 DEFAULT efrm transaction_match id ganesh
+5222; 2604 454070 DEFAULT efrm transaction_request id ganesh
+5225; 2604 454071 DEFAULT efrm transaction_result id ganesh
+5229; 2604 454072 DEFAULT efrm whitelist_entry id ganesh
+6441; 0 451145 TABLE DATA efrm account_lockout ganesh
+6443; 0 451156 TABLE DATA efrm adverse_alert ganesh
+6445; 0 451173 TABLE DATA efrm adverse_category_weight ganesh
+6447; 0 451184 TABLE DATA efrm adverse_config_master ganesh
+6449; 0 451202 TABLE DATA efrm adverse_country_risk ganesh
+6450; 0 451211 TABLE DATA efrm adverse_integration_config ganesh
+6453; 0 451256 TABLE DATA efrm adverse_match ganesh
+6455; 0 451276 TABLE DATA efrm adverse_recency_factor ganesh
+6457; 0 451287 TABLE DATA efrm adverse_request ganesh
+6459; 0 451306 TABLE DATA efrm adverse_result ganesh
+6461; 0 451320 TABLE DATA efrm adverse_risk_band ganesh
+6463; 0 451338 TABLE DATA efrm adverse_severity_score ganesh
+6465; 0 451349 TABLE DATA efrm adverse_source_weight ganesh
+6467; 0 451360 TABLE DATA efrm aggregated_metric ganesh
+6468; 0 451373 TABLE DATA efrm alembic_version ganesh
+6469; 0 451377 TABLE DATA efrm alert_category_master ganesh
+6471; 0 451389 TABLE DATA efrm alert_count_boost_config ganesh
+6473; 0 451400 TABLE DATA efrm assignment_config ganesh
+6474; 0 451414 TABLE DATA efrm audit_trail ganesh
+6476; 0 451428 TABLE DATA efrm bulk_file_upload ganesh
+6479; 0 451447 TABLE DATA efrm bulk_job ganesh
+6480; 0 451467 TABLE DATA efrm capability_endpoint_map ganesh
+6481; 0 451483 TABLE DATA efrm case_action_execution_log ganesh
+6483; 0 451496 TABLE DATA efrm case_action_execution_queue ganesh
+6485; 0 451522 TABLE DATA efrm case_action_master ganesh
+6487; 0 451544 TABLE DATA efrm case_alert_mapping ganesh
+6489; 0 451563 TABLE DATA efrm case_assignment ganesh
+6492; 0 451575 TABLE DATA efrm case_config_master ganesh
+6494; 0 451590 TABLE DATA efrm case_decision_action_mapping ganesh
+6496; 0 451608 TABLE DATA efrm case_decision_master ganesh
+6498; 0 451645 TABLE DATA efrm case_events ganesh
+6500; 0 451653 TABLE DATA efrm case_evidence ganesh
+6502; 0 451667 TABLE DATA efrm case_master ganesh
+6503; 0 451696 TABLE DATA efrm case_priority_master ganesh
+6505; 0 451707 TABLE DATA efrm case_recovery ganesh
+6507; 0 451713 TABLE DATA efrm case_score_breakdown ganesh
+6509; 0 451721 TABLE DATA efrm case_scoring_trace ganesh
+6511; 0 451731 TABLE DATA efrm case_sla_tracker ganesh
+6514; 0 451744 TABLE DATA efrm category_correlation_config ganesh
+6516; 0 451755 TABLE DATA efrm chatbot_audit_log ganesh
+6518; 0 451764 TABLE DATA efrm common_password_list ganesh
+6519; 0 451770 TABLE DATA efrm critical_override_rules ganesh
+6521; 0 451781 TABLE DATA efrm device_alert ganesh
+6523; 0 451799 TABLE DATA efrm device_master ganesh
+6525; 0 451814 TABLE DATA efrm device_match ganesh
+6527; 0 451829 TABLE DATA efrm device_request ganesh
+6529; 0 451846 TABLE DATA efrm device_result ganesh
+6531; 0 451860 TABLE DATA efrm efrm_service_config ganesh
+6533; 0 451880 TABLE DATA efrm engine_attribute_def ganesh
+6536; 0 451892 TABLE DATA efrm engine_flink_map ganesh
+6538; 0 451908 TABLE DATA efrm entity_definition ganesh
+6539; 0 451922 TABLE DATA efrm entity_device_map ganesh
+6541; 0 451937 TABLE DATA efrm entity_graph_cluster_nodes ganesh
+6543; 0 451947 TABLE DATA efrm entity_graph_clusters ganesh
+6545; 0 451973 TABLE DATA efrm entity_graph_edges ganesh
+6547; 0 451988 TABLE DATA efrm entity_graph_evidence ganesh
+6549; 0 452003 TABLE DATA efrm entity_graph_nodes ganesh
+6551; 0 452015 TABLE DATA efrm entity_graph_refresh_checkpoint ganesh
+6553; 0 452030 TABLE DATA efrm entity_graph_refresh_config ganesh
+6555; 0 452051 TABLE DATA efrm entity_graph_view_config ganesh
+6557; 0 452076 TABLE DATA efrm entity_master ganesh
+6559; 0 452097 TABLE DATA efrm entity_relation_map ganesh
+6561; 0 452115 TABLE DATA efrm entity_risk_aggregate ganesh
+6562; 0 452140 TABLE DATA efrm entity_risk_config ganesh
+6564; 0 452151 TABLE DATA efrm entity_risk_factor_breakdown ganesh
+6566; 0 452170 TABLE DATA efrm entity_risk_history ganesh
+6568; 0 452181 TABLE DATA efrm entity_risk_profile ganesh
+6570; 0 452202 TABLE DATA efrm enum_value ganesh
+6572; 0 452211 TABLE DATA efrm facts_definition ganesh
+6574; 0 452221 TABLE DATA efrm graph_dimension_config ganesh
+6576; 0 452252 TABLE DATA efrm graph_dimension_subtype_config ganesh
+6578; 0 452271 TABLE DATA efrm institution ganesh
+6579; 0 452286 TABLE DATA efrm institution_type ganesh
+6581; 0 452295 TABLE DATA efrm integration_endpoint_config ganesh
+6583; 0 452321 TABLE DATA efrm list_entity ganesh
+6584; 0 452330 TABLE DATA efrm list_entity_alias ganesh
+6587; 0 452341 TABLE DATA efrm list_normalized_address ganesh
+6589; 0 452352 TABLE DATA efrm list_source ganesh
+6591; 0 452364 TABLE DATA efrm list_version ganesh
+6593; 0 452376 TABLE DATA efrm login_attempt ganesh
+6594; 0 452386 TABLE DATA efrm menu_master ganesh
+6596; 0 452402 TABLE DATA efrm metric_definition ganesh
+6597; 0 452425 TABLE DATA efrm ml_feature_definition ganesh
+6599; 0 452445 TABLE DATA efrm ml_feature_definition_metadata ganesh
+6601; 0 452456 TABLE DATA efrm ml_feature_set ganesh
+6603; 0 452471 TABLE DATA efrm ml_feature_set_version ganesh
+6605; 0 452485 TABLE DATA efrm ml_feedback ganesh
+6607; 0 452495 TABLE DATA efrm ml_inference_result ganesh
+6609; 0 452508 TABLE DATA efrm ml_inference_shap_local ganesh
+6611; 0 452521 TABLE DATA efrm ml_model_drift_summary ganesh
+6613; 0 452529 TABLE DATA efrm ml_model_explainability_profile ganesh
+6615; 0 452551 TABLE DATA efrm ml_model_feature_drift ganesh
+6617; 0 452559 TABLE DATA efrm ml_model_governance ganesh
+6619; 0 452569 TABLE DATA efrm ml_model_job ganesh
+6621; 0 452586 TABLE DATA efrm ml_model_performance_daily ganesh
+6623; 0 452593 TABLE DATA efrm ml_model_registry ganesh
+6625; 0 452608 TABLE DATA efrm ml_model_runtime_metrics ganesh
+6627; 0 452616 TABLE DATA efrm ml_model_shap_global ganesh
+6629; 0 452624 TABLE DATA efrm ml_model_simulation_sample ganesh
+6631; 0 452644 TABLE DATA efrm ml_model_version ganesh
+6633; 0 452659 TABLE DATA efrm ml_score_blending_policy ganesh
+6635; 0 452667 TABLE DATA efrm ml_training_dataset_profile ganesh
+6637; 0 452680 TABLE DATA efrm notification_queue ganesh
+6639; 0 452689 TABLE DATA efrm notification_template ganesh
+6641; 0 452700 TABLE DATA efrm operator_value ganesh
+6643; 0 452708 TABLE DATA efrm password_expiry_notice ganesh
+6644; 0 452717 TABLE DATA efrm password_policy_rule ganesh
+6645; 0 452729 TABLE DATA efrm password_reset_token ganesh
+6646; 0 452742 TABLE DATA efrm product_master ganesh
+6647; 0 452751 TABLE DATA efrm profile_capability ganesh
+6648; 0 452761 TABLE DATA efrm profile_master ganesh
+6649; 0 452783 TABLE DATA efrm reference_data ganesh
+6651; 0 452803 TABLE DATA efrm refresh_token ganesh
+6652; 0 452815 TABLE DATA efrm risk_event_log ganesh
+6654; 0 452832 TABLE DATA efrm risk_rating_config ganesh
+6656; 0 452844 TABLE DATA efrm risk_rating_decay_policy_config ganesh
+6658; 0 452855 TABLE DATA efrm risk_rating_decision_impact_config ganesh
+6660; 0 452869 TABLE DATA efrm risk_rating_domain_override_config ganesh
+6662; 0 452885 TABLE DATA efrm risk_rating_event_type_config ganesh
+6664; 0 452900 TABLE DATA efrm risk_rating_override_policy ganesh
+6666; 0 452924 TABLE DATA efrm risk_rating_relationship_risk_config ganesh
+6668; 0 452942 TABLE DATA efrm risk_rating_service_weight_config ganesh
+6670; 0 452958 TABLE DATA efrm risk_rating_tier_config ganesh
+6672; 0 452970 TABLE DATA efrm risk_rating_weight_config ganesh
+6674; 0 452982 TABLE DATA efrm risk_recalculation_job ganesh
+6676; 0 453001 TABLE DATA efrm rule_decision_policy ganesh
+6678; 0 453027 TABLE DATA efrm rule_decision_upgrade ganesh
+6679; 0 453042 TABLE DATA efrm rule_drl_context ganesh
+6681; 0 453059 TABLE DATA efrm rule_group_master ganesh
+6683; 0 453072 TABLE DATA efrm rule_group_source_binding ganesh
+6685; 0 453089 TABLE DATA efrm rule_group_version ganesh
+6687; 0 453101 TABLE DATA efrm rule_group_version_map ganesh
+6689; 0 453113 TABLE DATA efrm rule_master ganesh
+6691; 0 453127 TABLE DATA efrm rule_master_tag ganesh
+6694; 0 453138 TABLE DATA efrm rule_metric_dependency ganesh
+6696; 0 453150 TABLE DATA efrm rule_required_data ganesh
+6697; 0 453160 TABLE DATA efrm rule_version ganesh
+6699; 0 453186 TABLE DATA efrm rule_version_old ganesh
+6700; 0 453191 TABLE DATA efrm rule_version_old1 ganesh
+6701; 0 453196 TABLE DATA efrm ruleengine_alert_old ganesh
+6702; 0 453201 TABLE DATA efrm ruleengine_bulk_job ganesh
+6704; 0 453226 TABLE DATA efrm ruleengine_bulk_job_item ganesh
+6706; 0 453239 TABLE DATA efrm ruleengine_bulk_job_summary ganesh
+6709; 0 453263 TABLE DATA efrm ruleengine_match_old ganesh
+6710; 0 453266 TABLE DATA efrm screening_alert ganesh
+6712; 0 453281 TABLE DATA efrm screening_bulk_job ganesh
+6714; 0 453304 TABLE DATA efrm screening_bulk_job_item ganesh
+6716; 0 453317 TABLE DATA efrm screening_bulk_job_summary ganesh
+6718; 0 453337 TABLE DATA efrm screening_config_master ganesh
+6721; 0 453354 TABLE DATA efrm screening_decision_threshold ganesh
+6723; 0 453384 TABLE DATA efrm screening_entity ganesh
+6724; 0 453398 TABLE DATA efrm screening_entity_field ganesh
+6727; 0 453418 TABLE DATA efrm screening_entity_relation ganesh
+6729; 0 453435 TABLE DATA efrm screening_field_config ganesh
+6731; 0 453456 TABLE DATA efrm screening_group_config ganesh
+6733; 0 453473 TABLE DATA efrm screening_identifier_config ganesh
+6735; 0 453493 TABLE DATA efrm screening_match ganesh
+6737; 0 453507 TABLE DATA efrm screening_request ganesh
+6739; 0 453520 TABLE DATA efrm screening_result ganesh
+6741; 0 453535 TABLE DATA efrm screening_risk_band ganesh
+6743; 0 453552 TABLE DATA efrm screening_source_config ganesh
+6745; 0 453571 TABLE DATA efrm security_audit_log ganesh
+6746; 0 453589 TABLE DATA efrm security_capability ganesh
+6747; 0 453607 TABLE DATA efrm security_check ganesh
+6748; 0 453615 TABLE DATA efrm security_notification ganesh
+6749; 0 453626 TABLE DATA efrm service_client ganesh
+6750; 0 453639 TABLE DATA efrm service_token_jti ganesh
+6751; 0 453647 TABLE DATA efrm sla_escalation ganesh
+6753; 0 453660 TABLE DATA efrm sla_policy ganesh
+6755; 0 453679 TABLE DATA efrm source_attribute_def ganesh
+6757; 0 453691 TABLE DATA efrm source_column_mapping ganesh
+6759; 0 453708 TABLE DATA efrm source_config ganesh
+6761; 0 453725 TABLE DATA efrm source_system_master ganesh
+6763; 0 453774 TABLE DATA efrm transaction_alert ganesh
+6765; 0 453793 TABLE DATA efrm transaction_master ganesh
+6767; 0 453808 TABLE DATA efrm transaction_match ganesh
+6769; 0 453823 TABLE DATA efrm transaction_request ganesh
+6771; 0 453840 TABLE DATA efrm transaction_result ganesh
+6773; 0 453852 TABLE DATA efrm user_credential ganesh
+6774; 0 453866 TABLE DATA efrm user_master ganesh
+6775; 0 453893 TABLE DATA efrm user_password_history ganesh
+6777; 0 453907 TABLE DATA efrm user_session ganesh
+6778; 0 453927 TABLE DATA efrm whitelist_entry ganesh
+7000; 0 0 SEQUENCE SET efrm adverse_alert_seq ganesh
+7001; 0 0 SEQUENCE SET efrm adverse_category_weight_seq ganesh
+7002; 0 0 SEQUENCE SET efrm adverse_config_master_seq ganesh
+7003; 0 0 SEQUENCE SET efrm adverse_country_risk_seq ganesh
+7004; 0 0 SEQUENCE SET efrm adverse_integration_config_id_seq ganesh
+7005; 0 0 SEQUENCE SET efrm adverse_match_seq ganesh
+7006; 0 0 SEQUENCE SET efrm adverse_recency_factor_seq ganesh
+7007; 0 0 SEQUENCE SET efrm adverse_request_seq ganesh
+7008; 0 0 SEQUENCE SET efrm adverse_result_seq ganesh
+7009; 0 0 SEQUENCE SET efrm adverse_risk_band_seq ganesh
+7010; 0 0 SEQUENCE SET efrm adverse_severity_score_seq ganesh
+7011; 0 0 SEQUENCE SET efrm adverse_source_weight_seq ganesh
+7012; 0 0 SEQUENCE SET efrm aggregated_metric_seq ganesh
+7013; 0 0 SEQUENCE SET efrm alert_category_master_id_seq ganesh
+7014; 0 0 SEQUENCE SET efrm alert_count_boost_config_id_seq ganesh
+7015; 0 0 SEQUENCE SET efrm audit_trail_seq ganesh
+7016; 0 0 SEQUENCE SET efrm bulk_file_upload_id_seq ganesh
+7017; 0 0 SEQUENCE SET efrm bulk_job_seq ganesh
+7018; 0 0 SEQUENCE SET efrm case_action_execution_log_log_id_seq ganesh
+7019; 0 0 SEQUENCE SET efrm case_action_execution_queue_execution_id_seq ganesh
+7020; 0 0 SEQUENCE SET efrm case_action_master_action_id_seq ganesh
+7021; 0 0 SEQUENCE SET efrm case_alert_mapping_id_seq ganesh
+7022; 0 0 SEQUENCE SET efrm case_assignment_assignment_id_seq ganesh
+7023; 0 0 SEQUENCE SET efrm case_assignment_config_config_id_seq ganesh
+7024; 0 0 SEQUENCE SET efrm case_config_master_id_seq ganesh
+7025; 0 0 SEQUENCE SET efrm case_decision_action_mapping_mapping_id_seq ganesh
+7026; 0 0 SEQUENCE SET efrm case_decision_master_decision_id_seq ganesh
+7027; 0 0 SEQUENCE SET efrm case_events_event_id_seq ganesh
+7028; 0 0 SEQUENCE SET efrm case_evidence_evidence_id_seq ganesh
+7029; 0 0 SEQUENCE SET efrm case_priority_master_id_seq ganesh
+7030; 0 0 SEQUENCE SET efrm case_recovery_recovery_id_seq ganesh
+7031; 0 0 SEQUENCE SET efrm case_score_breakdown_id_seq ganesh
+7032; 0 0 SEQUENCE SET efrm case_scoring_trace_id_seq ganesh
+7033; 0 0 SEQUENCE SET efrm case_sla_tracker_tracker_id_seq ganesh
+7034; 0 0 SEQUENCE SET efrm cases_case_id_seq ganesh
+7035; 0 0 SEQUENCE SET efrm category_correlation_config_id_seq ganesh
+7036; 0 0 SEQUENCE SET efrm chatbot_audit_log_id_seq ganesh
+7037; 0 0 SEQUENCE SET efrm critical_override_rules_id_seq ganesh
+7038; 0 0 SEQUENCE SET efrm device_alert_id_seq ganesh
+7039; 0 0 SEQUENCE SET efrm device_master_id_seq ganesh
+7040; 0 0 SEQUENCE SET efrm device_match_id_seq ganesh
+7041; 0 0 SEQUENCE SET efrm device_request_id_seq ganesh
+7042; 0 0 SEQUENCE SET efrm device_result_id_seq ganesh
+7043; 0 0 SEQUENCE SET efrm efrm_service_config_id_seq ganesh
+7044; 0 0 SEQUENCE SET efrm engine_attribute_def_id_seq ganesh
+7045; 0 0 SEQUENCE SET efrm engine_flink_map_seq ganesh
+7046; 0 0 SEQUENCE SET efrm entity_definition_seq ganesh
+7047; 0 0 SEQUENCE SET efrm entity_device_map_entity_device_id_seq ganesh
+7048; 0 0 SEQUENCE SET efrm entity_graph_cluster_nodes_id_seq ganesh
+7049; 0 0 SEQUENCE SET efrm entity_graph_clusters_cluster_id_seq ganesh
+7050; 0 0 SEQUENCE SET efrm entity_graph_edges_edge_id_seq ganesh
+7051; 0 0 SEQUENCE SET efrm entity_graph_evidence_id_seq ganesh
+7052; 0 0 SEQUENCE SET efrm entity_graph_nodes_node_id_seq ganesh
+7053; 0 0 SEQUENCE SET efrm entity_graph_refresh_checkpoint_id_seq ganesh
+7054; 0 0 SEQUENCE SET efrm entity_graph_refresh_config_id_seq ganesh
+7055; 0 0 SEQUENCE SET efrm entity_graph_view_config_id_seq ganesh
+7056; 0 0 SEQUENCE SET efrm entity_master_entity_id_seq ganesh
+7057; 0 0 SEQUENCE SET efrm entity_relation_map_entity_relation_id_seq ganesh
+7058; 0 0 SEQUENCE SET efrm entity_risk_config_id_seq ganesh
+7059; 0 0 SEQUENCE SET efrm entity_risk_factor_breakdown_id_seq ganesh
+7060; 0 0 SEQUENCE SET efrm entity_risk_history_id_seq ganesh
+7061; 0 0 SEQUENCE SET efrm entity_risk_profile_id_seq ganesh
+7062; 0 0 SEQUENCE SET efrm enum_value_id_seq ganesh
+7063; 0 0 SEQUENCE SET efrm facts_definition_id_seq ganesh
+7064; 0 0 SEQUENCE SET efrm graph_dimension_config_id_seq ganesh
+7065; 0 0 SEQUENCE SET efrm graph_dimension_subtype_config_id_seq ganesh
+7066; 0 0 SEQUENCE SET efrm institution_type_id_seq ganesh
+7067; 0 0 SEQUENCE SET efrm integration_endpoint_config_endpoint_config_id_seq ganesh
+7068; 0 0 SEQUENCE SET efrm list_entity_alias_id_seq ganesh
+7069; 0 0 SEQUENCE SET efrm list_entity_id_seq ganesh
+7070; 0 0 SEQUENCE SET efrm list_normalized_address_id_seq ganesh
+7071; 0 0 SEQUENCE SET efrm list_source_id_seq ganesh
+7072; 0 0 SEQUENCE SET efrm list_version_id_seq ganesh
+7073; 0 0 SEQUENCE SET efrm metric_definition_seq ganesh
+7074; 0 0 SEQUENCE SET efrm ml_feature_definition_feature_id_seq ganesh
+7075; 0 0 SEQUENCE SET efrm ml_feature_definition_metadata_seq ganesh
+7076; 0 0 SEQUENCE SET efrm ml_feature_set_feature_set_id_seq ganesh
+7077; 0 0 SEQUENCE SET efrm ml_feature_set_version_feature_set_version_id_seq ganesh
+7078; 0 0 SEQUENCE SET efrm ml_feedback_feedback_id_seq ganesh
+7079; 0 0 SEQUENCE SET efrm ml_inference_result_inference_id_seq ganesh
+7080; 0 0 SEQUENCE SET efrm ml_inference_shap_local_seq ganesh
+7081; 0 0 SEQUENCE SET efrm ml_model_drift_summary_model_drift_summary_id_seq ganesh
+7082; 0 0 SEQUENCE SET efrm ml_model_explainability_profile_explainability_profile_id_seq ganesh
+7083; 0 0 SEQUENCE SET efrm ml_model_feature_drift_model_feature_drift_id_seq ganesh
+7084; 0 0 SEQUENCE SET efrm ml_model_governance_model_governance_id_seq ganesh
+7085; 0 0 SEQUENCE SET efrm ml_model_job_seq ganesh
+7086; 0 0 SEQUENCE SET efrm ml_model_performance_daily_model_performance_daily_id_seq ganesh
+7087; 0 0 SEQUENCE SET efrm ml_model_registry_model_id_seq ganesh
+7088; 0 0 SEQUENCE SET efrm ml_model_runtime_metrics_model_runtime_metrics_id_seq ganesh
+7089; 0 0 SEQUENCE SET efrm ml_model_shap_global_model_shap_global_id_seq ganesh
+7090; 0 0 SEQUENCE SET efrm ml_model_simulation_sample_simulation_sample_id_seq ganesh
+7091; 0 0 SEQUENCE SET efrm ml_model_version_model_version_id_seq ganesh
+7092; 0 0 SEQUENCE SET efrm ml_score_blending_policy_policy_id_seq ganesh
+7093; 0 0 SEQUENCE SET efrm ml_training_dataset_profile_model_training_dataset_profile__seq ganesh
+7094; 0 0 SEQUENCE SET efrm notification_queue_notification_id_seq ganesh
+7095; 0 0 SEQUENCE SET efrm notification_template_template_id_seq ganesh
+7096; 0 0 SEQUENCE SET efrm operator_id_seq ganesh
+7097; 0 0 SEQUENCE SET efrm reference_data_ref_id_seq ganesh
+7098; 0 0 SEQUENCE SET efrm risk_event_log_id_seq ganesh
+7099; 0 0 SEQUENCE SET efrm risk_rating_config_id_seq ganesh
+7100; 0 0 SEQUENCE SET efrm risk_rating_decay_policy_config_id_seq ganesh
+7101; 0 0 SEQUENCE SET efrm risk_rating_decision_impact_config_id_seq ganesh
+7102; 0 0 SEQUENCE SET efrm risk_rating_domain_override_config_id_seq ganesh
+7103; 0 0 SEQUENCE SET efrm risk_rating_event_type_config_id_seq ganesh
+7104; 0 0 SEQUENCE SET efrm risk_rating_override_policy_id_seq ganesh
+7105; 0 0 SEQUENCE SET efrm risk_rating_relationship_risk_config_id_seq ganesh
+7106; 0 0 SEQUENCE SET efrm risk_rating_service_weight_config_id_seq ganesh
+7107; 0 0 SEQUENCE SET efrm risk_rating_tier_config_id_seq ganesh
+7108; 0 0 SEQUENCE SET efrm risk_rating_weight_config_id_seq ganesh
+7109; 0 0 SEQUENCE SET efrm risk_recalculation_job_id_seq ganesh
+7110; 0 0 SEQUENCE SET efrm rule_decision_policy_id_seq ganesh
+7111; 0 0 SEQUENCE SET efrm rule_drl_context_id_seq ganesh
+7112; 0 0 SEQUENCE SET efrm rule_group_master_id_seq ganesh
+7113; 0 0 SEQUENCE SET efrm rule_group_source_binding_id_seq ganesh
+7114; 0 0 SEQUENCE SET efrm rule_group_version_id_seq ganesh
+7115; 0 0 SEQUENCE SET efrm rule_group_version_map_id_seq ganesh
+7116; 0 0 SEQUENCE SET efrm rule_master_id_seq ganesh
+7117; 0 0 SEQUENCE SET efrm rule_master_tag_id_seq ganesh
+7118; 0 0 SEQUENCE SET efrm rule_metric_dependency_seq ganesh
+7119; 0 0 SEQUENCE SET efrm rule_required_data_seq ganesh
+7120; 0 0 SEQUENCE SET efrm rule_version_id_seq ganesh
+7121; 0 0 SEQUENCE SET efrm ruleengine_bulk_job_id_seq ganesh
+7122; 0 0 SEQUENCE SET efrm ruleengine_bulk_job_item_id_seq ganesh
+7123; 0 0 SEQUENCE SET efrm ruleengine_bulk_job_summary_id_seq ganesh
+7124; 0 0 SEQUENCE SET efrm ruleengine_decision_upgrade_id_seq ganesh
+7125; 0 0 SEQUENCE SET efrm screening_alert_id_seq ganesh
+7126; 0 0 SEQUENCE SET efrm screening_bulk_job_id_seq ganesh
+7127; 0 0 SEQUENCE SET efrm screening_bulk_job_item_id_seq ganesh
+7128; 0 0 SEQUENCE SET efrm screening_bulk_job_summary_id_seq ganesh
+7129; 0 0 SEQUENCE SET efrm screening_config_master_id_seq ganesh
+7130; 0 0 SEQUENCE SET efrm screening_config_seq ganesh
+7131; 0 0 SEQUENCE SET efrm screening_decision_threshold_id_seq ganesh
+7132; 0 0 SEQUENCE SET efrm screening_entity_field_field_id_seq ganesh
+7133; 0 0 SEQUENCE SET efrm screening_entity_id_seq ganesh
+7134; 0 0 SEQUENCE SET efrm screening_entity_relation_relation_id_seq ganesh
+7135; 0 0 SEQUENCE SET efrm screening_field_config_id_seq ganesh
+7136; 0 0 SEQUENCE SET efrm screening_group_config_id_seq ganesh
+7137; 0 0 SEQUENCE SET efrm screening_identifier_config_id_seq ganesh
+7138; 0 0 SEQUENCE SET efrm screening_match_id_seq ganesh
+7139; 0 0 SEQUENCE SET efrm screening_request_id_seq ganesh
+7140; 0 0 SEQUENCE SET efrm screening_result_id_seq ganesh
+7141; 0 0 SEQUENCE SET efrm screening_risk_band_id_seq ganesh
+7142; 0 0 SEQUENCE SET efrm screening_source_config_id_seq ganesh
+7143; 0 0 SEQUENCE SET efrm sla_escalation_escalation_id_seq ganesh
+7144; 0 0 SEQUENCE SET efrm sla_policy_sla_id_seq ganesh
+7145; 0 0 SEQUENCE SET efrm source_attribute_def_id_seq ganesh
+7146; 0 0 SEQUENCE SET efrm source_column_mapping_mapping_id_seq ganesh
+7147; 0 0 SEQUENCE SET efrm source_config_id_seq ganesh
+7148; 0 0 SEQUENCE SET efrm source_system_master_source_system_id_seq ganesh
+7149; 0 0 SEQUENCE SET efrm transaction_alert_seq ganesh
+7150; 0 0 SEQUENCE SET efrm transaction_master_id_seq ganesh
+7151; 0 0 SEQUENCE SET efrm transaction_match_seq ganesh
+7152; 0 0 SEQUENCE SET efrm transaction_request_seq ganesh
+7153; 0 0 SEQUENCE SET efrm transaction_result_seq ganesh
+7154; 0 0 SEQUENCE SET efrm user_password_history_seq ganesh
+7155; 0 0 SEQUENCE SET efrm whitelist_entry_id_seq ganesh
+5313; 2606 462151 CONSTRAINT efrm account_lockout account_lockout_pkey ganesh
+5316; 2606 456575 CONSTRAINT efrm adverse_alert adverse_alert_pkey ganesh
+5318; 2606 456598 CONSTRAINT efrm adverse_alert adverse_alert_unique ganesh
+5323; 2606 462625 CONSTRAINT efrm adverse_category_weight adverse_category_weight_pkey ganesh
+5325; 2606 460838 CONSTRAINT efrm adverse_config_master adverse_config_master_pkey ganesh
+5327; 2606 460842 CONSTRAINT efrm adverse_config_master adverse_config_master_unique ganesh
+5329; 2606 461035 CONSTRAINT efrm adverse_country_risk adverse_country_risk_pkey ganesh
+5331; 2606 457326 CONSTRAINT efrm adverse_integration_config adverse_integration_config_pkey ganesh
+5333; 2606 457333 CONSTRAINT efrm adverse_integration_config adverse_integration_config_unique ganesh
+5338; 2606 454300 CONSTRAINT efrm adverse_match adverse_match_pkey ganesh
+5344; 2606 461457 CONSTRAINT efrm adverse_recency_factor adverse_recency_factor_pkey ganesh
+5346; 2606 456049 CONSTRAINT efrm adverse_request adverse_request_pkey ganesh
+5348; 2606 456055 CONSTRAINT efrm adverse_request adverse_request_request_id_key ganesh
+5353; 2606 455275 CONSTRAINT efrm adverse_result adverse_result_pkey ganesh
+5357; 2606 462183 CONSTRAINT efrm adverse_risk_band adverse_risk_band_pkey ganesh
+5359; 2606 462455 CONSTRAINT efrm adverse_severity_score adverse_severity_score_pkey ganesh
+5361; 2606 462062 CONSTRAINT efrm adverse_source_weight adverse_source_weight_pkey ganesh
+5363; 2606 461529 CONSTRAINT efrm aggregated_metric aggregated_metric_pkey ganesh
+5365; 2606 461521 CONSTRAINT efrm aggregated_metric aggregated_metric_unique ganesh
+5372; 2606 461615 CONSTRAINT efrm alembic_version alembic_version_pkc ganesh
+5374; 2606 460857 CONSTRAINT efrm alert_category_master alert_category_master_pkey ganesh
+5376; 2606 484068 CONSTRAINT efrm alert_category_master alert_category_master_unique ganesh
+5378; 2606 461143 CONSTRAINT efrm alert_count_boost_config alert_count_boost_config_pkey ganesh
+5380; 2606 484076 CONSTRAINT efrm alert_count_boost_config alert_count_boost_config_unique ganesh
+5387; 2606 454414 CONSTRAINT efrm audit_trail audit_trail_pkey ganesh
+5391; 2606 458428 CONSTRAINT efrm bulk_file_upload bulk_file_upload_pkey ganesh
+5393; 2606 458430 CONSTRAINT efrm bulk_file_upload bulk_file_upload_unique ganesh
+5396; 2606 456142 CONSTRAINT efrm bulk_job bulk_job_pkey ganesh
+5398; 2606 456148 CONSTRAINT efrm bulk_job bulk_job_unique ganesh
+5403; 2606 454617 CONSTRAINT efrm capability_endpoint_map capability_endpoint_map_pkey ganesh
+5409; 2606 456789 CONSTRAINT efrm case_action_execution_log case_action_execution_log_pkey ganesh
+5411; 2606 456310 CONSTRAINT efrm case_action_execution_queue case_action_execution_queue_pkey ganesh
+5417; 2606 457524 CONSTRAINT efrm case_action_master case_action_master_pkey ganesh
+5421; 2606 456835 CONSTRAINT efrm case_alert_mapping case_alert_mapping_pkey ganesh
+5423; 2606 456837 CONSTRAINT efrm case_alert_mapping case_alert_mapping_unique ganesh
+5382; 2606 460848 CONSTRAINT efrm assignment_config case_assignment_config_pkey ganesh
+5425; 2606 457855 CONSTRAINT efrm case_assignment case_assignment_pkey ganesh
+5428; 2606 461043 CONSTRAINT efrm case_config_master case_config_master_pkey ganesh
+5430; 2606 461041 CONSTRAINT efrm case_config_master case_config_master_unique ganesh
+5432; 2606 458003 CONSTRAINT efrm case_decision_action_mapping case_decision_action_mapping_pkey ganesh
+5436; 2606 457653 CONSTRAINT efrm case_decision_master case_decision_master_pkey ganesh
+5440; 2606 455590 CONSTRAINT efrm case_events case_events_pkey ganesh
+5443; 2606 458313 CONSTRAINT efrm case_evidence case_evidence_pkey ganesh
+5448; 2606 460844 CONSTRAINT efrm case_priority_master case_priority_master_pkey ganesh
+5450; 2606 484070 CONSTRAINT efrm case_priority_master case_priority_master_unique ganesh
+5452; 2606 461514 CONSTRAINT efrm case_recovery case_recovery_case_id_key ganesh
+5454; 2606 461512 CONSTRAINT efrm case_recovery case_recovery_pkey ganesh
+5457; 2606 458238 CONSTRAINT efrm case_score_breakdown case_score_breakdown_pkey ganesh
+5459; 2606 458245 CONSTRAINT efrm case_score_breakdown case_score_breakdown_unique ganesh
+5461; 2606 458105 CONSTRAINT efrm case_scoring_trace case_scoring_trace_pkey ganesh
+5463; 2606 458109 CONSTRAINT efrm case_scoring_trace case_scoring_trace_unique ganesh
+5466; 2606 457826 CONSTRAINT efrm case_sla_tracker case_sla_tracker_pkey ganesh
+5446; 2606 455963 CONSTRAINT efrm case_master cases_pkey ganesh
+5469; 2606 461423 CONSTRAINT efrm category_correlation_config category_correlation_config_pkey ganesh
+5471; 2606 484074 CONSTRAINT efrm category_correlation_config category_correlation_config_unique ganesh
+5473; 2606 455814 CONSTRAINT efrm chatbot_audit_log chatbot_audit_log_pkey ganesh
+5476; 2606 457519 CONSTRAINT efrm common_password_list common_password_list_pkey ganesh
+5480; 2606 461994 CONSTRAINT efrm critical_override_rules critical_override_rules_pkey ganesh
+5482; 2606 484072 CONSTRAINT efrm critical_override_rules critical_override_rules_unique ganesh
+5484; 2606 456900 CONSTRAINT efrm device_alert device_alert_pkey ganesh
+5486; 2606 456910 CONSTRAINT efrm device_alert device_alert_unique ganesh
+5489; 2606 455060 CONSTRAINT efrm device_master device_master_pkey ganesh
+5491; 2606 457510 CONSTRAINT efrm device_match device_match_pkey ganesh
+5493; 2606 457516 CONSTRAINT efrm device_match device_match_unique ganesh
+5495; 2606 454741 CONSTRAINT efrm device_request device_request_pkey ganesh
+5497; 2606 454750 CONSTRAINT efrm device_request device_request_unique ganesh
+5499; 2606 457106 CONSTRAINT efrm device_result device_result_pkey ganesh
+5501; 2606 461955 CONSTRAINT efrm efrm_service_config efrm_service_config_pkey ganesh
+5505; 2606 456175 CONSTRAINT efrm engine_attribute_def engine_attribute_def_pkey ganesh
+5507; 2606 456188 CONSTRAINT efrm engine_attribute_def engine_attribute_def_unique ganesh
+5510; 2606 456723 CONSTRAINT efrm engine_flink_map engine_flink_map_pkey ganesh
+5512; 2606 456725 CONSTRAINT efrm engine_flink_map engine_flink_map_unique ganesh
+5517; 2606 462354 CONSTRAINT efrm entity_definition entity_definition_pkey ganesh
+5519; 2606 462346 CONSTRAINT efrm entity_definition entity_definition_unique ganesh
+5522; 2606 458265 CONSTRAINT efrm entity_device_map entity_device_map_pkey ganesh
+5527; 2606 462323 CONSTRAINT efrm entity_graph_cluster_nodes entity_graph_cluster_nodes_pkey ganesh
+5533; 2606 457943 CONSTRAINT efrm entity_graph_clusters entity_graph_clusters_pkey ganesh
+5539; 2606 457745 CONSTRAINT efrm entity_graph_edges entity_graph_edges_pkey ganesh
+5547; 2606 457357 CONSTRAINT efrm entity_graph_evidence entity_graph_evidence_pkey ganesh
+5555; 2606 456939 CONSTRAINT efrm entity_graph_nodes entity_graph_nodes_pkey ganesh
+5562; 2606 461163 CONSTRAINT efrm entity_graph_refresh_checkpoint entity_graph_refresh_checkpoint_pkey ganesh
+5567; 2606 458611 CONSTRAINT efrm entity_graph_refresh_config entity_graph_refresh_config_pkey ganesh
+5572; 2606 461287 CONSTRAINT efrm entity_graph_view_config entity_graph_view_config_pkey ganesh
+5577; 2606 455139 CONSTRAINT efrm entity_master entity_master_pkey ganesh
+5583; 2606 456110 CONSTRAINT efrm entity_relation_map entity_relation_map_pkey ganesh
+5588; 2606 456669 CONSTRAINT efrm entity_risk_aggregate entity_risk_aggregate_pkey ganesh
+5590; 2606 460835 CONSTRAINT efrm entity_risk_config entity_risk_config_pkey ganesh
+5592; 2606 461880 CONSTRAINT efrm entity_risk_config entity_risk_config_unique ganesh
+5594; 2606 456003 CONSTRAINT efrm entity_risk_factor_breakdown entity_risk_factor_breakdown_pkey ganesh
+5596; 2606 456017 CONSTRAINT efrm entity_risk_factor_breakdown entity_risk_factor_breakdown_unique ganesh
+5602; 2606 455933 CONSTRAINT efrm entity_risk_history entity_risk_history_pkey ganesh
+5604; 2606 455943 CONSTRAINT efrm entity_risk_history entity_risk_history_unique ganesh
+5607; 2606 456201 CONSTRAINT efrm entity_risk_profile entity_risk_profile_pkey ganesh
+5609; 2606 456207 CONSTRAINT efrm entity_risk_profile entity_risk_profile_unique ganesh
+5613; 2606 460939 CONSTRAINT efrm enum_value enum_value_pkey ganesh
+5615; 2606 460907 CONSTRAINT efrm enum_value enum_value_unique ganesh
+5618; 2606 460951 CONSTRAINT efrm facts_definition facts_definition_pkey ganesh
+5620; 2606 460949 CONSTRAINT efrm facts_definition facts_definition_unique ganesh
+5623; 2606 458330 CONSTRAINT efrm graph_dimension_config graph_dimension_config_pkey ganesh
+5629; 2606 461551 CONSTRAINT efrm graph_dimension_subtype_config graph_dimension_subtype_config_pkey ganesh
+5634; 2606 461051 CONSTRAINT efrm institution institution_pkey ganesh
+5636; 2606 461611 CONSTRAINT efrm institution_type institution_type_institution_type_key ganesh
+5638; 2606 461602 CONSTRAINT efrm institution_type institution_type_pkey ganesh
+5640; 2606 457130 CONSTRAINT efrm integration_endpoint_config integration_endpoint_config_pkey ganesh
+5659; 2606 468742 CONSTRAINT efrm list_entity_alias list_entity_alias_pkey ganesh
+5652; 2606 484046 CONSTRAINT efrm list_entity list_entity_pkey ganesh
+5666; 2606 468460 CONSTRAINT efrm list_normalized_address list_normalized_address_pkey ganesh
+5670; 2606 460930 CONSTRAINT efrm list_source list_source_pkey ganesh
+5672; 2606 460820 CONSTRAINT efrm list_source list_source_unique ganesh
+5677; 2606 457211 CONSTRAINT efrm list_version list_version_pkey ganesh
+5681; 2606 455793 CONSTRAINT efrm login_attempt login_attempt_pkey ganesh
+5684; 2606 455551 CONSTRAINT efrm menu_master menu_master_pkey ganesh
+5688; 2606 454818 CONSTRAINT efrm metric_definition metric_definition_pkey ganesh
+5690; 2606 454827 CONSTRAINT efrm metric_definition metric_definition_unique ganesh
+5697; 2606 455504 CONSTRAINT efrm ml_feature_definition_metadata ml_feature_definition_metadata_pkey ganesh
+5699; 2606 455513 CONSTRAINT efrm ml_feature_definition_metadata ml_feature_definition_metadata_unique ganesh
+5692; 2606 455737 CONSTRAINT efrm ml_feature_definition ml_feature_definition_pkey ganesh
+5694; 2606 455756 CONSTRAINT efrm ml_feature_definition ml_feature_definition_unique ganesh
+5701; 2606 458177 CONSTRAINT efrm ml_feature_set ml_feature_set_pkey ganesh
+5703; 2606 458199 CONSTRAINT efrm ml_feature_set ml_feature_set_unique ganesh
+5705; 2606 458125 CONSTRAINT efrm ml_feature_set_version ml_feature_set_version_pkey ganesh
+5707; 2606 458161 CONSTRAINT efrm ml_feature_set_version ml_feature_set_version_unique ganesh
+5710; 2606 461609 CONSTRAINT efrm ml_feedback ml_feedback_pkey ganesh
+5712; 2606 461607 CONSTRAINT efrm ml_feedback ml_feedback_unique ganesh
+5716; 2606 457173 CONSTRAINT efrm ml_inference_result ml_inference_result_pkey ganesh
+5718; 2606 457178 CONSTRAINT efrm ml_inference_result ml_inference_result_unique ganesh
+5722; 2606 461998 CONSTRAINT efrm ml_inference_shap_local ml_inference_shap_local_pkey ganesh
+5724; 2606 461719 CONSTRAINT efrm ml_inference_shap_local ml_inference_shap_local_unique ganesh
+5727; 2606 461620 CONSTRAINT efrm ml_model_drift_summary ml_model_drift_summary_pkey ganesh
+5729; 2606 461618 CONSTRAINT efrm ml_model_drift_summary ml_model_drift_summary_unique ganesh
+5731; 2606 456259 CONSTRAINT efrm ml_model_explainability_profile ml_model_explainability_profile_model_version_id_key ganesh
+5733; 2606 456261 CONSTRAINT efrm ml_model_explainability_profile ml_model_explainability_profile_pkey ganesh
+5735; 2606 461681 CONSTRAINT efrm ml_model_feature_drift ml_model_feature_drift_pkey ganesh
+5737; 2606 461645 CONSTRAINT efrm ml_model_feature_drift ml_model_feature_drift_unique ganesh
+5740; 2606 461677 CONSTRAINT efrm ml_model_governance ml_model_governance_pkey ganesh
+5742; 2606 461666 CONSTRAINT efrm ml_model_governance ml_model_governance_unique ganesh
+5746; 2606 462044 CONSTRAINT efrm ml_model_job ml_model_job_pkey ganesh
+5748; 2606 461711 CONSTRAINT efrm ml_model_job ml_model_job_unique ganesh
+5751; 2606 461708 CONSTRAINT efrm ml_model_performance_daily ml_model_performance_daily_pkey ganesh
+5753; 2606 461706 CONSTRAINT efrm ml_model_performance_daily ml_model_performance_daily_unique ganesh
+5756; 2606 462439 CONSTRAINT efrm ml_model_registry ml_model_registry_pkey ganesh
+5758; 2606 462261 CONSTRAINT efrm ml_model_registry ml_model_registry_unique ganesh
+5760; 2606 462366 CONSTRAINT efrm ml_model_runtime_metrics ml_model_runtime_metrics_pkey ganesh
+5762; 2606 462364 CONSTRAINT efrm ml_model_runtime_metrics ml_model_runtime_metrics_unique ganesh
+5764; 2606 462368 CONSTRAINT efrm ml_model_shap_global ml_model_shap_global_pkey ganesh
+5766; 2606 462362 CONSTRAINT efrm ml_model_shap_global ml_model_shap_global_unique ganesh
+5768; 2606 456862 CONSTRAINT efrm ml_model_simulation_sample ml_model_simulation_sample_pkey ganesh
+5774; 2606 462465 CONSTRAINT efrm ml_model_version ml_model_version_pkey ganesh
+5776; 2606 462463 CONSTRAINT efrm ml_model_version ml_model_version_unique ganesh
+5779; 2606 462089 CONSTRAINT efrm ml_score_blending_policy ml_score_blending_policy_pkey ganesh
+5781; 2606 462091 CONSTRAINT efrm ml_training_dataset_profile ml_training_dataset_profile_pkey ganesh
+5783; 2606 462086 CONSTRAINT efrm ml_training_dataset_profile ml_training_dataset_profile_unique ganesh
+5787; 2606 458063 CONSTRAINT efrm notification_queue notification_queue_pkey ganesh
+5794; 2606 461053 CONSTRAINT efrm notification_template notification_template_pkey ganesh
+5797; 2606 457544 CONSTRAINT efrm operator_value operator_pkey ganesh
+5799; 2606 457554 CONSTRAINT efrm operator_value operator_value_unique ganesh
+5802; 2606 458696 CONSTRAINT efrm password_expiry_notice password_expiry_notice_pkey ganesh
+5804; 2606 462259 CONSTRAINT efrm password_policy_rule password_policy_rule_pkey ganesh
+5807; 2606 462068 CONSTRAINT efrm password_reset_token password_reset_token_pkey ganesh
+5811; 2606 461996 CONSTRAINT efrm product_master product_master_pkey ganesh
+5814; 2606 456387 CONSTRAINT efrm profile_capability profile_capability_pkey ganesh
+5816; 2606 456271 CONSTRAINT efrm profile_master profile_master_pkey ganesh
+5822; 2606 454786 CONSTRAINT efrm reference_data reference_data_pkey ganesh
+5826; 2606 454791 CONSTRAINT efrm reference_data reference_data_unique ganesh
+5831; 2606 454254 CONSTRAINT efrm refresh_token refresh_token_pkey ganesh
+5838; 2606 455216 CONSTRAINT efrm risk_event_log risk_event_log_pkey ganesh
+5840; 2606 455224 CONSTRAINT efrm risk_event_log risk_event_log_unique ganesh
+5842; 2606 461380 CONSTRAINT efrm risk_rating_config risk_rating_config_pkey ganesh
+5844; 2606 461244 CONSTRAINT efrm risk_rating_config risk_rating_config_unique ganesh
+5846; 2606 461167 CONSTRAINT efrm risk_rating_decay_policy_config risk_rating_decay_policy_config_pkey ganesh
+5850; 2606 461939 CONSTRAINT efrm risk_rating_decision_impact_config risk_rating_decision_impact_config_pkey ganesh
+5855; 2606 461332 CONSTRAINT efrm risk_rating_domain_override_config risk_rating_domain_override_config_pkey ganesh
+5859; 2606 458014 CONSTRAINT efrm risk_rating_event_type_config risk_rating_event_type_config_pkey ganesh
+5863; 2606 458578 CONSTRAINT efrm risk_rating_override_policy risk_rating_override_policy_pkey ganesh
+5867; 2606 458662 CONSTRAINT efrm risk_rating_relationship_risk_config risk_rating_relationship_risk_config_pkey ganesh
+5871; 2606 461019 CONSTRAINT efrm risk_rating_service_weight_config risk_rating_service_weight_config_pkey ganesh
+5875; 2606 461089 CONSTRAINT efrm risk_rating_tier_config risk_rating_tier_config_pkey ganesh
+5879; 2606 461233 CONSTRAINT efrm risk_rating_weight_config risk_rating_weight_config_pkey ganesh
+5885; 2606 461723 CONSTRAINT efrm risk_recalculation_job risk_recalculation_job_pkey ganesh
+5888; 2606 458627 CONSTRAINT efrm rule_decision_policy rule_decision_policy_pkey ganesh
+5890; 2606 458632 CONSTRAINT efrm rule_decision_policy rule_decision_policy_unique ganesh
+5893; 2606 460937 CONSTRAINT efrm rule_decision_upgrade rule_decision_upgrade_pkey ganesh
+5895; 2606 460935 CONSTRAINT efrm rule_decision_upgrade rule_decision_upgrade_unique ganesh
+5898; 2606 460846 CONSTRAINT efrm rule_drl_context rule_drl_context_pkey ganesh
+5900; 2606 460830 CONSTRAINT efrm rule_drl_context rule_drl_context_unique ganesh
+5903; 2606 457973 CONSTRAINT efrm rule_group_master rule_group_master_pkey ganesh
+5905; 2606 457991 CONSTRAINT efrm rule_group_master rule_group_master_unique ganesh
+5908; 2606 460853 CONSTRAINT efrm rule_group_source_binding rule_group_source_binding_pkey ganesh
+5910; 2606 460850 CONSTRAINT efrm rule_group_source_binding rule_group_source_binding_unique ganesh
+5918; 2606 457695 CONSTRAINT efrm rule_group_version_map rule_group_version_map_pkey ganesh
+5920; 2606 457708 CONSTRAINT efrm rule_group_version_map rule_group_version_map_unique ganesh
+5913; 2606 458541 CONSTRAINT efrm rule_group_version rule_group_version_pkey ganesh
+5915; 2606 458563 CONSTRAINT efrm rule_group_version rule_group_version_unique ganesh
+5923; 2606 455392 CONSTRAINT efrm rule_master rule_master_pkey ganesh
+5929; 2606 456435 CONSTRAINT efrm rule_master_tag rule_master_tag_pkey ganesh
+5931; 2606 456437 CONSTRAINT efrm rule_master_tag rule_master_tag_unique ganesh
+5925; 2606 455411 CONSTRAINT efrm rule_master rule_master_unique ganesh
+5933; 2606 457001 CONSTRAINT efrm rule_metric_dependency rule_metric_dependency_pkey ganesh
+5935; 2606 457009 CONSTRAINT efrm rule_metric_dependency rule_metric_dependency_unique ganesh
+5938; 2606 456449 CONSTRAINT efrm rule_required_data rule_required_data_pkey ganesh
+5941; 2606 454357 CONSTRAINT efrm rule_version rule_version_pkey ganesh
+5943; 2606 454362 CONSTRAINT efrm rule_version rule_version_unique ganesh
+6104; 2606 456699 CONSTRAINT efrm transaction_alert ruleengine_alert_pkey ganesh
+6106; 2606 456705 CONSTRAINT efrm transaction_alert ruleengine_alert_unique ganesh
+5951; 2606 461794 CONSTRAINT efrm ruleengine_bulk_job_item ruleengine_bulk_job_item_pkey ganesh
+5946; 2606 462269 CONSTRAINT efrm ruleengine_bulk_job ruleengine_bulk_job_pkey ganesh
+5954; 2606 462081 CONSTRAINT efrm ruleengine_bulk_job_summary ruleengine_bulk_job_summary_pkey ganesh
+5956; 2606 461811 CONSTRAINT efrm ruleengine_bulk_job_summary ruleengine_bulk_job_summary_unique ganesh
+5948; 2606 461775 CONSTRAINT efrm ruleengine_bulk_job ruleengine_bulk_job_unique ganesh
+6115; 2606 457037 CONSTRAINT efrm transaction_match ruleengine_match_pkey ganesh
+6117; 2606 457042 CONSTRAINT efrm transaction_match ruleengine_match_unique ganesh
+6120; 2606 455104 CONSTRAINT efrm transaction_request ruleengine_request_pkey ganesh
+6122; 2606 455123 CONSTRAINT efrm transaction_request ruleengine_request_unique ganesh
+6125; 2606 457269 CONSTRAINT efrm transaction_result ruleengine_result_pkey ganesh
+5965; 2606 456538 CONSTRAINT efrm screening_alert screening_alert_pkey ganesh
+5967; 2606 456549 CONSTRAINT efrm screening_alert screening_alert_unique ganesh
+5975; 2606 457398 CONSTRAINT efrm screening_bulk_job_item screening_bulk_job_item_pkey ganesh
+5970; 2606 458384 CONSTRAINT efrm screening_bulk_job screening_bulk_job_pkey ganesh
+5978; 2606 461496 CONSTRAINT efrm screening_bulk_job_summary screening_bulk_job_summary_pkey ganesh
+5980; 2606 461483 CONSTRAINT efrm screening_bulk_job_summary screening_bulk_job_summary_unique ganesh
+5972; 2606 458403 CONSTRAINT efrm screening_bulk_job screening_bulk_job_unique ganesh
+5982; 2606 461151 CONSTRAINT efrm screening_config_master screening_config_master_pkey ganesh
+5984; 2606 461149 CONSTRAINT efrm screening_config_master screening_config_master_unique ganesh
+5986; 2606 461026 CONSTRAINT efrm screening_decision_threshold screening_decision_threshold_pkey ganesh
+5988; 2606 460987 CONSTRAINT efrm screening_decision_threshold screening_decision_threshold_unique ganesh
+5993; 2606 457446 CONSTRAINT efrm screening_entity screening_entity_entity_type_unique ganesh
+5999; 2606 454962 CONSTRAINT efrm screening_entity_field screening_entity_field_pkey ganesh
+6002; 2606 454984 CONSTRAINT efrm screening_entity_field screening_entity_field_unique ganesh
+5995; 2606 457448 CONSTRAINT efrm screening_entity screening_entity_pkey ganesh
+6006; 2606 456642 CONSTRAINT efrm screening_entity_relation screening_entity_relation_pkey ganesh
+6010; 2606 460955 CONSTRAINT efrm screening_field_config screening_field_config_pkey ganesh
+6012; 2606 461028 CONSTRAINT efrm screening_field_config screening_field_config_unique ganesh
+6014; 2606 461604 CONSTRAINT efrm screening_group_config screening_group_config_pkey ganesh
+6016; 2606 461342 CONSTRAINT efrm screening_group_config screening_group_config_unique ganesh
+6018; 2606 461229 CONSTRAINT efrm screening_identifier_config screening_identifier_config_pkey ganesh
+6020; 2606 461227 CONSTRAINT efrm screening_identifier_config screening_identifier_config_unique ganesh
+6024; 2606 454588 CONSTRAINT efrm screening_match screening_match_pkey ganesh
+6032; 2606 455677 CONSTRAINT efrm screening_request screening_request_pkey ganesh
+6034; 2606 455689 CONSTRAINT efrm screening_request screening_request_unique ganesh
+6043; 2606 455897 CONSTRAINT efrm screening_result screening_result_pkey ganesh
+6045; 2606 461242 CONSTRAINT efrm screening_risk_band screening_risk_band_pkey ganesh
+6047; 2606 461240 CONSTRAINT efrm screening_risk_band screening_risk_band_unique ganesh
+6049; 2606 461321 CONSTRAINT efrm screening_source_config screening_source_config_pkey ganesh
+6051; 2606 461304 CONSTRAINT efrm screening_source_config screening_source_config_unique ganesh
+6057; 2606 454176 CONSTRAINT efrm security_audit_log security_audit_log_pkey ganesh
+6061; 2606 455457 CONSTRAINT efrm security_capability security_capability_pkey ganesh
+6063; 2606 460888 CONSTRAINT efrm security_check security_check_pkey ganesh
+6065; 2606 458491 CONSTRAINT efrm security_notification security_notification_pkey ganesh
+6067; 2606 457888 CONSTRAINT efrm service_client service_client_pkey ganesh
+6070; 2606 455714 CONSTRAINT efrm service_token_jti service_token_jti_pkey ganesh
+6073; 2606 461165 CONSTRAINT efrm sla_escalation sla_escalation_pkey ganesh
+6077; 2606 460953 CONSTRAINT efrm sla_policy sla_policy_pkey ganesh
+6080; 2606 455342 CONSTRAINT efrm source_attribute_def source_attribute_def_pkey ganesh
+6082; 2606 455355 CONSTRAINT efrm source_attribute_def source_attribute_def_unique ganesh
+6086; 2606 457065 CONSTRAINT efrm source_column_mapping source_column_mapping_pkey ganesh
+6088; 2606 457073 CONSTRAINT efrm source_column_mapping source_column_mapping_unique ganesh
+6092; 2606 457459 CONSTRAINT efrm source_config source_config_pkey ganesh
+6094; 2606 457480 CONSTRAINT efrm source_config source_config_unique ganesh
+6099; 2606 458475 CONSTRAINT efrm source_system_master source_system_master_pkey ganesh
+6110; 2606 454883 CONSTRAINT efrm transaction_master transaction_master_pkey ganesh
+6112; 2606 454891 CONSTRAINT efrm transaction_master transaction_master_unique ganesh
+5407; 2606 454663 CONSTRAINT efrm capability_endpoint_map uk_cemap_route ganesh
+5478; 2606 457521 CONSTRAINT efrm common_password_list uk_cpwd_hash ganesh
+5503; 2606 461948 CONSTRAINT efrm efrm_service_config uk_efrm_service_config ganesh
+5531; 2606 462314 CONSTRAINT efrm entity_graph_cluster_nodes uk_entity_graph_cluster_nodes ganesh
+5537; 2606 457947 CONSTRAINT efrm entity_graph_clusters uk_entity_graph_clusters ganesh
+5565; 2606 461161 CONSTRAINT efrm entity_graph_refresh_checkpoint uk_entity_graph_refresh_checkpoint ganesh
+5570; 2606 458620 CONSTRAINT efrm entity_graph_refresh_config uk_entity_graph_refresh_config ganesh
+5575; 2606 461284 CONSTRAINT efrm entity_graph_view_config uk_entity_graph_view_config ganesh
+5632; 2606 461546 CONSTRAINT efrm graph_dimension_subtype_config uk_graph_dimension_subtype_config ganesh
+5809; 2606 461726 CONSTRAINT efrm password_reset_token uk_prst_hash ganesh
+5833; 2606 454265 CONSTRAINT efrm refresh_token uk_rft_hash ganesh
+5848; 2606 461147 CONSTRAINT efrm risk_rating_decay_policy_config uk_risk_rating_decay_policy ganesh
+5852; 2606 461927 CONSTRAINT efrm risk_rating_decision_impact_config uk_risk_rating_decision_impact ganesh
+5857; 2606 461324 CONSTRAINT efrm risk_rating_domain_override_config uk_risk_rating_domain_override ganesh
+5861; 2606 458021 CONSTRAINT efrm risk_rating_event_type_config uk_risk_rating_event_type ganesh
+5865; 2606 458590 CONSTRAINT efrm risk_rating_override_policy uk_risk_rating_override_policy ganesh
+5869; 2606 458668 CONSTRAINT efrm risk_rating_relationship_risk_config uk_risk_rating_relationship_risk ganesh
+5877; 2606 461039 CONSTRAINT efrm risk_rating_tier_config uk_risk_rating_risk_tier ganesh
+5873; 2606 461000 CONSTRAINT efrm risk_rating_service_weight_config uk_risk_rating_service_weight ganesh
+5881; 2606 461192 CONSTRAINT efrm risk_rating_weight_config uk_risk_rating_weight ganesh
+6144; 2606 454487 CONSTRAINT efrm user_session uk_usess_jti ganesh
+6146; 2606 454496 CONSTRAINT efrm user_session uk_usess_token ganesh
+5342; 2606 454323 CONSTRAINT efrm adverse_match uq_adverse_match_result_article_hash ganesh
+5419; 2606 457526 CONSTRAINT efrm case_action_master uq_case_action_code ganesh
+5415; 2606 456337 CONSTRAINT efrm case_action_execution_queue uq_case_action_idempotency_key ganesh
+5434; 2606 458005 CONSTRAINT efrm case_decision_action_mapping uq_case_decision_action_mapping ganesh
+5438; 2606 457655 CONSTRAINT efrm case_decision_master uq_case_decision_scope ganesh
+5525; 2606 458277 CONSTRAINT efrm entity_device_map uq_entity_device ganesh
+5580; 2606 455155 CONSTRAINT efrm entity_master uq_entity_institution_external ganesh
+5586; 2606 456120 CONSTRAINT efrm entity_relation_map uq_entity_relation ganesh
+5642; 2606 457143 CONSTRAINT efrm integration_endpoint_config uq_integration_endpoint_action_target ganesh
+5770; 2606 456874 CONSTRAINT efrm ml_model_simulation_sample uq_ml_model_simulation_sample_code ganesh
+6008; 2606 456655 CONSTRAINT efrm screening_entity_relation uq_screening_entity_relation ganesh
+6101; 2606 458483 CONSTRAINT efrm source_system_master uq_source_system_institution_code ganesh
+6128; 2606 457926 CONSTRAINT efrm user_credential user_credential_pkey ganesh
+6132; 2606 457591 CONSTRAINT efrm user_master user_master_pkey ganesh
+6136; 2606 461033 CONSTRAINT efrm user_password_history user_password_history_pkey ganesh
+6148; 2606 454501 CONSTRAINT efrm user_session user_session_pkey ganesh
+6154; 2606 461822 CONSTRAINT efrm whitelist_entry whitelist_entry_pkey ganesh
+6156; 2606 461820 CONSTRAINT efrm whitelist_entry whitelist_entry_unique ganesh
+5384; 1259 454397 INDEX efrm audit_trail_action_type_idx ganesh
+5385; 1259 454404 INDEX efrm audit_trail_created_at_idx ganesh
+5388; 1259 454426 INDEX efrm audit_trail_table_name_idx ganesh
+5389; 1259 454438 INDEX efrm audit_trail_user_name_idx ganesh
+5464; 1259 457818 INDEX efrm case_sla_tracker_case_id_idx ganesh
+5487; 1259 455046 INDEX efrm device_master_institution_request_id_uq ganesh
+5520; 1259 458254 INDEX efrm entity_device_map_entity_id_idx ganesh
+5581; 1259 456096 INDEX efrm entity_relation_map_entity_id_idx ganesh
+5319; 1259 456605 INDEX efrm idx_adverse_alert_request_id ganesh
+5320; 1259 456613 INDEX efrm idx_adverse_alert_result_id ganesh
+5321; 1259 456614 INDEX efrm idx_adverse_alert_status ganesh
+5334; 1259 457334 INDEX efrm idx_adverse_integration_config_institution_provider_active ganesh
+5335; 1259 457335 INDEX efrm idx_adverse_integration_config_master ganesh
+5336; 1259 457336 INDEX efrm idx_adverse_integration_inst_provider_active ganesh
+5339; 1259 454307 INDEX efrm idx_adverse_match_url ganesh
+5349; 1259 456076 INDEX efrm idx_adverse_request_created_at ganesh
+5350; 1259 456083 INDEX efrm idx_adverse_request_entity_id ganesh
+5351; 1259 456084 INDEX efrm idx_adverse_request_entity_type ganesh
+5354; 1259 455300 INDEX efrm idx_adverse_result_risk_score ganesh
+5399; 1259 456149 INDEX efrm idx_bulk_job_last_heartbeat_at ganesh
+5400; 1259 456150 INDEX efrm idx_bulk_job_source_status ganesh
+5401; 1259 456151 INDEX efrm idx_bulk_job_status ganesh
+5404; 1259 454635 INDEX efrm idx_cemap_cap_status ganesh
+5405; 1259 454648 INDEX efrm idx_cemap_service_path ganesh
+5528; 1259 462303 INDEX efrm idx_entity_graph_cluster_nodes_cluster ganesh
+5529; 1259 462290 INDEX efrm idx_entity_graph_cluster_nodes_node ganesh
+5534; 1259 457944 INDEX efrm idx_entity_graph_clusters_risk ganesh
+5535; 1259 457945 INDEX efrm idx_entity_graph_clusters_status ganesh
+5540; 1259 457763 INDEX efrm idx_entity_graph_edges_confidence ganesh
+5541; 1259 457764 INDEX efrm idx_entity_graph_edges_dimension ganesh
+5542; 1259 457766 INDEX efrm idx_entity_graph_edges_source ganesh
+5543; 1259 457772 INDEX efrm idx_entity_graph_edges_target ganesh
+5548; 1259 457364 INDEX efrm idx_entity_graph_evidence_case ganesh
+5549; 1259 457368 INDEX efrm idx_entity_graph_evidence_edge ganesh
+5550; 1259 457379 INDEX efrm idx_entity_graph_evidence_rule ganesh
+5551; 1259 457387 INDEX efrm idx_entity_graph_evidence_source ganesh
+5552; 1259 457391 INDEX efrm idx_entity_graph_evidence_time ganesh
+5553; 1259 457392 INDEX efrm idx_entity_graph_evidence_transaction ganesh
+5556; 1259 456942 INDEX efrm idx_entity_graph_nodes_dimension ganesh
+5557; 1259 456944 INDEX efrm idx_entity_graph_nodes_institution ganesh
+5558; 1259 456952 INDEX efrm idx_entity_graph_nodes_type ganesh
+5563; 1259 461159 INDEX efrm idx_entity_graph_refresh_checkpoint_status ganesh
+5568; 1259 458618 INDEX efrm idx_entity_graph_refresh_config_due ganesh
+5573; 1259 461264 INDEX efrm idx_entity_graph_view_config_enabled ganesh
+5597; 1259 456023 INDEX efrm idx_entity_risk_factor_entity ganesh
+5598; 1259 456024 INDEX efrm idx_entity_risk_factor_entity_time ganesh
+5599; 1259 456025 INDEX efrm idx_entity_risk_factor_event ganesh
+5600; 1259 456030 INDEX efrm idx_entity_risk_factor_reference ganesh
+5605; 1259 455950 INDEX efrm idx_entity_risk_history_entity ganesh
+5610; 1259 456213 INDEX efrm idx_entity_risk_score ganesh
+5611; 1259 456220 INDEX efrm idx_entity_risk_tier ganesh
+5624; 1259 458342 INDEX efrm idx_graph_dimension_config_enabled ganesh
+5625; 1259 458348 INDEX efrm idx_graph_dimension_config_entity_type ganesh
+5626; 1259 458359 INDEX efrm idx_graph_dimension_config_source_table ganesh
+5630; 1259 461536 INDEX efrm idx_graph_dimension_subtype_enabled ganesh
+5678; 1259 455777 INDEX efrm idx_lgat_name_time ganesh
+5679; 1259 455785 INDEX efrm idx_lgat_user_time ganesh
+5660; 1259 458818 INDEX efrm idx_list_addr_country ganesh
+5661; 1259 458717 INDEX efrm idx_list_addr_postal ganesh
+5662; 1259 459461 INDEX efrm idx_list_addr_tokens ganesh
+5654; 1259 467306 INDEX efrm idx_list_alias_arabic_trgm ganesh
+5655; 1259 467305 INDEX efrm idx_list_alias_translit_trgm ganesh
+5656; 1259 467390 INDEX efrm idx_list_entity_alias_list_entity_id ganesh
+5643; 1259 484033 INDEX efrm idx_list_entity_arabic_trgm ganesh
+5644; 1259 484035 INDEX efrm idx_list_entity_country ganesh
+5645; 1259 484034 INDEX efrm idx_list_entity_entity_type ganesh
+5646; 1259 484032 INDEX efrm idx_list_entity_list_version_id ganesh
+5647; 1259 484036 INDEX efrm idx_list_entity_normalized_name_prefix ganesh
+5648; 1259 484037 INDEX efrm idx_list_entity_screening_filters ganesh
+5649; 1259 484038 INDEX efrm idx_list_entity_translit_trgm ganesh
+5667; 1259 461882 INDEX efrm idx_list_source_is_active ganesh
+5673; 1259 457203 INDEX efrm idx_list_version_source_code_status_loaded ganesh
+5674; 1259 457208 INDEX efrm idx_list_version_source_config_status_loaded ganesh
+5314; 1259 462149 INDEX efrm idx_lock_user_active ganesh
+5708; 1259 461605 INDEX efrm idx_mf_inference ganesh
+5695; 1259 455498 INDEX efrm idx_mfdm_feature_order ganesh
+5713; 1259 457156 INDEX efrm idx_mir_status ganesh
+5714; 1259 457157 INDEX efrm idx_mir_txn ganesh
+5719; 1259 461622 INDEX efrm idx_misl_inference_rank ganesh
+5720; 1259 461621 INDEX efrm idx_misl_model_version ganesh
+5725; 1259 461616 INDEX efrm idx_mmds_version ganesh
+5738; 1259 461652 INDEX efrm idx_mmg_version ganesh
+5743; 1259 461709 INDEX efrm idx_mmj_job_status ganesh
+5744; 1259 461703 INDEX efrm idx_mmj_version_type ganesh
+5749; 1259 461704 INDEX efrm idx_mmpd_date ganesh
+5754; 1259 462257 INDEX efrm idx_mmr_lookup ganesh
+5772; 1259 462461 INDEX efrm idx_mmv_version ganesh
+5812; 1259 456378 INDEX efrm idx_pcap_capability ganesh
+5800; 1259 458689 INDEX efrm idx_pexp_user_status ganesh
+5805; 1259 461724 INDEX efrm idx_prst_user_exp ganesh
+5827; 1259 454232 INDEX efrm idx_rft_parent ganesh
+5828; 1259 454238 INDEX efrm idx_rft_sess_exp ganesh
+5829; 1259 454243 INDEX efrm idx_rft_user_exp ganesh
+5834; 1259 455193 INDEX efrm idx_risk_event_entity ganesh
+5835; 1259 455197 INDEX efrm idx_risk_event_entity_source_time ganesh
+5836; 1259 455214 INDEX efrm idx_risk_event_source ganesh
+5853; 1259 461322 INDEX efrm idx_risk_rating_domain_override_lookup ganesh
+5882; 1259 461721 INDEX efrm idx_risk_recalculation_job_scope ganesh
+5883; 1259 461720 INDEX efrm idx_risk_recalculation_job_status ganesh
+6052; 1259 454107 INDEX efrm idx_saud_evt_out ganesh
+6053; 1259 454125 INDEX efrm idx_saud_request ganesh
+6054; 1259 454140 INDEX efrm idx_saud_sess_time ganesh
+6055; 1259 454160 INDEX efrm idx_saud_usr_evt ganesh
+6058; 1259 455436 INDEX efrm idx_scap_module_resource ganesh
+6059; 1259 455446 INDEX efrm idx_scap_product_menu ganesh
+6025; 1259 455626 INDEX efrm idx_screening_request_channel ganesh
+6026; 1259 455637 INDEX efrm idx_screening_request_client_request_id ganesh
+6027; 1259 455652 INDEX efrm idx_screening_request_entity_id ganesh
+6028; 1259 455656 INDEX efrm idx_screening_request_entity_type ganesh
+6035; 1259 455857 INDEX efrm idx_screening_result_created_at ganesh
+6036; 1259 455872 INDEX efrm idx_screening_result_decision ganesh
+6037; 1259 455881 INDEX efrm idx_screening_result_request_item_order ganesh
+6038; 1259 455884 INDEX efrm idx_screening_result_risk_band ganesh
+6068; 1259 455708 INDEX efrm idx_stjti_client_exp ganesh
+6126; 1259 457912 INDEX efrm idx_ucred_user_active ganesh
+6140; 1259 454465 INDEX efrm idx_usess_abs_st ganesh
+6141; 1259 454471 INDEX efrm idx_usess_exp_st ganesh
+6142; 1259 454481 INDEX efrm idx_usess_user_st ganesh
+6149; 1259 461818 INDEX efrm idx_whitelist_entry_list_entity_id ganesh
+5412; 1259 456311 INDEX efrm ix_case_action_execution_queue_case ganesh
+5413; 1259 456318 INDEX efrm ix_case_action_execution_queue_due ganesh
+5340; 1259 454316 INDEX efrm ix_efrm_adverse_match_result_id ganesh
+5355; 1259 455309 INDEX efrm ix_efrm_adverse_result_request_id ganesh
+5366; 1259 461519 INDEX efrm ix_efrm_aggregated_metric_entity_id ganesh
+5367; 1259 461518 INDEX efrm ix_efrm_aggregated_metric_entity_type ganesh
+5368; 1259 461517 INDEX efrm ix_efrm_aggregated_metric_institution_id ganesh
+5369; 1259 461516 INDEX efrm ix_efrm_aggregated_metric_lookup ganesh
+5370; 1259 461515 INDEX efrm ix_efrm_aggregated_metric_metric_code ganesh
+5394; 1259 458431 INDEX efrm ix_efrm_bulk_file_upload_id ganesh
+5426; 1259 457861 INDEX efrm ix_efrm_case_assignment_assignment_id ganesh
+5383; 1259 460825 INDEX efrm ix_efrm_case_assignment_config_config_id ganesh
+5441; 1259 455604 INDEX efrm ix_efrm_case_events_event_id ganesh
+5444; 1259 458314 INDEX efrm ix_efrm_case_evidence_evidence_id ganesh
+5455; 1259 461510 INDEX efrm ix_efrm_case_recovery_recovery_id ganesh
+5467; 1259 457827 INDEX efrm ix_efrm_case_sla_tracker_tracker_id ganesh
+5474; 1259 455820 INDEX efrm ix_efrm_chatbot_audit_log_id ganesh
+5508; 1259 456193 INDEX efrm ix_efrm_engine_attribute_def_id ganesh
+5513; 1259 456726 INDEX efrm ix_efrm_engine_flink_map_context_code ganesh
+5514; 1259 456737 INDEX efrm ix_efrm_engine_flink_map_flink_event_key ganesh
+5515; 1259 456751 INDEX efrm ix_efrm_engine_flink_map_rule_engine_key ganesh
+5523; 1259 458269 INDEX efrm ix_efrm_entity_device_map_entity_device_id ganesh
+5544; 1259 457781 INDEX efrm ix_efrm_entity_graph_edges_edge_id ganesh
+5559; 1259 456956 INDEX efrm ix_efrm_entity_graph_nodes_node_id ganesh
+5578; 1259 455148 INDEX efrm ix_efrm_entity_master_entity_id ganesh
+5584; 1259 456114 INDEX efrm ix_efrm_entity_relation_map_entity_relation_id ganesh
+5616; 1259 460878 INDEX efrm ix_efrm_enum_value_id ganesh
+5621; 1259 460947 INDEX efrm ix_efrm_facts_definition_source_system_id ganesh
+5657; 1259 468457 INDEX efrm ix_efrm_list_entity_alias_id ganesh
+5650; 1259 484039 INDEX efrm ix_efrm_list_entity_id ganesh
+5663; 1259 460190 INDEX efrm ix_efrm_list_normalized_address_id ganesh
+5664; 1259 460502 INDEX efrm ix_efrm_list_normalized_address_list_entity_id ganesh
+5668; 1259 460925 INDEX efrm ix_efrm_list_source_id ganesh
+5675; 1259 457209 INDEX efrm ix_efrm_list_version_id ganesh
+5686; 1259 454811 INDEX efrm ix_efrm_metric_definition_metric_code ganesh
+5777; 1259 462339 INDEX efrm ix_efrm_ml_score_blending_policy_policy_id ganesh
+5784; 1259 458060 INDEX efrm ix_efrm_notification_queue_notification_id ganesh
+5790; 1259 458714 INDEX efrm ix_efrm_notification_template_template_id ganesh
+5795; 1259 457534 INDEX efrm ix_efrm_operator_id ganesh
+5820; 1259 454775 INDEX efrm ix_efrm_reference_data_ref_id ganesh
+5886; 1259 458622 INDEX efrm ix_efrm_rule_decision_policy_id ganesh
+5896; 1259 462148 INDEX efrm ix_efrm_rule_drl_context_context_code ganesh
+5901; 1259 457967 INDEX efrm ix_efrm_rule_group_master_group_code ganesh
+5906; 1259 461881 INDEX efrm ix_efrm_rule_group_source_binding_id ganesh
+5911; 1259 458532 INDEX efrm ix_efrm_rule_group_version_id ganesh
+5916; 1259 457676 INDEX efrm ix_efrm_rule_group_version_map_id ganesh
+5921; 1259 455377 INDEX efrm ix_efrm_rule_master_rule_code ganesh
+5936; 1259 456444 INDEX efrm ix_efrm_rule_required_data_rule_version_id ganesh
+5939; 1259 454347 INDEX efrm ix_efrm_rule_version_id ganesh
+6102; 1259 456684 INDEX efrm ix_efrm_ruleengine_alert_id ganesh
+5944; 1259 462079 INDEX efrm ix_efrm_ruleengine_bulk_job_id ganesh
+5949; 1259 461786 INDEX efrm ix_efrm_ruleengine_bulk_job_item_id ganesh
+5952; 1259 461809 INDEX efrm ix_efrm_ruleengine_bulk_job_summary_id ganesh
+5891; 1259 460933 INDEX efrm ix_efrm_ruleengine_decision_upgrade_id ganesh
+6113; 1259 457027 INDEX efrm ix_efrm_ruleengine_match_id ganesh
+6118; 1259 455096 INDEX efrm ix_efrm_ruleengine_request_id ganesh
+6123; 1259 457267 INDEX efrm ix_efrm_ruleengine_result_id ganesh
+5957; 1259 456501 INDEX efrm ix_efrm_screening_alert_alert_id ganesh
+5958; 1259 456505 INDEX efrm ix_efrm_screening_alert_entity_id ganesh
+5959; 1259 456507 INDEX efrm ix_efrm_screening_alert_entity_type ganesh
+5960; 1259 456519 INDEX efrm ix_efrm_screening_alert_id ganesh
+5961; 1259 456523 INDEX efrm ix_efrm_screening_alert_request_id ganesh
+5962; 1259 456525 INDEX efrm ix_efrm_screening_alert_result_id ganesh
+5963; 1259 456527 INDEX efrm ix_efrm_screening_alert_status ganesh
+5968; 1259 458379 INDEX efrm ix_efrm_screening_bulk_job_id ganesh
+5973; 1259 457396 INDEX efrm ix_efrm_screening_bulk_job_item_id ganesh
+5976; 1259 461471 INDEX efrm ix_efrm_screening_bulk_job_summary_id ganesh
+5989; 1259 457418 INDEX efrm ix_efrm_screening_entity_entity_group ganesh
+5990; 1259 457432 INDEX efrm ix_efrm_screening_entity_entity_type ganesh
+5996; 1259 454927 INDEX efrm ix_efrm_screening_entity_field_field_id ganesh
+5991; 1259 457439 INDEX efrm ix_efrm_screening_entity_id ganesh
+6021; 1259 454565 INDEX efrm ix_efrm_screening_match_id ganesh
+6022; 1259 454578 INDEX efrm ix_efrm_screening_match_result_id ganesh
+6029; 1259 455661 INDEX efrm ix_efrm_screening_request_id ganesh
+6030; 1259 455664 INDEX efrm ix_efrm_screening_request_request_id ganesh
+6039; 1259 455892 INDEX efrm ix_efrm_screening_result_entity_id ganesh
+6040; 1259 455894 INDEX efrm ix_efrm_screening_result_id ganesh
+6041; 1259 455895 INDEX efrm ix_efrm_screening_result_request_id ganesh
+6071; 1259 461158 INDEX efrm ix_efrm_sla_escalation_escalation_id ganesh
+6074; 1259 460941 INDEX efrm ix_efrm_sla_policy_sla_id ganesh
+6078; 1259 455332 INDEX efrm ix_efrm_source_attribute_def_id ganesh
+6083; 1259 457049 INDEX efrm ix_efrm_source_column_mapping_mapping_id ganesh
+6084; 1259 457057 INDEX efrm ix_efrm_source_column_mapping_source_code ganesh
+6089; 1259 457452 INDEX efrm ix_efrm_source_config_id ganesh
+6090; 1259 457453 INDEX efrm ix_efrm_source_config_list_source_id ganesh
+6095; 1259 458438 INDEX efrm ix_efrm_source_system_master_institution_id ganesh
+6096; 1259 458444 INDEX efrm ix_efrm_source_system_master_source_system_code ganesh
+6097; 1259 458459 INDEX efrm ix_efrm_source_system_master_source_system_id ganesh
+6107; 1259 454868 INDEX efrm ix_efrm_transaction_master_id ganesh
+6150; 1259 461817 INDEX efrm ix_efrm_whitelist_entry_entity_id ganesh
+6151; 1259 461816 INDEX efrm ix_efrm_whitelist_entry_entity_type ganesh
+6152; 1259 461815 INDEX efrm ix_efrm_whitelist_entry_id ganesh
+5926; 1259 456423 INDEX efrm ix_rule_master_tag_rule_id ganesh
+5927; 1259 456433 INDEX efrm ix_rule_master_tag_tag_code ganesh
+6003; 1259 456621 INDEX efrm ix_screening_entity_relation_active ganesh
+6004; 1259 456631 INDEX efrm ix_screening_entity_relation_entity_type ganesh
+6075; 1259 461907 INDEX efrm ix_sla_policy_lookup ganesh
+5682; 1259 455541 INDEX efrm menu_master_parent_id_idx ganesh
+5685; 1259 455555 INDEX efrm menu_master_product_id_idx ganesh
+5785; 1259 458061 INDEX efrm notification_queue_event_code_idx ganesh
+5788; 1259 458066 INDEX efrm notification_queue_status_idx ganesh
+5789; 1259 458076 INDEX efrm notification_queue_user_id_idx ganesh
+5791; 1259 460932 INDEX efrm notification_template_channel_idx ganesh
+5792; 1259 462395 INDEX efrm notification_template_event_code_idx ganesh
+5817; 1259 456276 INDEX efrm profile_mstr_pwd_policy_idx ganesh
+5818; 1259 456285 INDEX efrm profile_mstr_security_chk_idx ganesh
+5819; 1259 456289 INDEX efrm profile_mstr_status_idx ganesh
+5823; 1259 454788 INDEX efrm reference_data_ref_type_active_idx ganesh
+5824; 1259 454789 INDEX efrm reference_data_ref_type_idx ganesh
+5997; 1259 454942 INDEX efrm screening_entity_field_entity_type_idx ganesh
+6000; 1259 454966 INDEX efrm screening_entity_field_relation_idx ganesh
+6108; 1259 454873 INDEX efrm transaction_master_institution_source_txn_id_uq ganesh
+5545; 1259 457787 INDEX efrm uk_entity_graph_edge_institution_pair_dimension ganesh
+5560; 1259 456960 INDEX efrm uk_entity_graph_node_institution_type_hash ganesh
+5627; 1259 458364 INDEX efrm uk_graph_dimension_config_source ganesh
+5653; 1259 484040 INDEX efrm uq_list_entity_version_external_id_not_null ganesh
+5771; 1259 456882 INDEX efrm uq_ml_model_simulation_sample_default ganesh
+6129; 1259 457578 INDEX efrm user_master_created_at_idx ganesh
+6130; 1259 457579 INDEX efrm user_master_institution_id_idx ganesh
+6133; 1259 457643 INDEX efrm user_master_profile_id_idx ganesh
+6134; 1259 457650 INDEX efrm user_master_user_status_idx ganesh
+6137; 1259 461031 INDEX efrm user_pwd_hist_created_at_idx ganesh
+6138; 1259 461030 INDEX efrm user_pwd_hist_is_current_idx ganesh
+6139; 1259 461029 INDEX efrm user_pwd_hist_user_name_idx ganesh
+6293; 2620 454199 TRIGGER efrm security_audit_log trg_saud_append_only ganesh
+6157; 2606 462143 FK CONSTRAINT efrm account_lockout account_lockout_user_id_fkey ganesh
+6158; 2606 456568 FK CONSTRAINT efrm adverse_alert adverse_alert_request_id_fkey ganesh
+6159; 2606 456554 FK CONSTRAINT efrm adverse_alert adverse_alert_result_id_fkey ganesh
+6160; 2606 462637 FK CONSTRAINT efrm adverse_category_weight adverse_category_weight_config_master_id_fkey ganesh
+6161; 2606 461059 FK CONSTRAINT efrm adverse_country_risk adverse_country_risk_config_master_id_fkey ganesh
+6162; 2606 462157 FK CONSTRAINT efrm adverse_integration_config adverse_integration_config_master_fkey ganesh
+6163; 2606 456581 FK CONSTRAINT efrm adverse_match adverse_match_alert_id_fkey ganesh
+6164; 2606 455287 FK CONSTRAINT efrm adverse_match adverse_match_result_id_fkey ganesh
+6165; 2606 461500 FK CONSTRAINT efrm adverse_recency_factor adverse_recency_factor_config_master_id_fkey ganesh
+6166; 2606 456062 FK CONSTRAINT efrm adverse_result adverse_result_request_id_fkey ganesh
+6167; 2606 462170 FK CONSTRAINT efrm adverse_risk_band adverse_risk_band_config_master_id_fkey ganesh
+6168; 2606 462449 FK CONSTRAINT efrm adverse_severity_score adverse_severity_score_config_master_id_fkey ganesh
+6169; 2606 462051 FK CONSTRAINT efrm adverse_source_weight adverse_source_weight_config_master_id_fkey ganesh
+6170; 2606 462587 FK CONSTRAINT efrm aggregated_metric aggregated_metric_metric_code_fkey ganesh
+6171; 2606 461064 FK CONSTRAINT efrm alert_category_master alert_category_master_config_master_id_fkey ganesh
+6172; 2606 461135 FK CONSTRAINT efrm alert_count_boost_config alert_count_boost_config_config_master_id_fkey ganesh
+6173; 2606 457623 FK CONSTRAINT efrm audit_trail audit_trail_user_name_fkey ganesh
+6174; 2606 457212 FK CONSTRAINT efrm bulk_job bulk_job_list_version_id_fkey ganesh
+6176; 2606 456769 FK CONSTRAINT efrm case_action_execution_log case_action_execution_log_case_id_fkey ganesh
+6177; 2606 456774 FK CONSTRAINT efrm case_action_execution_log case_action_execution_log_execution_id_fkey ganesh
+6178; 2606 456304 FK CONSTRAINT efrm case_action_execution_queue case_action_execution_queue_case_id_fkey ganesh
+6179; 2606 462204 FK CONSTRAINT efrm case_action_master case_action_master_config_master_id_fkey ganesh
+6180; 2606 456827 FK CONSTRAINT efrm case_alert_mapping case_alert_mapping_case_id_fkey ganesh
+6181; 2606 457843 FK CONSTRAINT efrm case_assignment case_assignment_case_id_fkey ganesh
+6182; 2606 461054 FK CONSTRAINT efrm case_decision_action_mapping case_decision_action_mapping_config_master_id_fkey ganesh
+6183; 2606 461962 FK CONSTRAINT efrm case_decision_master case_decision_master_config_master_id_fkey ganesh
+6184; 2606 455971 FK CONSTRAINT efrm case_events case_events_case_id_fkey ganesh
+6185; 2606 458302 FK CONSTRAINT efrm case_evidence case_evidence_case_id_fkey ganesh
+6186; 2606 461045 FK CONSTRAINT efrm case_priority_master case_priority_master_config_master_id_fkey ganesh
+6187; 2606 462417 FK CONSTRAINT efrm case_recovery case_recovery_case_id_fkey ganesh
+6188; 2606 458218 FK CONSTRAINT efrm case_score_breakdown case_score_breakdown_case_id_fkey ganesh
+6189; 2606 458094 FK CONSTRAINT efrm case_scoring_trace case_scoring_trace_case_id_fkey ganesh
+6190; 2606 457810 FK CONSTRAINT efrm case_sla_tracker case_sla_tracker_case_id_fkey ganesh
+6191; 2606 461130 FK CONSTRAINT efrm category_correlation_config category_correlation_config_config_master_id_fkey ganesh
+6192; 2606 462222 FK CONSTRAINT efrm critical_override_rules critical_override_rules_config_master_id_fkey ganesh
+6193; 2606 457107 FK CONSTRAINT efrm device_alert device_alert_device_result_id_fkey ganesh
+6194; 2606 455033 FK CONSTRAINT efrm device_master device_master_device_request_id_fkey ganesh
+6195; 2606 457497 FK CONSTRAINT efrm device_match device_match_device_result_id_fkey ganesh
+6196; 2606 457100 FK CONSTRAINT efrm device_result device_result_device_master_id_fkey ganesh
+6197; 2606 461899 FK CONSTRAINT efrm efrm_service_config efrm_service_config_institution_id_fkey ganesh
+6198; 2606 458249 FK CONSTRAINT efrm entity_device_map entity_device_map_entity_id_fkey ganesh
+6199; 2606 462285 FK CONSTRAINT efrm entity_graph_cluster_nodes entity_graph_cluster_nodes_cluster_id_fkey ganesh
+6200; 2606 462423 FK CONSTRAINT efrm entity_graph_cluster_nodes entity_graph_cluster_nodes_node_id_fkey ganesh
+6201; 2606 457712 FK CONSTRAINT efrm entity_graph_edges entity_graph_edges_source_node_fkey ganesh
+6202; 2606 457729 FK CONSTRAINT efrm entity_graph_edges entity_graph_edges_target_node_fkey ganesh
+6203; 2606 457752 FK CONSTRAINT efrm entity_graph_evidence entity_graph_evidence_edge_id_fkey ganesh
+6204; 2606 456088 FK CONSTRAINT efrm entity_relation_map entity_relation_map_entity_id_fkey ganesh
+6205; 2606 460942 FK CONSTRAINT efrm facts_definition facts_definition_source_system_id_fkey ganesh
+6175; 2606 455462 FK CONSTRAINT efrm capability_endpoint_map fk_cemap_cap ganesh
+6237; 2606 456368 FK CONSTRAINT efrm profile_capability fk_pcap_capability ganesh
+6238; 2606 456373 FK CONSTRAINT efrm profile_capability fk_pcap_profile ganesh
+6257; 2606 456408 FK CONSTRAINT efrm rule_master_tag fk_rule_master_tag_rule ganesh
+6207; 2606 484052 FK CONSTRAINT efrm list_entity_alias list_entity_alias_list_entity_id_fkey ganesh
+6206; 2606 484047 FK CONSTRAINT efrm list_entity list_entity_list_version_id_fkey ganesh
+6208; 2606 484057 FK CONSTRAINT efrm list_normalized_address list_normalized_address_list_entity_id_fkey ganesh
+6209; 2606 462409 FK CONSTRAINT efrm list_version list_version_list_source_id_fkey ganesh
+6210; 2606 457467 FK CONSTRAINT efrm list_version list_version_source_config_id_fkey ganesh
+6211; 2606 457635 FK CONSTRAINT efrm login_attempt login_attempt_user_id_fkey ganesh
+6212; 2606 455559 FK CONSTRAINT efrm menu_master menu_master_parent_id_fkey ganesh
+6213; 2606 462671 FK CONSTRAINT efrm menu_master menu_master_product_id_fkey ganesh
+6214; 2606 458130 FK CONSTRAINT efrm ml_feature_definition ml_feature_definition_feature_set_version_id_fkey ganesh
+6215; 2606 455744 FK CONSTRAINT efrm ml_feature_definition_metadata ml_feature_definition_metadata_feature_id_fkey ganesh
+6216; 2606 458188 FK CONSTRAINT efrm ml_feature_set_version ml_feature_set_version_feature_set_id_fkey ganesh
+6217; 2606 462270 FK CONSTRAINT efrm ml_feedback ml_feedback_inference_id_fkey ganesh
+6218; 2606 462494 FK CONSTRAINT efrm ml_inference_result ml_inference_result_model_version_id_fkey ganesh
+6219; 2606 462433 FK CONSTRAINT efrm ml_inference_shap_local ml_inference_shap_local_inference_id_fkey ganesh
+6220; 2606 462577 FK CONSTRAINT efrm ml_inference_shap_local ml_inference_shap_local_model_version_id_fkey ganesh
+6221; 2606 462572 FK CONSTRAINT efrm ml_model_drift_summary ml_model_drift_summary_model_version_id_fkey ganesh
+6222; 2606 458144 FK CONSTRAINT efrm ml_model_explainability_profile ml_model_explainability_profile_feature_set_version_id_fkey ganesh
+6223; 2606 462605 FK CONSTRAINT efrm ml_model_explainability_profile ml_model_explainability_profile_model_version_id_fkey ganesh
+6224; 2606 462562 FK CONSTRAINT efrm ml_model_feature_drift ml_model_feature_drift_model_version_id_fkey ganesh
+6225; 2606 462553 FK CONSTRAINT efrm ml_model_governance ml_model_governance_model_version_id_fkey ganesh
+6226; 2606 462544 FK CONSTRAINT efrm ml_model_job ml_model_job_model_version_id_fkey ganesh
+6227; 2606 462535 FK CONSTRAINT efrm ml_model_performance_daily ml_model_performance_daily_model_version_id_fkey ganesh
+6228; 2606 462528 FK CONSTRAINT efrm ml_model_runtime_metrics ml_model_runtime_metrics_model_version_id_fkey ganesh
+6229; 2606 462510 FK CONSTRAINT efrm ml_model_shap_global ml_model_shap_global_model_version_id_fkey ganesh
+6230; 2606 462466 FK CONSTRAINT efrm ml_model_simulation_sample ml_model_simulation_sample_model_version_id_fkey ganesh
+6231; 2606 462456 FK CONSTRAINT efrm ml_model_version ml_model_version_feature_set_version_id_fkey ganesh
+6232; 2606 462444 FK CONSTRAINT efrm ml_model_version ml_model_version_model_id_fkey ganesh
+6233; 2606 462517 FK CONSTRAINT efrm ml_training_dataset_profile ml_training_dataset_profile_model_version_id_fkey ganesh
+6234; 2606 458677 FK CONSTRAINT efrm password_expiry_notice password_expiry_notice_credential_id_fkey ganesh
+6235; 2606 458670 FK CONSTRAINT efrm password_expiry_notice password_expiry_notice_user_id_fkey ganesh
+6236; 2606 462262 FK CONSTRAINT efrm password_reset_token password_reset_token_user_id_fkey ganesh
+6239; 2606 462567 FK CONSTRAINT efrm profile_master profile_master_password_policy_rule_id_fkey ganesh
+6240; 2606 462582 FK CONSTRAINT efrm profile_master profile_master_security_check_id_fkey ganesh
+6241; 2606 454509 FK CONSTRAINT efrm refresh_token refresh_token_session_id_fkey ganesh
+6242; 2606 457602 FK CONSTRAINT efrm refresh_token refresh_token_user_id_fkey ganesh
+6243; 2606 461256 FK CONSTRAINT efrm risk_rating_config risk_rating_config_institution_id_fkey ganesh
+6244; 2606 461429 FK CONSTRAINT efrm risk_rating_decay_policy_config risk_rating_decay_policy_config_config_master_id_fkey ganesh
+6245; 2606 462152 FK CONSTRAINT efrm risk_rating_decision_impact_config risk_rating_decision_impact_config_config_master_id_fkey ganesh
+6246; 2606 461424 FK CONSTRAINT efrm risk_rating_domain_override_config risk_rating_domain_override_config_config_master_id_fkey ganesh
+6247; 2606 462188 FK CONSTRAINT efrm risk_rating_event_type_config risk_rating_event_type_config_config_master_id_fkey ganesh
+6248; 2606 461972 FK CONSTRAINT efrm risk_rating_override_policy risk_rating_override_policy_config_master_id_fkey ganesh
+6249; 2606 461505 FK CONSTRAINT efrm risk_rating_relationship_risk_config risk_rating_relationship_risk_config_config_master_id_fkey ganesh
+6250; 2606 461407 FK CONSTRAINT efrm risk_rating_service_weight_config risk_rating_service_weight_config_config_master_id_fkey ganesh
+6251; 2606 461402 FK CONSTRAINT efrm risk_rating_tier_config risk_rating_tier_config_config_master_id_fkey ganesh
+6252; 2606 461397 FK CONSTRAINT efrm risk_rating_weight_config risk_rating_weight_config_config_master_id_fkey ganesh
+6253; 2606 461888 FK CONSTRAINT efrm rule_group_source_binding rule_group_source_binding_rule_group_version_id_fkey ganesh
+6255; 2606 458554 FK CONSTRAINT efrm rule_group_version_map rule_group_version_map_rule_group_version_id_fkey ganesh
+6256; 2606 457663 FK CONSTRAINT efrm rule_group_version_map rule_group_version_map_rule_version_id_fkey ganesh
+6254; 2606 458511 FK CONSTRAINT efrm rule_group_version rule_group_version_rule_group_master_id_fkey ganesh
+6258; 2606 456981 FK CONSTRAINT efrm rule_metric_dependency rule_metric_dependency_metric_code_fkey ganesh
+6259; 2606 456986 FK CONSTRAINT efrm rule_metric_dependency rule_metric_dependency_rule_id_fkey ganesh
+6260; 2606 456439 FK CONSTRAINT efrm rule_required_data rule_required_data_rule_version_id_fkey ganesh
+6261; 2606 462676 FK CONSTRAINT efrm rule_version rule_version_drl_context_id_fkey ganesh
+6262; 2606 455399 FK CONSTRAINT efrm rule_version rule_version_rule_master_id_fkey ganesh
+6282; 2606 457273 FK CONSTRAINT efrm transaction_alert ruleengine_alert_ruleengine_result_id_fkey ganesh
+6263; 2606 462280 FK CONSTRAINT efrm ruleengine_bulk_job_item ruleengine_bulk_job_item_bulk_job_id_fkey ganesh
+6264; 2606 462275 FK CONSTRAINT efrm ruleengine_bulk_job_summary ruleengine_bulk_job_summary_bulk_job_id_fkey ganesh
+6284; 2606 457285 FK CONSTRAINT efrm transaction_match ruleengine_match_ruleengine_result_id_fkey ganesh
+6285; 2606 457256 FK CONSTRAINT efrm transaction_result ruleengine_result_transaction_master_id_fkey ganesh
+6265; 2606 456481 FK CONSTRAINT efrm screening_alert screening_alert_request_id_fkey ganesh
+6266; 2606 456489 FK CONSTRAINT efrm screening_alert screening_alert_result_id_fkey ganesh
+6267; 2606 458390 FK CONSTRAINT efrm screening_bulk_job_item screening_bulk_job_item_bulk_job_id_fkey ganesh
+6268; 2606 461977 FK CONSTRAINT efrm screening_bulk_job_summary screening_bulk_job_summary_bulk_job_id_fkey ganesh
+6269; 2606 461392 FK CONSTRAINT efrm screening_decision_threshold screening_decision_threshold_config_master_id_fkey ganesh
+6270; 2606 461987 FK CONSTRAINT efrm screening_field_config screening_field_config_config_master_id_fkey ganesh
+6271; 2606 461982 FK CONSTRAINT efrm screening_group_config screening_group_config_config_master_id_fkey ganesh
+6272; 2606 461204 FK CONSTRAINT efrm screening_identifier_config screening_identifier_config_config_master_id_fkey ganesh
+6273; 2606 455898 FK CONSTRAINT efrm screening_match screening_match_result_id_fkey ganesh
+6274; 2606 455842 FK CONSTRAINT efrm screening_result screening_result_request_id_fkey ganesh
+6275; 2606 461234 FK CONSTRAINT efrm screening_risk_band screening_risk_band_config_master_id_fkey ganesh
+6276; 2606 461293 FK CONSTRAINT efrm screening_source_config screening_source_config_config_master_id_fkey ganesh
+6277; 2606 461417 FK CONSTRAINT efrm screening_source_config screening_source_config_list_source_code_fkey ganesh
+6278; 2606 458485 FK CONSTRAINT efrm security_notification security_notification_user_id_fkey ganesh
+6279; 2606 457889 FK CONSTRAINT efrm service_token_jti service_token_jti_client_id_fkey ganesh
+6280; 2606 461412 FK CONSTRAINT efrm sla_escalation sla_escalation_sla_id_fkey ganesh
+6281; 2606 461883 FK CONSTRAINT efrm source_config source_config_list_source_id_fkey ganesh
+6283; 2606 455111 FK CONSTRAINT efrm transaction_master transaction_master_ruleengine_request_id_fkey ganesh
+6286; 2606 457897 FK CONSTRAINT efrm user_credential user_credential_user_id_fkey ganesh
+6287; 2606 462165 FK CONSTRAINT efrm user_master user_master_institution_id_fkey ganesh
+6288; 2606 457573 FK CONSTRAINT efrm user_master user_master_profile_id_fkey ganesh
+6289; 2606 461967 FK CONSTRAINT efrm user_password_history user_password_history_user_name_fkey ganesh
+6290; 2606 462666 FK CONSTRAINT efrm user_session user_session_security_check_id_fkey ganesh
+6291; 2606 457630 FK CONSTRAINT efrm user_session user_session_user_id_fkey ganesh
+6292; 2606 484062 FK CONSTRAINT efrm whitelist_entry whitelist_entry_list_entity_id_fkey ganesh
